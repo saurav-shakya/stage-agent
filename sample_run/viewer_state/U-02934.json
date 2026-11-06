@@ -1,0 +1,378 @@
+{
+ "viewer_id": "U-02934",
+ "arm": "agent",
+ "facts_latest": {
+  "profile_present": {
+   "value": true,
+   "source": "profile_snapshot",
+   "ref": "profile:U-02934@2026-09-29T09:39:13.544Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 142158,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "page_dialect": {
+   "value": "d4",
+   "source": "app_setting",
+   "ref": "event:92d61e1f-6c83-4bd7-8baa-93fbf75e0f1e",
+   "observed_at": "2026-10-01T15:29:18.526Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "app_language": {
+   "value": "hin",
+   "source": "app_setting",
+   "ref": "event:92d61e1f-6c83-4bd7-8baa-93fbf75e0f1e",
+   "observed_at": "2026-10-01T15:29:18.526Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "profile_dialect": {
+   "value": "d4",
+   "source": "profile_snapshot",
+   "ref": "profile:U-02934@2026-09-29T09:39:13.544Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 142158,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "signup_at": {
+   "value": "2024-10-09T16:05:01.599Z",
+   "source": "profile_snapshot",
+   "ref": "profile:U-02934@2026-09-29T09:39:13.544Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 142158,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "subscription_status": {
+   "value": "active",
+   "source": "profile_snapshot",
+   "ref": "profile:U-02934@2026-09-29T09:39:13.544Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 142158,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "lapsed_at": {
+   "value": null,
+   "source": "profile_snapshot",
+   "ref": "profile:U-02934@2026-09-29T09:39:13.544Z",
+   "observed_at": null,
+   "age_s_at_decision": null,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "ever_paid": {
+   "value": true,
+   "source": "event+profile",
+   "ref": "profile:U-02934@2026-09-29T09:39:13.544Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 142158,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "trial_ends_at": {
+   "value": null,
+   "source": "profile_snapshot",
+   "ref": "profile:U-02934@2026-09-29T09:39:13.544Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 142158,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "consent_push": {
+   "value": true,
+   "source": "profile_snapshot",
+   "ref": "profile:U-02934@2026-09-29T09:39:13.544Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 142158,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "consent_whatsapp": {
+   "value": false,
+   "source": "profile_snapshot",
+   "ref": "profile:U-02934@2026-09-29T09:39:13.544Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 142158,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "ever_played": {
+   "value": true,
+   "source": "event",
+   "ref": "event:690d6c86-4785-453e-a4ce-f46e8d6042ab",
+   "observed_at": "2026-09-01T11:25:45.315Z",
+   "age_s_at_decision": 2606613,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "ever_completed": {
+   "value": true,
+   "source": "event",
+   "ref": "event:61ccc7c4-4dac-4f1f-b134-bb141920c639",
+   "observed_at": "2026-09-01T12:57:47.897Z",
+   "age_s_at_decision": 2601090,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "last_app_open": {
+   "value": "2026-10-01T15:05:26.852Z",
+   "source": "event",
+   "ref": "event:4b59ce24-9923-4a3f-8622-e0dae1fd1880",
+   "observed_at": "2026-10-01T15:05:26.852Z",
+   "age_s_at_decision": 1431,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "first_seen": {
+   "value": "2026-09-01T11:21:36.576Z",
+   "source": "event",
+   "ref": null,
+   "observed_at": null,
+   "age_s_at_decision": null,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "play_days_14d": {
+   "value": [
+    "2026-09-18",
+    "2026-09-20",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-26",
+    "2026-09-27"
+   ],
+   "source": "event",
+   "ref": "events:play_started(last 14d)",
+   "observed_at": "2026-10-01T15:29:18.526Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "top_genres": {
+   "value": [
+    "Drama",
+    "Family",
+    "Crime"
+   ],
+   "source": "event",
+   "ref": "events:play_started",
+   "observed_at": "2026-10-01T15:29:18.526Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "watched_slugs": {
+   "value": [
+    "bagi-baya-d4",
+    "chuma-daja-d4",
+    "gineni-d4",
+    "lapa-mavada-d4",
+    "naparo-chupi-d4"
+   ],
+   "source": "event",
+   "ref": "events:play_started",
+   "observed_at": "2026-10-01T15:29:18.526Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "unfinished_series": {
+   "value": [
+    {
+     "slug": "bagi-baya-d4",
+     "title_id": "T1811",
+     "next_episode_index": 0,
+     "next_episode_number": 1,
+     "episodes_total": 40,
+     "last_play": "2026-09-03T18:13:44.461Z",
+     "idle_days": 27.89,
+     "evidence": "event:b9e89f14-7568-429a-a0ed-a2c6e1d2faac"
+    }
+   ],
+   "source": "event+episodes",
+   "ref": "events:play_started,episode_completed;episodes.csv",
+   "observed_at": "2026-10-01T15:29:18.526Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "messages_by_ist_day": {
+   "value": {},
+   "source": "event",
+   "ref": "events:message_delivered",
+   "observed_at": "2026-10-01T15:29:18.526Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "trigger_buffered_s": {
+   "value": 0,
+   "source": "event_clock_delta",
+   "ref": "event:92d61e1f-6c83-4bd7-8baa-93fbf75e0f1e",
+   "observed_at": "2026-10-01T15:29:18.526Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02268"
+  },
+  "learned:last_goal_result": {
+   "value": {
+    "goal_id": "G07",
+    "status": "failed",
+    "attribution": "n/a"
+   },
+   "source": "outcome",
+   "ref": "outcome:G-01173",
+   "observed_at": "2026-10-04T15:05:27.876Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": null
+  },
+  "learned:push_undeliverable": {
+   "value": true,
+   "source": "outcome",
+   "ref": "outcome:G-01173",
+   "observed_at": "2026-10-04T15:05:27.876Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": null
+  }
+ },
+ "goals": [
+  {
+   "instance_id": "G-01173",
+   "user_id": "U-02934",
+   "goal_id": "G07",
+   "arm": "agent",
+   "status": "judged:failed",
+   "rule_version": 1,
+   "started_at": "2026-10-01T15:05:27.876Z",
+   "deadline": "2026-10-04T15:05:27.876Z",
+   "decision_id": "D-02102",
+   "params": {
+    "slug": "bagi-baya-d4",
+    "title_id": "T1811",
+    "next_episode_number": 1
+   },
+   "closed_at": "2026-10-04T15:05:27.876Z",
+   "close_reason": null
+  }
+ ],
+ "decisions": [
+  {
+   "decision_id": "D-02102",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE+PUSH",
+   "no_action_reason": null,
+   "goal": {
+    "id": "G07",
+    "name": "resume_series_3d",
+    "instance_id": "G-01173",
+    "started_at": "2026-10-01T15:05:27.876Z",
+    "deadline": "2026-10-04T15:05:27.876Z",
+    "rule_version": 1,
+    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
+    "carried_over": false,
+    "params": {
+     "slug": "bagi-baya-d4",
+     "title_id": "T1811",
+     "next_episode_number": 1
+    }
+   },
+   "confidence": 0.7,
+   "published_at": "2026-10-01T15:05:27.876Z",
+   "trigger": "4b59ce24-9923-4a3f-8622-e0dae1fd1880"
+  },
+  {
+   "decision_id": "D-02268",
+   "status": "NO_ACTION",
+   "action": "NONE",
+   "no_action_reason": "page_already_live: an identical page for this dialect is still live; nothing to change",
+   "goal": {
+    "id": "G07",
+    "name": "resume_series_3d",
+    "instance_id": "G-01173",
+    "started_at": "2026-10-01T15:05:27.876Z",
+    "deadline": "2026-10-04T15:05:27.876Z",
+    "rule_version": 1,
+    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
+    "carried_over": true,
+    "params": {
+     "slug": "bagi-baya-d4",
+     "title_id": "T1811",
+     "next_episode_number": 1
+    }
+   },
+   "confidence": null,
+   "published_at": null,
+   "trigger": "92d61e1f-6c83-4bd7-8baa-93fbf75e0f1e"
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-00936",
+   "type": "home_page",
+   "status": "published",
+   "published_at": "2026-10-01T15:05:27.876Z",
+   "send_at": null,
+   "live_until": "2026-10-01T17:05:27.876Z",
+   "dialect": "d4"
+  },
+  {
+   "action_id": "A-00937",
+   "type": "push",
+   "status": "scheduled",
+   "published_at": "2026-10-01T15:05:27.876Z",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "live_until": null,
+   "dialect": null
+  }
+ ],
+ "outcomes": [
+  {
+   "instance_id": "G-01173",
+   "user_id": "U-02934",
+   "goal_id": "G07",
+   "arm": "agent",
+   "decision_id": "D-02102",
+   "rule_version": 1,
+   "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
+   "started_at": "2026-10-01T15:05:27.876Z",
+   "deadline": "2026-10-04T15:05:27.876Z",
+   "status": "failed",
+   "detail": "no play_started (same content_slug as the unfinished series) by deadline",
+   "evidence": [],
+   "success_at": null,
+   "first_exposure_at": "2026-10-01T15:06:04.852Z",
+   "pages_shown": 2,
+   "messages_delivered": 0,
+   "messages_clicked": 0,
+   "message_failures": [
+    "token_invalid"
+   ],
+   "attribution": "n/a",
+   "learning": "page seen 2 time(s); message failed (token_invalid): do not retry push, prefer the home page; goal not reached: next time try a different lever or a lower-effort goal",
+   "closed_early": null
+  }
+ ],
+ "journal": [
+  {
+   "at": "2026-10-01T15:05:27.876Z",
+   "kind": "goal_committed",
+   "instance_id": "G-01173",
+   "goal_id": "G07",
+   "arm": "agent",
+   "decision_id": "D-02102"
+  },
+  {
+   "at": "2026-10-04T15:05:27.876Z",
+   "kind": "learning",
+   "instance_id": "G-01173",
+   "learning": "page seen 2 time(s); message failed (token_invalid): do not retry push, prefer the home page; goal not reached: next time try a different lever or a lower-effort goal"
+  }
+ ]
+}

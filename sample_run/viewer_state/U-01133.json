@@ -1,0 +1,304 @@
+{
+ "viewer_id": "U-01133",
+ "arm": "agent",
+ "facts_latest": {
+  "profile_present": {
+   "value": true,
+   "source": "profile_snapshot",
+   "ref": "profile:U-01133@2026-09-29T12:53:53.610Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 136013,
+   "conflicts": [],
+   "as_of_decision": "D-01759"
+  },
+  "page_dialect": {
+   "value": "d7",
+   "source": "app_setting",
+   "ref": "event:c76beb6f-6e7d-4fb6-a40a-73356d637e26",
+   "observed_at": "2026-10-01T13:46:53.082Z",
+   "age_s_at_decision": 0,
+   "conflicts": [
+    "profile:d5"
+   ],
+   "as_of_decision": "D-01759"
+  },
+  "app_language": {
+   "value": "hin",
+   "source": "app_setting",
+   "ref": "event:c76beb6f-6e7d-4fb6-a40a-73356d637e26",
+   "observed_at": "2026-10-01T13:46:53.082Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01759"
+  },
+  "profile_dialect": {
+   "value": "d5",
+   "source": "profile_snapshot",
+   "ref": "profile:U-01133@2026-09-29T12:53:53.610Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 136013,
+   "conflicts": [],
+   "as_of_decision": "D-01759"
+  },
+  "signup_at": {
+   "value": "2024-12-30T22:40:14.215Z",
+   "source": "profile_snapshot",
+   "ref": "profile:U-01133@2026-09-29T12:53:53.610Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 136013,
+   "conflicts": [],
+   "as_of_decision": "D-01759"
+  },
+  "subscription_status": {
+   "value": "never",
+   "source": "profile_snapshot",
+   "ref": "profile:U-01133@2026-09-29T12:53:53.610Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 136013,
+   "conflicts": [],
+   "as_of_decision": "D-01759"
+  },
+  "lapsed_at": {
+   "value": null,
+   "source": "profile_snapshot",
+   "ref": "profile:U-01133@2026-09-29T12:53:53.610Z",
+   "observed_at": null,
+   "age_s_at_decision": null,
+   "conflicts": [],
+   "as_of_decision": "D-01759"
+  },
+  "ever_paid": {
+   "value": false,
+   "source": "event+profile",
+   "ref": "profile:U-01133@2026-09-29T12:53:53.610Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 136013,
+   "conflicts": [],
+   "as_of_decision": "D-01759"
+  },
+  "trial_ends_at": {
+   "value": null,
+   "source": "profile_snapshot",
+   "ref": "profile:U-01133@2026-09-29T12:53:53.610Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 136013,
+   "conflicts": [],
+   "as_of_decision": "D-01759"
+  },
+  "consent_push": {
+   "value": true,
+   "source": "profile_snapshot",
+   "ref": "profile:U-01133@2026-09-29T12:53:53.610Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 136013,
+   "conflicts": [],
+   "as_of_decision": "D-01759"
+  },
+  "consent_whatsapp": {
+   "value": false,
+   "source": "profile_snapshot",
+   "ref": "profile:U-01133@2026-09-29T12:53:53.610Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 136013,
+   "conflicts": [],
+   "as_of_decision": "D-01759"
+  },
+  "ever_played": {
+   "value": true,
+   "source": "event",
+   "ref": "event:4bb5bddf-62ac-4da3-97c0-1e9124cf5730",
+   "observed_at": "2026-09-06T16:45:37.829Z",
+   "age_s_at_decision": 2149275,
+   "conflicts": [],
+   "as_of_decision": "D-01759"
+  },
+  "ever_completed": {
+   "value": true,
+   "source": "event",
+   "ref": "event:f8d17a8f-b935-4c82-97c2-4f28f591340e",
+   "observed_at": "2026-09-06T19:00:54.096Z",
+   "age_s_at_decision": 2141158,
+   "conflicts": [],
+   "as_of_decision": "D-01759"
+  },
+  "last_app_open": {
+   "value": "2026-09-23T09:23:52.866Z",
+   "source": "event",
+   "ref": "event:96722989-67cf-4a5c-b57d-7e6b17c79580",
+   "observed_at": "2026-09-23T09:23:52.866Z",
+   "age_s_at_decision": 706980,
+   "conflicts": [],
+   "as_of_decision": "D-01759"
+  },
+  "first_seen": {
+   "value": "2026-09-05T01:57:09.084Z",
+   "source": "event",
+   "ref": null,
+   "observed_at": null,
+   "age_s_at_decision": null,
+   "conflicts": [],
+   "as_of_decision": "D-01759"
+  },
+  "play_days_14d": {
+   "value": [],
+   "source": "event",
+   "ref": "events:play_started(last 14d)",
+   "observed_at": "2026-10-01T13:46:53.082Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01759"
+  },
+  "top_genres": {
+   "value": [
+    "Devotional",
+    "Romance"
+   ],
+   "source": "event",
+   "ref": "events:play_started",
+   "observed_at": "2026-10-01T13:46:53.082Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01759"
+  },
+  "watched_slugs": {
+   "value": [
+    "yakani-panine-d1"
+   ],
+   "source": "event",
+   "ref": "events:play_started",
+   "observed_at": "2026-10-01T13:46:53.082Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01759"
+  },
+  "unfinished_series": {
+   "value": [],
+   "source": "event+episodes",
+   "ref": "events:play_started,episode_completed;episodes.csv",
+   "observed_at": "2026-10-01T13:46:53.082Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01759"
+  },
+  "messages_by_ist_day": {
+   "value": {},
+   "source": "event",
+   "ref": "events:message_delivered",
+   "observed_at": "2026-10-01T13:46:53.082Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01759"
+  },
+  "trigger_buffered_s": {
+   "value": 206,
+   "source": "event_clock_delta",
+   "ref": "event:c76beb6f-6e7d-4fb6-a40a-73356d637e26",
+   "observed_at": "2026-10-01T13:46:53.082Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01759"
+  },
+  "learned:last_goal_result": {
+   "value": {
+    "goal_id": "G05",
+    "status": "failed",
+    "attribution": "n/a"
+   },
+   "source": "outcome",
+   "ref": "outcome:G-00978",
+   "observed_at": "2026-10-08T13:46:53.517Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": null
+  },
+  "learned:page_not_seen": {
+   "value": true,
+   "source": "outcome",
+   "ref": "outcome:G-00978",
+   "observed_at": "2026-10-08T13:46:53.517Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": null
+  }
+ },
+ "goals": [
+  {
+   "instance_id": "G-00978",
+   "user_id": "U-01133",
+   "goal_id": "G05",
+   "arm": "agent",
+   "status": "judged:failed",
+   "rule_version": 1,
+   "started_at": "2026-10-01T13:46:53.517Z",
+   "deadline": "2026-10-08T13:46:53.517Z",
+   "decision_id": "D-01759",
+   "params": {},
+   "closed_at": "2026-10-08T13:46:53.517Z",
+   "close_reason": null
+  }
+ ],
+ "decisions": [
+  {
+   "decision_id": "D-01759",
+   "status": "NO_ACTION",
+   "action": "NONE",
+   "no_action_reason": "invalid_app_dialect: the app is set to 'd7', which has no catalogue; the app would not show a page in any other dialect, so there is nothing safe to publish",
+   "goal": {
+    "id": "G05",
+    "name": "first_paid_7d",
+    "instance_id": "G-00978",
+    "started_at": "2026-10-01T13:46:53.517Z",
+    "deadline": "2026-10-08T13:46:53.517Z",
+    "rule_version": 1,
+    "success_signal": "purchase_completed (is_trial = false) within 168h",
+    "carried_over": false,
+    "params": {}
+   },
+   "confidence": null,
+   "published_at": null,
+   "trigger": "c76beb6f-6e7d-4fb6-a40a-73356d637e26"
+  }
+ ],
+ "actions": [],
+ "outcomes": [
+  {
+   "instance_id": "G-00978",
+   "user_id": "U-01133",
+   "goal_id": "G05",
+   "arm": "agent",
+   "decision_id": "D-01759",
+   "rule_version": 1,
+   "success_signal": "purchase_completed (is_trial = false) within 168h",
+   "started_at": "2026-10-01T13:46:53.517Z",
+   "deadline": "2026-10-08T13:46:53.517Z",
+   "status": "failed",
+   "detail": "no purchase_completed (is_trial = false) by deadline",
+   "evidence": [],
+   "success_at": null,
+   "first_exposure_at": null,
+   "pages_shown": 0,
+   "messages_delivered": 0,
+   "messages_clicked": 0,
+   "message_failures": [],
+   "attribution": "n/a",
+   "learning": "agent took no action for this goal; goal not reached: next time try a different lever or a lower-effort goal",
+   "closed_early": null
+  }
+ ],
+ "journal": [
+  {
+   "at": "2026-10-01T13:46:53.517Z",
+   "kind": "goal_committed",
+   "instance_id": "G-00978",
+   "goal_id": "G05",
+   "arm": "agent",
+   "decision_id": "D-01759"
+  },
+  {
+   "at": "2026-10-08T13:46:53.517Z",
+   "kind": "learning",
+   "instance_id": "G-00978",
+   "learning": "agent took no action for this goal; goal not reached: next time try a different lever or a lower-effort goal"
+  }
+ ]
+}

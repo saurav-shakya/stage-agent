@@ -1,0 +1,371 @@
+{
+ "viewer_id": "U-04158",
+ "arm": "agent",
+ "facts_latest": {
+  "profile_present": {
+   "value": true,
+   "source": "profile_snapshot",
+   "ref": "profile:U-04158@2026-09-29T08:35:53.890Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 150452,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "page_dialect": {
+   "value": "d6",
+   "source": "app_setting",
+   "ref": "event:71448377-b3fc-45aa-a9b2-e1b6a90c2745",
+   "observed_at": "2026-10-01T17:47:32.676Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "app_language": {
+   "value": "en",
+   "source": "app_setting",
+   "ref": "event:71448377-b3fc-45aa-a9b2-e1b6a90c2745",
+   "observed_at": "2026-10-01T17:47:32.676Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "profile_dialect": {
+   "value": "d6",
+   "source": "profile_snapshot",
+   "ref": "profile:U-04158@2026-09-29T08:35:53.890Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 150452,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "deeplink": {
+   "value": {
+    "campaign": "cmp007",
+    "dialect": "d4",
+    "title_id": "T0915"
+   },
+   "source": "campaign_link",
+   "ref": "event:468a0f67-c2c0-44ff-9f0a-de7f08fdccc8",
+   "observed_at": "2026-10-01T05:59:53.304Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-00745"
+  },
+  "signup_at": {
+   "value": "2025-03-22T00:38:23.463Z",
+   "source": "profile_snapshot",
+   "ref": "profile:U-04158@2026-09-29T08:35:53.890Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 150452,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "subscription_status": {
+   "value": "never",
+   "source": "profile_snapshot",
+   "ref": "profile:U-04158@2026-09-29T08:35:53.890Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 150452,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "lapsed_at": {
+   "value": null,
+   "source": "profile_snapshot",
+   "ref": "profile:U-04158@2026-09-29T08:35:53.890Z",
+   "observed_at": null,
+   "age_s_at_decision": null,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "ever_paid": {
+   "value": false,
+   "source": "event+profile",
+   "ref": "profile:U-04158@2026-09-29T08:35:53.890Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 150452,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "trial_ends_at": {
+   "value": null,
+   "source": "profile_snapshot",
+   "ref": "profile:U-04158@2026-09-29T08:35:53.890Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 150452,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "consent_push": {
+   "value": false,
+   "source": "profile_snapshot",
+   "ref": "profile:U-04158@2026-09-29T08:35:53.890Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 150452,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "consent_whatsapp": {
+   "value": true,
+   "source": "profile_snapshot",
+   "ref": "profile:U-04158@2026-09-29T08:35:53.890Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 150452,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "ever_played": {
+   "value": true,
+   "source": "event",
+   "ref": "event:8777f54d-ebef-4826-ad7e-cf7734e31809",
+   "observed_at": "2026-09-22T15:17:23.393Z",
+   "age_s_at_decision": 786609,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "ever_completed": {
+   "value": true,
+   "source": "event",
+   "ref": "event:63c4e0c7-c5dc-486d-ba08-06eae59100c7",
+   "observed_at": "2026-09-22T15:19:14.039Z",
+   "age_s_at_decision": 786498,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "last_app_open": {
+   "value": "2026-10-01T05:59:53.304Z",
+   "source": "event",
+   "ref": "event:468a0f67-c2c0-44ff-9f0a-de7f08fdccc8",
+   "observed_at": "2026-10-01T05:59:53.304Z",
+   "age_s_at_decision": 42459,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "first_seen": {
+   "value": "2026-09-03T17:49:20.409Z",
+   "source": "event",
+   "ref": null,
+   "observed_at": null,
+   "age_s_at_decision": null,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "play_days_14d": {
+   "value": [
+    "2026-09-22",
+    "2026-09-23"
+   ],
+   "source": "event",
+   "ref": "events:play_started(last 14d)",
+   "observed_at": "2026-10-01T17:47:32.676Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "top_genres": {
+   "value": [
+    "Romance",
+    "Family"
+   ],
+   "source": "event",
+   "ref": "events:play_started",
+   "observed_at": "2026-10-01T17:47:32.676Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "watched_slugs": {
+   "value": [
+    "bhari-vagi-d6"
+   ],
+   "source": "event",
+   "ref": "events:play_started",
+   "observed_at": "2026-10-01T17:47:32.676Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "unfinished_series": {
+   "value": [
+    {
+     "slug": "bhari-vagi-d6",
+     "title_id": "T1393",
+     "next_episode_index": 2,
+     "next_episode_number": 3,
+     "episodes_total": 26,
+     "last_play": "2026-09-23T17:00:50.365Z",
+     "idle_days": 8.03,
+     "evidence": "event:e7b8cb4e-2388-4f76-b129-e6da5e371280"
+    }
+   ],
+   "source": "event+episodes",
+   "ref": "events:play_started,episode_completed;episodes.csv",
+   "observed_at": "2026-10-01T17:47:32.676Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "messages_by_ist_day": {
+   "value": {},
+   "source": "event",
+   "ref": "events:message_delivered",
+   "observed_at": "2026-10-01T17:47:32.676Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "trigger_buffered_s": {
+   "value": 0,
+   "source": "event_clock_delta",
+   "ref": "event:71448377-b3fc-45aa-a9b2-e1b6a90c2745",
+   "observed_at": "2026-10-01T17:47:32.676Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02703"
+  },
+  "learned:last_goal_result": {
+   "value": {
+    "goal_id": "G07",
+    "status": "failed",
+    "attribution": "n/a"
+   },
+   "source": "outcome",
+   "ref": "outcome:G-00373",
+   "observed_at": "2026-10-04T05:59:54.086Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": null
+  }
+ },
+ "goals": [
+  {
+   "instance_id": "G-00373",
+   "user_id": "U-04158",
+   "goal_id": "G07",
+   "arm": "agent",
+   "status": "judged:failed",
+   "rule_version": 1,
+   "started_at": "2026-10-01T05:59:54.086Z",
+   "deadline": "2026-10-04T05:59:54.086Z",
+   "decision_id": "D-00745",
+   "params": {
+    "slug": "bhari-vagi-d6",
+    "title_id": "T1393",
+    "next_episode_number": 3
+   },
+   "closed_at": "2026-10-04T05:59:54.086Z",
+   "close_reason": null
+  }
+ ],
+ "decisions": [
+  {
+   "decision_id": "D-00745",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "no_action_reason": null,
+   "goal": {
+    "id": "G07",
+    "name": "resume_series_3d",
+    "instance_id": "G-00373",
+    "started_at": "2026-10-01T05:59:54.086Z",
+    "deadline": "2026-10-04T05:59:54.086Z",
+    "rule_version": 1,
+    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
+    "carried_over": false,
+    "params": {
+     "slug": "bhari-vagi-d6",
+     "title_id": "T1393",
+     "next_episode_number": 3
+    }
+   },
+   "confidence": 0.6,
+   "published_at": "2026-10-01T05:59:54.086Z",
+   "trigger": "468a0f67-c2c0-44ff-9f0a-de7f08fdccc8"
+  },
+  {
+   "decision_id": "D-02703",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE",
+   "no_action_reason": null,
+   "goal": {
+    "id": "G07",
+    "name": "resume_series_3d",
+    "instance_id": "G-00373",
+    "started_at": "2026-10-01T05:59:54.086Z",
+    "deadline": "2026-10-04T05:59:54.086Z",
+    "rule_version": 1,
+    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
+    "carried_over": true,
+    "params": {
+     "slug": "bhari-vagi-d6",
+     "title_id": "T1393",
+     "next_episode_number": 3
+    }
+   },
+   "confidence": 0.7,
+   "published_at": "2026-10-01T17:47:32.721Z",
+   "trigger": "71448377-b3fc-45aa-a9b2-e1b6a90c2745"
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-00262",
+   "type": "home_page",
+   "status": "published",
+   "published_at": "2026-10-01T05:59:54.086Z",
+   "send_at": null,
+   "live_until": "2026-10-01T07:59:54.086Z",
+   "dialect": "d6"
+  },
+  {
+   "action_id": "A-01185",
+   "type": "home_page",
+   "status": "published",
+   "published_at": "2026-10-01T17:47:32.721Z",
+   "send_at": null,
+   "live_until": "2026-10-01T19:47:32.721Z",
+   "dialect": "d6"
+  }
+ ],
+ "outcomes": [
+  {
+   "instance_id": "G-00373",
+   "user_id": "U-04158",
+   "goal_id": "G07",
+   "arm": "agent",
+   "decision_id": "D-00745",
+   "rule_version": 1,
+   "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
+   "started_at": "2026-10-01T05:59:54.086Z",
+   "deadline": "2026-10-04T05:59:54.086Z",
+   "status": "failed",
+   "detail": "no play_started (same content_slug as the unfinished series) by deadline",
+   "evidence": [],
+   "success_at": null,
+   "first_exposure_at": "2026-10-01T06:00:25.304Z",
+   "pages_shown": 2,
+   "messages_delivered": 0,
+   "messages_clicked": 0,
+   "message_failures": [],
+   "attribution": "n/a",
+   "learning": "page seen 2 time(s); goal not reached: next time try a different lever or a lower-effort goal",
+   "closed_early": null
+  }
+ ],
+ "journal": [
+  {
+   "at": "2026-10-01T05:59:54.086Z",
+   "kind": "goal_committed",
+   "instance_id": "G-00373",
+   "goal_id": "G07",
+   "arm": "agent",
+   "decision_id": "D-00745"
+  },
+  {
+   "at": "2026-10-04T05:59:54.086Z",
+   "kind": "learning",
+   "instance_id": "G-00373",
+   "learning": "page seen 2 time(s); goal not reached: next time try a different lever or a lower-effort goal"
+  }
+ ]
+}

@@ -1,0 +1,337 @@
+{
+ "viewer_id": "U-01629",
+ "arm": "agent",
+ "facts_latest": {
+  "profile_present": {
+   "value": true,
+   "source": "profile_snapshot",
+   "ref": "profile:U-01629@2026-09-29T04:20:22.756Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 137948,
+   "conflicts": [],
+   "as_of_decision": "D-01864"
+  },
+  "page_dialect": {
+   "value": "d6",
+   "source": "app_setting",
+   "ref": "event:55472681-9c30-41aa-b8ec-467c315e5fe0",
+   "observed_at": "2026-10-01T14:19:08.988Z",
+   "age_s_at_decision": 0,
+   "conflicts": [
+    "profile:d2"
+   ],
+   "as_of_decision": "D-01864"
+  },
+  "app_language": {
+   "value": "hin",
+   "source": "app_setting",
+   "ref": "event:55472681-9c30-41aa-b8ec-467c315e5fe0",
+   "observed_at": "2026-10-01T14:19:08.988Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01864"
+  },
+  "profile_dialect": {
+   "value": "d2",
+   "source": "profile_snapshot",
+   "ref": "profile:U-01629@2026-09-29T04:20:22.756Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 137948,
+   "conflicts": [],
+   "as_of_decision": "D-01864"
+  },
+  "signup_at": {
+   "value": "2025-06-16T19:27:19.323Z",
+   "source": "profile_snapshot",
+   "ref": "profile:U-01629@2026-09-29T04:20:22.756Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 137948,
+   "conflicts": [],
+   "as_of_decision": "D-01864"
+  },
+  "subscription_status": {
+   "value": "active",
+   "source": "profile_snapshot",
+   "ref": "profile:U-01629@2026-09-29T04:20:22.756Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 137948,
+   "conflicts": [],
+   "as_of_decision": "D-01864"
+  },
+  "lapsed_at": {
+   "value": null,
+   "source": "profile_snapshot",
+   "ref": "profile:U-01629@2026-09-29T04:20:22.756Z",
+   "observed_at": null,
+   "age_s_at_decision": null,
+   "conflicts": [],
+   "as_of_decision": "D-01864"
+  },
+  "ever_paid": {
+   "value": true,
+   "source": "event+profile",
+   "ref": "profile:U-01629@2026-09-29T04:20:22.756Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 137948,
+   "conflicts": [],
+   "as_of_decision": "D-01864"
+  },
+  "trial_ends_at": {
+   "value": null,
+   "source": "profile_snapshot",
+   "ref": "profile:U-01629@2026-09-29T04:20:22.756Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 137948,
+   "conflicts": [],
+   "as_of_decision": "D-01864"
+  },
+  "consent_push": {
+   "value": true,
+   "source": "profile_snapshot",
+   "ref": "profile:U-01629@2026-09-29T04:20:22.756Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 137948,
+   "conflicts": [],
+   "as_of_decision": "D-01864"
+  },
+  "consent_whatsapp": {
+   "value": false,
+   "source": "profile_snapshot",
+   "ref": "profile:U-01629@2026-09-29T04:20:22.756Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 137948,
+   "conflicts": [],
+   "as_of_decision": "D-01864"
+  },
+  "ever_played": {
+   "value": true,
+   "source": "event",
+   "ref": "event:a17c76d6-f291-4908-9138-fc047a27e455",
+   "observed_at": "2026-09-02T23:08:11.514Z",
+   "age_s_at_decision": 2473857,
+   "conflicts": [],
+   "as_of_decision": "D-01864"
+  },
+  "ever_completed": {
+   "value": true,
+   "source": "event",
+   "ref": "event:ef65ff1a-c1ce-439d-9e13-c0373a9b0694",
+   "observed_at": "2026-09-04T19:45:34.401Z",
+   "age_s_at_decision": 2313214,
+   "conflicts": [],
+   "as_of_decision": "D-01864"
+  },
+  "last_app_open": {
+   "value": "2026-09-27T15:30:25.980Z",
+   "source": "event",
+   "ref": "event:5fb3cd46-fe2e-4497-9ee7-9ce011c22664",
+   "observed_at": "2026-09-27T15:30:25.980Z",
+   "age_s_at_decision": 341323,
+   "conflicts": [],
+   "as_of_decision": "D-01864"
+  },
+  "first_seen": {
+   "value": "2026-09-02T23:05:27.886Z",
+   "source": "event",
+   "ref": null,
+   "observed_at": null,
+   "age_s_at_decision": null,
+   "conflicts": [],
+   "as_of_decision": "D-01864"
+  },
+  "play_days_14d": {
+   "value": [
+    "2026-09-27"
+   ],
+   "source": "event",
+   "ref": "events:play_started(last 14d)",
+   "observed_at": "2026-10-01T14:19:08.988Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01864"
+  },
+  "top_genres": {
+   "value": [
+    "Thriller",
+    "Devotional",
+    "Comedy"
+   ],
+   "source": "event",
+   "ref": "events:play_started",
+   "observed_at": "2026-10-01T14:19:08.988Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01864"
+  },
+  "watched_slugs": {
+   "value": [
+    "rasuya-moni-d6",
+    "sajachu-jabha-d6"
+   ],
+   "source": "event",
+   "ref": "events:play_started",
+   "observed_at": "2026-10-01T14:19:08.988Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01864"
+  },
+  "unfinished_series": {
+   "value": [
+    {
+     "slug": "rasuya-moni-d6",
+     "title_id": "T1976",
+     "next_episode_index": 1,
+     "next_episode_number": 2,
+     "episodes_total": 9,
+     "last_play": "2026-09-27T07:54:14.791Z",
+     "idle_days": 4.27,
+     "evidence": "event:74973a22-0529-42cd-aef4-37b99d41967a"
+    }
+   ],
+   "source": "event+episodes",
+   "ref": "events:play_started,episode_completed;episodes.csv",
+   "observed_at": "2026-10-01T14:19:08.988Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01864"
+  },
+  "messages_by_ist_day": {
+   "value": {},
+   "source": "event",
+   "ref": "events:message_delivered",
+   "observed_at": "2026-10-01T14:19:08.988Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01864"
+  },
+  "trigger_buffered_s": {
+   "value": 0,
+   "source": "event_clock_delta",
+   "ref": "event:55472681-9c30-41aa-b8ec-467c315e5fe0",
+   "observed_at": "2026-10-01T14:19:08.988Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01864"
+  },
+  "learned:last_goal_result": {
+   "value": {
+    "goal_id": "G07",
+    "status": "failed",
+    "attribution": "n/a"
+   },
+   "source": "outcome",
+   "ref": "outcome:G-01032",
+   "observed_at": "2026-10-04T14:19:09.682Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": null
+  }
+ },
+ "goals": [
+  {
+   "instance_id": "G-01032",
+   "user_id": "U-01629",
+   "goal_id": "G07",
+   "arm": "agent",
+   "status": "judged:failed",
+   "rule_version": 1,
+   "started_at": "2026-10-01T14:19:09.682Z",
+   "deadline": "2026-10-04T14:19:09.682Z",
+   "decision_id": "D-01864",
+   "params": {
+    "slug": "rasuya-moni-d6",
+    "title_id": "T1976",
+    "next_episode_number": 2
+   },
+   "closed_at": "2026-10-04T14:19:09.682Z",
+   "close_reason": null
+  }
+ ],
+ "decisions": [
+  {
+   "decision_id": "D-01864",
+   "status": "PUBLISHED",
+   "action": "HOME_PAGE+PUSH",
+   "no_action_reason": null,
+   "goal": {
+    "id": "G07",
+    "name": "resume_series_3d",
+    "instance_id": "G-01032",
+    "started_at": "2026-10-01T14:19:09.682Z",
+    "deadline": "2026-10-04T14:19:09.682Z",
+    "rule_version": 1,
+    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
+    "carried_over": false,
+    "params": {
+     "slug": "rasuya-moni-d6",
+     "title_id": "T1976",
+     "next_episode_number": 2
+    }
+   },
+   "confidence": 0.6,
+   "published_at": "2026-10-01T14:19:09.682Z",
+   "trigger": "55472681-9c30-41aa-b8ec-467c315e5fe0"
+  }
+ ],
+ "actions": [
+  {
+   "action_id": "A-00821",
+   "type": "home_page",
+   "status": "published",
+   "published_at": "2026-10-01T14:19:09.682Z",
+   "send_at": null,
+   "live_until": "2026-10-01T16:19:09.682Z",
+   "dialect": "d6"
+  },
+  {
+   "action_id": "A-00822",
+   "type": "push",
+   "status": "scheduled",
+   "published_at": "2026-10-01T14:19:09.682Z",
+   "send_at": "2026-10-02T13:30:00.000Z",
+   "live_until": null,
+   "dialect": null
+  }
+ ],
+ "outcomes": [
+  {
+   "instance_id": "G-01032",
+   "user_id": "U-01629",
+   "goal_id": "G07",
+   "arm": "agent",
+   "decision_id": "D-01864",
+   "rule_version": 1,
+   "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
+   "started_at": "2026-10-01T14:19:09.682Z",
+   "deadline": "2026-10-04T14:19:09.682Z",
+   "status": "failed",
+   "detail": "no play_started (same content_slug as the unfinished series) by deadline",
+   "evidence": [],
+   "success_at": null,
+   "first_exposure_at": "2026-10-01T14:19:15.988Z",
+   "pages_shown": 1,
+   "messages_delivered": 1,
+   "messages_clicked": 0,
+   "message_failures": [],
+   "attribution": "n/a",
+   "learning": "page seen 1 time(s); goal not reached: next time try a different lever or a lower-effort goal",
+   "closed_early": null
+  }
+ ],
+ "journal": [
+  {
+   "at": "2026-10-01T14:19:09.682Z",
+   "kind": "goal_committed",
+   "instance_id": "G-01032",
+   "goal_id": "G07",
+   "arm": "agent",
+   "decision_id": "D-01864"
+  },
+  {
+   "at": "2026-10-04T14:19:09.682Z",
+   "kind": "learning",
+   "instance_id": "G-01032",
+   "learning": "page seen 1 time(s); goal not reached: next time try a different lever or a lower-effort goal"
+  }
+ ]
+}

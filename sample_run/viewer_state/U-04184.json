@@ -1,0 +1,363 @@
+{
+ "viewer_id": "U-04184",
+ "arm": "holdout",
+ "facts_latest": {
+  "profile_present": {
+   "value": true,
+   "source": "profile_snapshot",
+   "ref": "profile:U-04184@2026-09-29T11:38:19.100Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 140913,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "page_dialect": {
+   "value": "d5",
+   "source": "app_setting",
+   "ref": "event:545d5e73-bf5b-4db8-a61f-2869f09626a2",
+   "observed_at": "2026-10-01T15:08:33.061Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "app_language": {
+   "value": "hin",
+   "source": "app_setting",
+   "ref": "event:545d5e73-bf5b-4db8-a61f-2869f09626a2",
+   "observed_at": "2026-10-01T15:08:33.061Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "profile_dialect": {
+   "value": "d5",
+   "source": "profile_snapshot",
+   "ref": "profile:U-04184@2026-09-29T11:38:19.100Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 140913,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "deeplink": {
+   "value": {
+    "campaign": "cmp042",
+    "dialect": "d1",
+    "title_id": "T0002"
+   },
+   "source": "campaign_link",
+   "ref": "event:696e0ab5-15e7-4a55-a3be-60e88a32ee4e",
+   "observed_at": "2026-10-01T03:50:31.669Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-00277"
+  },
+  "signup_at": {
+   "value": "2026-09-20T18:09:05.703Z",
+   "source": "event",
+   "ref": "event:7708d4e0-3daf-48b5-93c6-9234e353f7b6",
+   "observed_at": "2026-09-20T18:09:05.703Z",
+   "age_s_at_decision": 939567,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "subscription_status": {
+   "value": "never",
+   "source": "profile_snapshot",
+   "ref": "profile:U-04184@2026-09-29T11:38:19.100Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 140913,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "lapsed_at": {
+   "value": null,
+   "source": "profile_snapshot",
+   "ref": "profile:U-04184@2026-09-29T11:38:19.100Z",
+   "observed_at": null,
+   "age_s_at_decision": null,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "ever_paid": {
+   "value": false,
+   "source": "event+profile",
+   "ref": "profile:U-04184@2026-09-29T11:38:19.100Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 140913,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "trial_ends_at": {
+   "value": null,
+   "source": "profile_snapshot",
+   "ref": "profile:U-04184@2026-09-29T11:38:19.100Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 140913,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "consent_push": {
+   "value": true,
+   "source": "profile_snapshot",
+   "ref": "profile:U-04184@2026-09-29T11:38:19.100Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 140913,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "consent_whatsapp": {
+   "value": true,
+   "source": "profile_snapshot",
+   "ref": "profile:U-04184@2026-09-29T11:38:19.100Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 140913,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "ever_played": {
+   "value": true,
+   "source": "event",
+   "ref": "event:869041b2-3736-49a0-b997-43bc17c47e3e",
+   "observed_at": "2026-09-20T18:11:19.086Z",
+   "age_s_at_decision": 939433,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "ever_completed": {
+   "value": true,
+   "source": "event",
+   "ref": "event:06cf30f1-abed-4d80-8dcd-9cdf5c857474",
+   "observed_at": "2026-09-20T18:14:03.555Z",
+   "age_s_at_decision": 939269,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "last_app_open": {
+   "value": "2026-10-01T07:15:29.220Z",
+   "source": "event",
+   "ref": "event:558aa176-4487-4a30-9353-712ce5ea333a",
+   "observed_at": "2026-10-01T07:15:29.220Z",
+   "age_s_at_decision": 28383,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "first_seen": {
+   "value": "2026-09-20T18:09:05.703Z",
+   "source": "event",
+   "ref": null,
+   "observed_at": null,
+   "age_s_at_decision": null,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "play_days_14d": {
+   "value": [
+    "2026-09-20",
+    "2026-09-27"
+   ],
+   "source": "event",
+   "ref": "events:play_started(last 14d)",
+   "observed_at": "2026-10-01T15:08:33.061Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "top_genres": {
+   "value": [
+    "Devotional"
+   ],
+   "source": "event",
+   "ref": "events:play_started",
+   "observed_at": "2026-10-01T15:08:33.061Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "watched_slugs": {
+   "value": [
+    "gubava-gihaya-d5"
+   ],
+   "source": "event",
+   "ref": "events:play_started",
+   "observed_at": "2026-10-01T15:08:33.061Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "unfinished_series": {
+   "value": [
+    {
+     "slug": "gubava-gihaya-d5",
+     "title_id": "T1177",
+     "next_episode_index": 2,
+     "next_episode_number": 3,
+     "episodes_total": 29,
+     "last_play": "2026-09-27T07:46:29.522Z",
+     "idle_days": 4.31,
+     "evidence": "event:6af14db9-639e-4f04-918a-3aa5afff7ce2"
+    }
+   ],
+   "source": "event+episodes",
+   "ref": "events:play_started,episode_completed;episodes.csv",
+   "observed_at": "2026-10-01T15:08:33.061Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "messages_by_ist_day": {
+   "value": {},
+   "source": "event",
+   "ref": "events:message_delivered",
+   "observed_at": "2026-10-01T15:08:33.061Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "trigger_buffered_s": {
+   "value": 0,
+   "source": "event_clock_delta",
+   "ref": "event:545d5e73-bf5b-4db8-a61f-2869f09626a2",
+   "observed_at": "2026-10-01T15:08:33.061Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-02161"
+  },
+  "learned:last_goal_result": {
+   "value": {
+    "goal_id": "G07",
+    "status": "failed",
+    "attribution": "holdout_shadow_goal"
+   },
+   "source": "outcome",
+   "ref": "outcome:G-00212",
+   "observed_at": "2026-10-04T03:50:31.729Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": null
+  }
+ },
+ "goals": [
+  {
+   "instance_id": "G-00212",
+   "user_id": "U-04184",
+   "goal_id": "G07",
+   "arm": "holdout",
+   "status": "judged:failed",
+   "rule_version": 1,
+   "started_at": "2026-10-01T03:50:31.729Z",
+   "deadline": "2026-10-04T03:50:31.729Z",
+   "decision_id": "D-00277",
+   "params": {
+    "slug": "gubava-gihaya-d5",
+    "title_id": "T1177",
+    "next_episode_number": 3
+   },
+   "closed_at": "2026-10-04T03:50:31.729Z",
+   "close_reason": null
+  }
+ ],
+ "decisions": [
+  {
+   "decision_id": "D-00277",
+   "status": "NO_ACTION",
+   "action": "NONE",
+   "no_action_reason": "holdout_arm: randomized holdout receives no agent action (policy rule 5)",
+   "goal": {
+    "id": "G07",
+    "name": "resume_series_3d",
+    "instance_id": "G-00212",
+    "started_at": "2026-10-01T03:50:31.729Z",
+    "deadline": "2026-10-04T03:50:31.729Z",
+    "rule_version": 1,
+    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
+    "carried_over": false,
+    "params": {
+     "slug": "gubava-gihaya-d5",
+     "title_id": "T1177",
+     "next_episode_number": 3
+    },
+    "shadow": true
+   },
+   "confidence": null,
+   "published_at": null,
+   "trigger": "696e0ab5-15e7-4a55-a3be-60e88a32ee4e"
+  },
+  {
+   "decision_id": "D-01018",
+   "status": "NO_ACTION",
+   "action": "NONE",
+   "no_action_reason": "stale_trigger: app open happened 3336s before it reached us (held offline); the viewer has left that session, a page now would not be seen",
+   "goal": null,
+   "confidence": null,
+   "published_at": null,
+   "trigger": "558aa176-4487-4a30-9353-712ce5ea333a"
+  },
+  {
+   "decision_id": "D-02161",
+   "status": "NO_ACTION",
+   "action": "NONE",
+   "no_action_reason": "holdout_arm: randomized holdout receives no agent action (policy rule 5)",
+   "goal": {
+    "id": "G07",
+    "name": "resume_series_3d",
+    "instance_id": "G-00212",
+    "started_at": "2026-10-01T03:50:31.729Z",
+    "deadline": "2026-10-04T03:50:31.729Z",
+    "rule_version": 1,
+    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
+    "carried_over": true,
+    "params": {
+     "slug": "gubava-gihaya-d5",
+     "title_id": "T1177",
+     "next_episode_number": 3
+    },
+    "shadow": true
+   },
+   "confidence": null,
+   "published_at": null,
+   "trigger": "545d5e73-bf5b-4db8-a61f-2869f09626a2"
+  }
+ ],
+ "actions": [],
+ "outcomes": [
+  {
+   "instance_id": "G-00212",
+   "user_id": "U-04184",
+   "goal_id": "G07",
+   "arm": "holdout",
+   "decision_id": "D-00277",
+   "rule_version": 1,
+   "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
+   "started_at": "2026-10-01T03:50:31.729Z",
+   "deadline": "2026-10-04T03:50:31.729Z",
+   "status": "failed",
+   "detail": "no play_started (same content_slug as the unfinished series) by deadline",
+   "evidence": [],
+   "success_at": null,
+   "first_exposure_at": null,
+   "pages_shown": 0,
+   "messages_delivered": 0,
+   "messages_clicked": 0,
+   "message_failures": [],
+   "attribution": "holdout_shadow_goal",
+   "learning": "holdout: no action taken; outcome is the baseline for this kind of viewer",
+   "closed_early": null
+  }
+ ],
+ "journal": [
+  {
+   "at": "2026-10-01T03:50:31.729Z",
+   "kind": "goal_committed",
+   "instance_id": "G-00212",
+   "goal_id": "G07",
+   "arm": "holdout",
+   "decision_id": "D-00277"
+  },
+  {
+   "at": "2026-10-04T03:50:31.729Z",
+   "kind": "learning",
+   "instance_id": "G-00212",
+   "learning": "holdout: no action taken; outcome is the baseline for this kind of viewer"
+  }
+ ]
+}

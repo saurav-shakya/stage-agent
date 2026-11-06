@@ -1,0 +1,206 @@
+{
+  "impact": {
+    "arms": {
+      "holdout": 883,
+      "agent": 863
+    },
+    "itt": [
+      {
+        "metric": "committed goal reached (first goal per viewer; holdout = shadow goal)",
+        "agent_n": 863,
+        "agent_rate": 0.12166859791425261,
+        "holdout_n": 883,
+        "holdout_rate": 0.11098527746319366,
+        "diff_pts": 1.068332045105895,
+        "ci95_pts": 3.0082733872365983,
+        "p_value": 0.4863929134672797
+      },
+      {
+        "metric": "play_started within 72h",
+        "agent_n": 863,
+        "agent_rate": 0.6025492468134415,
+        "holdout_n": 883,
+        "holdout_rate": 0.5175537938844847,
+        "diff_pts": 8.499545292895672,
+        "ci95_pts": 4.639357999737237,
+        "p_value": 0.00032963670872624367
+      },
+      {
+        "metric": "episode_completed within 72h",
+        "agent_n": 863,
+        "agent_rate": 0.36732329084588644,
+        "holdout_n": 883,
+        "holdout_rate": 0.29331823329558326,
+        "diff_pts": 7.400505755030318,
+        "ci95_pts": 4.400353853422749,
+        "p_value": 0.0009795902915819199
+      },
+      {
+        "metric": "plays again on a later IST day within 7d",
+        "agent_n": 863,
+        "agent_rate": 0.5040556199304751,
+        "holdout_n": 883,
+        "holdout_rate": 0.5232163080407701,
+        "diff_pts": -1.9160688110295032,
+        "ci95_pts": 4.688389529360122,
+        "p_value": 0.42311993310866963
+      },
+      {
+        "metric": "paid purchase within 14d",
+        "agent_n": 863,
+        "agent_rate": 0.038238702201622246,
+        "holdout_n": 883,
+        "holdout_rate": 0.04077010192525481,
+        "diff_pts": -0.2531399723632567,
+        "ci95_pts": 1.8271629321424336,
+        "p_value": 0.785972993895782
+      }
+    ],
+    "per_goal": {
+      "G07": {
+        "agent": [
+          11,
+          317
+        ],
+        "holdout": [
+          11,
+          303
+        ]
+      },
+      "G02": {
+        "agent": [
+          29,
+          182
+        ],
+        "holdout": [
+          20,
+          158
+        ]
+      },
+      "G08": {
+        "agent": [
+          9,
+          45
+        ],
+        "holdout": [
+          11,
+          50
+        ]
+      },
+      "G06": {
+        "agent": [
+          5,
+          52
+        ],
+        "holdout": [
+          9,
+          63
+        ]
+      },
+      "G05": {
+        "agent": [
+          2,
+          45
+        ],
+        "holdout": [
+          3,
+          48
+        ]
+      },
+      "G12": {
+        "agent": [
+          22,
+          40
+        ],
+        "holdout": [
+          27,
+          54
+        ]
+      },
+      "G09": {
+        "agent": [
+          3,
+          12
+        ],
+        "holdout": [
+          2,
+          10
+        ]
+      },
+      "G01": {
+        "agent": [
+          24,
+          59
+        ],
+        "holdout": [
+          14,
+          50
+        ]
+      },
+      "G04": {
+        "agent": [
+          0,
+          1
+        ],
+        "holdout": [
+          0,
+          1
+        ]
+      },
+      "G03": {
+        "agent": [
+          0,
+          1
+        ],
+        "holdout": [
+          1,
+          2
+        ]
+      }
+    },
+    "naive": {
+      "exposed_n": 621,
+      "exposed_rate": 0.7198067632850241,
+      "others_n": 1125,
+      "others_rate": 0.4711111111111111,
+      "holdout_fresh_rate": 0.5648648648648649,
+      "holdout_fresh_n": 740,
+      "holdout_stale_rate": 0.2727272727272727,
+      "holdout_stale_n": 143
+    }
+  },
+  "pilot": {
+    "treatment": [
+      1912,
+      349
+    ],
+    "holdout": [
+      1979,
+      387
+    ],
+    "served": [
+      217,
+      87
+    ],
+    "not_served": [
+      3674,
+      649
+    ],
+    "itt": {
+      "diff_pts": -1.3021928999262133,
+      "ci95_pts": 2.460025544172141,
+      "p_value": 0.29949880925563743
+    },
+    "served_rate_by_arm": {
+      "treatment": 217,
+      "holdout": 0
+    },
+    "goal_base_rates": {
+      "G05": 0.008970727101038715,
+      "G06": 0.01812688821752266,
+      "G09": 0.6411332633788038,
+      "G02": 0.19444444444444445,
+      "G04": 0.23255813953488372
+    }
+  }
+}

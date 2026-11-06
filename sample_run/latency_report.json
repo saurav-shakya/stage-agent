@@ -1,0 +1,80 @@
+{
+  "budget_ms": 60000,
+  "definition": "publish_delay = queue wait + measured processing + simulated dependency latency; time from trigger delivery to publish/no-action",
+  "all_decisions": {
+    "n": 2472,
+    "p50_ms": 59,
+    "p95_ms": 1125,
+    "p99_ms": 1270,
+    "max_ms": 1906,
+    "over_60s": 0,
+    "over_5min": 0,
+    "mean_queue_wait_ms": 0
+  },
+  "by_condition": {
+    "model_provider_unavailable": {
+      "n": 20,
+      "p50_ms": 58,
+      "p95_ms": 127,
+      "p99_ms": 127,
+      "max_ms": 127,
+      "over_60s": 0,
+      "over_5min": 0,
+      "mean_queue_wait_ms": 0
+    },
+    "normal": {
+      "n": 2438,
+      "p50_ms": 58,
+      "p95_ms": 1111,
+      "p99_ms": 1256,
+      "max_ms": 1280,
+      "over_60s": 0,
+      "over_5min": 0,
+      "mean_queue_wait_ms": 0
+    },
+    "user_data_store_degraded": {
+      "n": 14,
+      "p50_ms": 1500,
+      "p95_ms": 1906,
+      "p99_ms": 1906,
+      "max_ms": 1906,
+      "over_60s": 0,
+      "over_5min": 0,
+      "mean_queue_wait_ms": 0
+    }
+  },
+  "median_triggers_per_10min": 17,
+  "busiest_10min": {
+    "bucket_ist": "10:10",
+    "triggers": 240,
+    "x_median": 14.1,
+    "n": 237,
+    "p50_ms": 0,
+    "p95_ms": 50,
+    "p99_ms": 992,
+    "max_ms": 1072,
+    "over_60s": 0,
+    "over_5min": 0,
+    "mean_queue_wait_ms": 0
+  },
+  "evening_peak": {
+    "bucket_ist": "20:30",
+    "triggers": 165,
+    "x_median": 9.7,
+    "n": 156,
+    "p50_ms": 63,
+    "p95_ms": 1130,
+    "p99_ms": 1258,
+    "max_ms": 1273,
+    "over_60s": 0,
+    "over_5min": 0,
+    "mean_queue_wait_ms": 0
+  },
+  "skipped_idempotent": 297,
+  "model_outcomes": {
+    "ok": 743,
+    "unavailable": 4,
+    "skipped_circuit_open": 6,
+    "malformed_output": 1
+  }
+}

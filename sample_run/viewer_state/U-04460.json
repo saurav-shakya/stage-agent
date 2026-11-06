@@ -1,0 +1,33 @@
+{
+ "viewer_id": "U-04460",
+ "arm": "agent",
+ "facts_latest": {},
+ "goals": [],
+ "decisions": [
+  {
+   "decision_id": "D-00700",
+   "status": "NO_ACTION",
+   "action": "NONE",
+   "no_action_reason": "stale_trigger: app open happened 562729s before it reached us (held offline); the viewer has left that session, a page now would not be seen",
+   "goal": null,
+   "confidence": null,
+   "published_at": null,
+   "trigger": "55e712fa-0e49-47a6-be93-07dccd8075e5"
+  }
+ ],
+ "actions": [],
+ "outcomes": [],
+ "journal": [
+  {
+   "at": "2026-10-01T05:42:54.597Z",
+   "kind": "replan_purchase",
+   "event": "event:c9925b9d-0cb0-4093-9585-6109b95b3f10",
+   "plan_id": "P_MONTH",
+   "is_trial": false,
+   "goal_closed": null,
+   "messages_cancelled": 0,
+   "seconds_after_last_decision": null,
+   "note": "subscription fact now comes from this event, overriding the snapshot"
+  }
+ ]
+}

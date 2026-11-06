@@ -1,0 +1,31 @@
+{
+ "viewer_id": "U-03031",
+ "arm": "agent",
+ "facts_latest": {},
+ "goals": [],
+ "decisions": [
+  {
+   "decision_id": "D-01804",
+   "status": "NO_ACTION",
+   "action": "NONE",
+   "no_action_reason": "stale_trigger: app open happened 569903s before it reached us (held offline); the viewer has left that session, a page now would not be seen",
+   "goal": null,
+   "confidence": null,
+   "published_at": null,
+   "trigger": "7a2256d7-dc5d-48b7-b973-efd56515bcb2"
+  },
+  {
+   "decision_id": "D-01805",
+   "status": "SKIPPED_SAME_SESSION",
+   "action": "NONE",
+   "no_action_reason": "session 51358ba6-2ef0-458d-8714-df4b7b19e783 already handled by D-01804",
+   "goal": null,
+   "confidence": null,
+   "published_at": null,
+   "trigger": "fa5b502b-34b1-467c-a5fa-04382c6342ed"
+  }
+ ],
+ "actions": [],
+ "outcomes": [],
+ "journal": []
+}

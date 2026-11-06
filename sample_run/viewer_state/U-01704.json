@@ -1,0 +1,41 @@
+{
+ "viewer_id": "U-01704",
+ "arm": "holdout",
+ "facts_latest": {},
+ "goals": [],
+ "decisions": [
+  {
+   "decision_id": "D-01662",
+   "status": "NO_ACTION",
+   "action": "NONE",
+   "no_action_reason": "data_store_unavailable: cannot verify consent, eligibility or history; acting blind is worse than not acting",
+   "goal": null,
+   "confidence": null,
+   "published_at": null,
+   "trigger": "2d9edf30-f3bb-4c93-a86b-d369ecd8397e"
+  },
+  {
+   "decision_id": "D-01663",
+   "status": "SKIPPED_SAME_SESSION",
+   "action": "NONE",
+   "no_action_reason": "session b59e0afe-4e8f-4ec2-a1e5-e496cc806fd7 already handled by D-01662",
+   "goal": null,
+   "confidence": null,
+   "published_at": null,
+   "trigger": "ea5dcdf9-f72e-47f8-b872-16d44f70db95"
+  }
+ ],
+ "actions": [],
+ "outcomes": [],
+ "journal": [
+  {
+   "at": "2026-10-01T13:12:42.453Z",
+   "kind": "fact_changed",
+   "event": "signup_completed",
+   "ref": "event:0793abd9-213c-4227-8cd7-03cd24e96e03",
+   "properties": {
+    "method": "phone_otp"
+   }
+  }
+ ]
+}

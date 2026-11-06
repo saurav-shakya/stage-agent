@@ -1,0 +1,363 @@
+{
+ "viewer_id": "U-01055",
+ "arm": "holdout",
+ "facts_latest": {
+  "profile_present": {
+   "value": true,
+   "source": "profile_snapshot",
+   "ref": "profile:U-01055@2026-09-29T12:32:34.438Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 118811,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "page_dialect": {
+   "value": "d5",
+   "source": "app_setting",
+   "ref": "event:ed4a4900-918b-431c-9ca9-cbced89e715f",
+   "observed_at": "2026-10-01T09:00:11.911Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "app_language": {
+   "value": "hin",
+   "source": "app_setting",
+   "ref": "event:ed4a4900-918b-431c-9ca9-cbced89e715f",
+   "observed_at": "2026-10-01T09:00:11.911Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "profile_dialect": {
+   "value": "d5",
+   "source": "profile_snapshot",
+   "ref": "profile:U-01055@2026-09-29T12:32:34.438Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 118811,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "signup_at": {
+   "value": "2025-06-01T06:58:56.228Z",
+   "source": "profile_snapshot",
+   "ref": "profile:U-01055@2026-09-29T12:32:34.438Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 118811,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "subscription_status": {
+   "value": "active",
+   "source": "profile_snapshot",
+   "ref": "profile:U-01055@2026-09-29T12:32:34.438Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 118811,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "lapsed_at": {
+   "value": null,
+   "source": "profile_snapshot",
+   "ref": "profile:U-01055@2026-09-29T12:32:34.438Z",
+   "observed_at": null,
+   "age_s_at_decision": null,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "ever_paid": {
+   "value": true,
+   "source": "event+profile",
+   "ref": "profile:U-01055@2026-09-29T12:32:34.438Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 118811,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "trial_ends_at": {
+   "value": null,
+   "source": "profile_snapshot",
+   "ref": "profile:U-01055@2026-09-29T12:32:34.438Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 118811,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "consent_push": {
+   "value": true,
+   "source": "profile_snapshot",
+   "ref": "profile:U-01055@2026-09-29T12:32:34.438Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 118811,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "consent_whatsapp": {
+   "value": false,
+   "source": "profile_snapshot",
+   "ref": "profile:U-01055@2026-09-29T12:32:34.438Z",
+   "observed_at": "2026-09-30T00:00:00.000Z",
+   "age_s_at_decision": 118811,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "ever_played": {
+   "value": true,
+   "source": "event",
+   "ref": "event:451c0cc3-b101-4df9-b020-d5253a4addd3",
+   "observed_at": "2026-09-01T20:55:05.016Z",
+   "age_s_at_decision": 2549106,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "ever_completed": {
+   "value": true,
+   "source": "event",
+   "ref": "event:8ec64e19-bf52-4360-81a6-369b21753f9e",
+   "observed_at": "2026-09-05T03:04:30.718Z",
+   "age_s_at_decision": 2267741,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "last_app_open": {
+   "value": "2026-10-01T08:49:03.495Z",
+   "source": "event",
+   "ref": "event:73a9a4f9-02ae-44f6-a812-d261ffa82f3d",
+   "observed_at": "2026-10-01T08:49:03.495Z",
+   "age_s_at_decision": 668,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "first_seen": {
+   "value": "2026-09-01T05:52:26.776Z",
+   "source": "event",
+   "ref": null,
+   "observed_at": null,
+   "age_s_at_decision": null,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "play_days_14d": {
+   "value": [
+    "2026-09-18"
+   ],
+   "source": "event",
+   "ref": "events:play_started(last 14d)",
+   "observed_at": "2026-10-01T09:00:11.911Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "top_genres": {
+   "value": [
+    "Action",
+    "Crime",
+    "Thriller"
+   ],
+   "source": "event",
+   "ref": "events:play_started",
+   "observed_at": "2026-10-01T09:00:11.911Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "watched_slugs": {
+   "value": [
+    "diti-kochu-d5",
+    "gilosa-dhate-d5",
+    "gubava-gihaya-d5"
+   ],
+   "source": "event",
+   "ref": "events:play_started",
+   "observed_at": "2026-10-01T09:00:11.911Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "unfinished_series": {
+   "value": [
+    {
+     "slug": "diti-kochu-d5",
+     "title_id": "T1187",
+     "next_episode_index": 7,
+     "next_episode_number": 8,
+     "episodes_total": 32,
+     "last_play": "2026-09-18T16:57:10.765Z",
+     "idle_days": 12.67,
+     "evidence": "event:c527a5e9-840c-4cef-b81f-f2919c360a07"
+    },
+    {
+     "slug": "gubava-gihaya-d5",
+     "title_id": "T1177",
+     "next_episode_index": 1,
+     "next_episode_number": 2,
+     "episodes_total": 29,
+     "last_play": "2026-09-17T19:31:29.723Z",
+     "idle_days": 13.56,
+     "evidence": "event:8a33b9fe-b49e-4997-956b-af4ab8a9ffc3"
+    }
+   ],
+   "source": "event+episodes",
+   "ref": "events:play_started,episode_completed;episodes.csv",
+   "observed_at": "2026-10-01T09:00:11.911Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "messages_by_ist_day": {
+   "value": {},
+   "source": "event",
+   "ref": "events:message_delivered",
+   "observed_at": "2026-10-01T09:00:11.911Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "trigger_buffered_s": {
+   "value": 0,
+   "source": "event_clock_delta",
+   "ref": "event:ed4a4900-918b-431c-9ca9-cbced89e715f",
+   "observed_at": "2026-10-01T09:00:11.911Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": "D-01121"
+  },
+  "learned:last_goal_result": {
+   "value": {
+    "goal_id": "G07",
+    "status": "failed",
+    "attribution": "holdout_shadow_goal"
+   },
+   "source": "outcome",
+   "ref": "outcome:G-00605",
+   "observed_at": "2026-10-04T08:49:03.564Z",
+   "age_s_at_decision": 0,
+   "conflicts": [],
+   "as_of_decision": null
+  }
+ },
+ "goals": [
+  {
+   "instance_id": "G-00605",
+   "user_id": "U-01055",
+   "goal_id": "G07",
+   "arm": "holdout",
+   "status": "judged:failed",
+   "rule_version": 1,
+   "started_at": "2026-10-01T08:49:03.564Z",
+   "deadline": "2026-10-04T08:49:03.564Z",
+   "decision_id": "D-01102",
+   "params": {
+    "slug": "diti-kochu-d5",
+    "title_id": "T1187",
+    "next_episode_number": 8
+   },
+   "closed_at": "2026-10-04T08:49:03.564Z",
+   "close_reason": null
+  }
+ ],
+ "decisions": [
+  {
+   "decision_id": "D-00566",
+   "status": "NO_ACTION",
+   "action": "NONE",
+   "no_action_reason": "stale_trigger: app open happened 53886s before it reached us (held offline); the viewer has left that session, a page now would not be seen",
+   "goal": null,
+   "confidence": null,
+   "published_at": null,
+   "trigger": "da957053-c50d-4b31-a960-2ec1d48fd83e"
+  },
+  {
+   "decision_id": "D-01102",
+   "status": "NO_ACTION",
+   "action": "NONE",
+   "no_action_reason": "holdout_arm: randomized holdout receives no agent action (policy rule 5)",
+   "goal": {
+    "id": "G07",
+    "name": "resume_series_3d",
+    "instance_id": "G-00605",
+    "started_at": "2026-10-01T08:49:03.564Z",
+    "deadline": "2026-10-04T08:49:03.564Z",
+    "rule_version": 1,
+    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
+    "carried_over": false,
+    "params": {
+     "slug": "diti-kochu-d5",
+     "title_id": "T1187",
+     "next_episode_number": 8
+    },
+    "shadow": true
+   },
+   "confidence": null,
+   "published_at": null,
+   "trigger": "73a9a4f9-02ae-44f6-a812-d261ffa82f3d"
+  },
+  {
+   "decision_id": "D-01121",
+   "status": "NO_ACTION",
+   "action": "NONE",
+   "no_action_reason": "holdout_arm: randomized holdout receives no agent action (policy rule 5)",
+   "goal": {
+    "id": "G07",
+    "name": "resume_series_3d",
+    "instance_id": "G-00605",
+    "started_at": "2026-10-01T08:49:03.564Z",
+    "deadline": "2026-10-04T08:49:03.564Z",
+    "rule_version": 1,
+    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
+    "carried_over": true,
+    "params": {
+     "slug": "diti-kochu-d5",
+     "title_id": "T1187",
+     "next_episode_number": 8
+    },
+    "shadow": true
+   },
+   "confidence": null,
+   "published_at": null,
+   "trigger": "ed4a4900-918b-431c-9ca9-cbced89e715f"
+  }
+ ],
+ "actions": [],
+ "outcomes": [
+  {
+   "instance_id": "G-00605",
+   "user_id": "U-01055",
+   "goal_id": "G07",
+   "arm": "holdout",
+   "decision_id": "D-01102",
+   "rule_version": 1,
+   "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
+   "started_at": "2026-10-01T08:49:03.564Z",
+   "deadline": "2026-10-04T08:49:03.564Z",
+   "status": "failed",
+   "detail": "no play_started (same content_slug as the unfinished series) by deadline",
+   "evidence": [],
+   "success_at": null,
+   "first_exposure_at": null,
+   "pages_shown": 0,
+   "messages_delivered": 0,
+   "messages_clicked": 0,
+   "message_failures": [],
+   "attribution": "holdout_shadow_goal",
+   "learning": "holdout: no action taken; outcome is the baseline for this kind of viewer",
+   "closed_early": null
+  }
+ ],
+ "journal": [
+  {
+   "at": "2026-10-01T08:49:03.564Z",
+   "kind": "goal_committed",
+   "instance_id": "G-00605",
+   "goal_id": "G07",
+   "arm": "holdout",
+   "decision_id": "D-01102"
+  },
+  {
+   "at": "2026-10-04T08:49:03.564Z",
+   "kind": "learning",
+   "instance_id": "G-00605",
+   "learning": "holdout: no action taken; outcome is the baseline for this kind of viewer"
+  }
+ ]
+}

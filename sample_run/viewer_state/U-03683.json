@@ -1,0 +1,41 @@
+{
+ "viewer_id": "U-03683",
+ "arm": "holdout",
+ "facts_latest": {},
+ "goals": [],
+ "decisions": [
+  {
+   "decision_id": "D-01696",
+   "status": "NO_ACTION",
+   "action": "NONE",
+   "no_action_reason": "stale_trigger: app open happened 1425s before it reached us (held offline); the viewer has left that session, a page now would not be seen",
+   "goal": null,
+   "confidence": null,
+   "published_at": null,
+   "trigger": "85e0aa23-17b7-40f5-8242-963aa36c1380"
+  },
+  {
+   "decision_id": "D-02656",
+   "status": "NO_ACTION",
+   "action": "NONE",
+   "no_action_reason": "stale_trigger: app open happened 218915s before it reached us (held offline); the viewer has left that session, a page now would not be seen",
+   "goal": null,
+   "confidence": null,
+   "published_at": null,
+   "trigger": "ca31e37c-930d-4b36-a58f-5b029dcb90c6"
+  },
+  {
+   "decision_id": "D-02659",
+   "status": "SKIPPED_DUPLICATE",
+   "action": "NONE",
+   "no_action_reason": "event_id already handled by D-02656",
+   "goal": null,
+   "confidence": null,
+   "published_at": null,
+   "trigger": "ca31e37c-930d-4b36-a58f-5b029dcb90c6"
+  }
+ ],
+ "actions": [],
+ "outcomes": [],
+ "journal": []
+}

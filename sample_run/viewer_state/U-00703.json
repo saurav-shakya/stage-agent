@@ -1,0 +1,33 @@
+{
+ "viewer_id": "U-00703",
+ "arm": "holdout",
+ "facts_latest": {},
+ "goals": [],
+ "decisions": [
+  {
+   "decision_id": "D-00608",
+   "status": "NO_ACTION",
+   "action": "NONE",
+   "no_action_reason": "stale_trigger: app open happened 455600s before it reached us (held offline); the viewer has left that session, a page now would not be seen",
+   "goal": null,
+   "confidence": null,
+   "published_at": null,
+   "trigger": "f0aa16e5-9cd8-4e5c-b94a-ca18ac8c7372"
+  }
+ ],
+ "actions": [],
+ "outcomes": [],
+ "journal": [
+  {
+   "at": "2026-10-01T05:04:30.420Z",
+   "kind": "replan_purchase",
+   "event": "event:17dca1e5-7413-4951-8ca1-f3051963c547",
+   "plan_id": "P_MONTH",
+   "is_trial": false,
+   "goal_closed": null,
+   "messages_cancelled": 0,
+   "seconds_after_last_decision": null,
+   "note": "subscription fact now comes from this event, overriding the snapshot"
+  }
+ ]
+}
