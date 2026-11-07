@@ -28,9 +28,8 @@ class Verifier:
         f = resolve(self.pack, user_id, trigger, now)
         ok, ev, why = self.goalbook.eligibility(goal_id, f, now)
         (passed if ok else failed).append(('eligibility', '%s: %s' % (goal_id, why)))
-        rule = self.goalbook.current(goal_id)['success']
-        measurable = rule.get('event') is not None and goal_id not in ('G10', 'G11')
-        (passed if measurable else failed).append(('goal_measurable', goal_id))
+        measurable, m_why = self.goalbook.measurable(goal_id)
+        (passed if measurable else failed).append(('goal_measurable', '%s: %s' % (goal_id, m_why)))
         (passed if ev else failed).append(('evidence_present', ', '.join(ev) or 'no evidence'))
         if model_answer is not None:
             m_ok, _, m_why = self.goalbook.eligibility(model_answer['goal_id'], f, now)

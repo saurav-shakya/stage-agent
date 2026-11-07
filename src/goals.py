@@ -8,6 +8,7 @@ Decisions about the catalogue itself, all recorded in KNOWN_LIMITATIONS.md:
 - Success rules are versioned. A `goal_rule_corrected` control event adds a version; it applies to open goals of
   that goal_id only, so a correction never forces reprocessing of other viewers.
 """
+import re
 from datetime import timedelta
 
 from .timeutil import iso, ist_day, ts
@@ -22,6 +23,38 @@ DISABLED = {
     'G11': 'success event tv_app_open does not exist anywhere in the event stream: not measurable',
 }
 LAPSE_RECENT_DAYS = 30
+
+# Every event name the pack documents (data pack README) plus the two the simulator adds. A success rule naming any
+# other event can never be observed, so it cannot be judged.
+KNOWN_EVENTS = frozenset({
+    'signup_completed', 'login_success', 'app_open', 'app_dialect_changed', 'home_viewed', 'title_viewed', 'search',
+    'play_started', 'play_progress', 'episode_completed', 'paywall_viewed', 'purchase_completed',
+    'subscription_renewed', 'subscription_lapsed', 'message_delivered', 'message_clicked', 'notification_opt_out',
+    'home_page_shown', 'message_failed',
+})
+
+# The success conditions we know how to judge. Each must match the WHOLE condition text: anything else (a new
+# wording from a rule correction, an extra clause) is unknown and is judged inconclusive, never guessed. Numbers in
+# the text are read, not assumed.
+CONDITIONS = [
+    (re.compile(r'any( title| episode)?'), 'any'),
+    (re.compile(r'is_trial = false|any paid plan'), 'paid'),
+    (re.compile(r'on a later ist calendar day( than the goal start| within the window)?'), 'later_day'),
+    (re.compile(r'same content_slug as the unfinished series'), 'same_slug'),
+    (re.compile(r'a title released in the (\d+) days before the goal start'), 'new_release'),
+    (re.compile(r'on (\d+) distinct ist days'), 'distinct_days'),
+]
+
+
+def parse_condition(condition):
+    """(kind, number or None) for a condition we can judge, else None."""
+    text = ' '.join((condition or '').lower().split())
+    for pattern, kind in CONDITIONS:
+        m = pattern.fullmatch(text)
+        if m:
+            nums = [g for g in m.groups() if g and g.isdigit()]
+            return kind, (int(nums[0]) if nums else None)
+    return None
 
 
 class GoalBook:
@@ -48,6 +81,20 @@ class GoalBook:
         self.versions[gid].append(v)
         return v
 
+    def measurable(self, gid, version=None):
+        """(ok, reason). Can a goal under this rule version be judged from events at all? Used when choosing goals,
+        by the verifier, when a correction arrives, and when judging, so all four agree."""
+        if gid in DISABLED:
+            return False, DISABLED[gid]
+        rule = (self.rule(gid, version) if version else self.current(gid))['success']
+        if rule.get('event') is None:
+            return False, 'no success event'
+        if rule['event'] not in KNOWN_EVENTS:
+            return False, 'success event %r does not exist in the event stream' % rule['event']
+        if parse_condition(rule.get('condition')) is None:
+            return False, 'unrecognised success condition %r' % rule.get('condition')
+        return True, 'success event %s, condition understood' % rule['event']
+
     def window(self, gid):
         return timedelta(hours=self.current(gid)['success']['window_hours'])
 
@@ -58,8 +105,9 @@ class GoalBook:
     # ------------------------------------------------------------------ eligibility
     def eligibility(self, gid, f, now):
         """Returns (eligible, evidence_refs, reason). Uses only resolved facts, which carry their own provenance."""
-        if gid in DISABLED:
-            return False, [], DISABLED[gid]
+        ok, why = self.measurable(gid)
+        if not ok:
+            return False, [], 'not measurable: %s' % why
         status = f['subscription_status']['value']
         sref = f['subscription_status']['ref'] or f['subscription_status']['source']
         signup = ts(f['signup_at']['value'])
@@ -169,30 +217,33 @@ class GoalBook:
         gid = goal['goal_id']
         rule = self.rule(gid, goal['rule_version'])['success']
         start, deadline = ts(goal['started_at']), ts(goal['deadline'])
-        if rule.get('event') is None:
-            return 'inconclusive', [], 'goal has no measurable success event'
+        ok, why = self.measurable(gid, goal['rule_version'])
+        if not ok:
+            # Saying "succeeded" would overstate the agent's impact and "failed" would blame it for a rule nobody
+            # can evaluate; the honest answer is that we do not know.
+            return 'inconclusive', [], 'rule v%d cannot be judged (%s): not judged rather than guessed' % (
+                goal['rule_version'], why)
         evs = [e for e in events if e['event'] == rule['event'] and start < ts(e['received_at']) <= deadline]
-        cond = (rule.get('condition') or '').lower()
+        kind, n = parse_condition(rule.get('condition'))
         params = goal.get('params') or {}
-        hits = []
-        if 'is_trial = false' in cond or 'paid plan' in cond:
+        if kind == 'paid':
             hits = [e for e in evs if not (e.get('properties') or {}).get('is_trial')]
-        elif 'later ist calendar day' in cond:
+        elif kind == 'later_day':
             d0 = ist_day(start)
             hits = [e for e in evs if ist_day(ts(e['received_at'])) > d0]
-        elif 'same content_slug' in cond:
+        elif kind == 'same_slug':
             hits = [e for e in evs if titles.get((e.get('properties') or {}).get('title_id'), {}).get('slug')
                     == params.get('slug')]
-        elif 'released in the 30 days' in cond:
-            lo = (start - timedelta(days=30)).date().isoformat()
+        elif kind == 'new_release':
+            lo = (start - timedelta(days=n)).date().isoformat()
             hits = [e for e in evs if lo <= titles.get((e.get('properties') or {}).get('title_id'), {})
                     .get('release_date', '') <= start.date().isoformat()]
-        elif 'distinct ist days' in cond:
+        elif kind == 'distinct_days':
             days = {}
             for e in evs:
                 days.setdefault(ist_day(ts(e['received_at'])), e)
-            hits = list(days.values()) if len(days) >= 3 else []
-        else:  # "any", "any title", "any episode"
+            hits = list(days.values()) if len(days) >= n else []
+        else:  # kind == 'any': matched exactly, never a fallback
             hits = evs
         if hits:
             return 'succeeded', ['outcome_event:%s' % e['event_id'] for e in hits[:3]], \

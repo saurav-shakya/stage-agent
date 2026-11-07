@@ -96,6 +96,10 @@ def final_report(rt, decisions, outcomes, lat, imp, sim):
     for j in st.journal_kind('goal_rule_correction_impact'):
         w('  - %s v%d: %d open goals re-pointed to the corrected rule (%d viewers); no other viewer reprocessed.'
           % (j['goal_id'], j['version'], j['open_goals_updated'], j['viewers_touched']))
+        if j.get('measurable') is False:
+            w('  - %s v%d cannot be judged (%s): its goals are reported inconclusive, not guessed, and no new viewer '
+              'was committed to %s after the correction.' % (j['goal_id'], j['version'], j['measurable_reason'],
+                                                            j['goal_id']))
     mo = lat.get('model_outcomes', {})
     w('  - model calls: %s. Every non-ok outcome fell back to the rule-based goal; no decision waited longer than '
       'the model timeout (%d ms), and after a 503 or %d timeouts in a row the circuit skipped the model for %d s.'

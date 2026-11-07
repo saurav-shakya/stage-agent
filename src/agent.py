@@ -109,9 +109,13 @@ class Runtime:
             self.store.journal(iso(at), g['user_id'], 'goal_rule_corrected',
                                {'instance_id': g['instance_id'], 'goal_id': gid, 'from_version': old,
                                 'to_version': v['version'], 'new_success': self.goalbook.signal_text(gid)})
+        # The correction applies to open goals whatever it says. If it cannot be judged, say so now: those goals will
+        # be judged inconclusive, and no new viewer is committed to this goal while the rule stays unmeasurable.
+        measurable, why = self.goalbook.measurable(gid)
         self.store.journal(iso(at), None, 'goal_rule_correction_impact',
                            {'goal_id': gid, 'version': v['version'], 'open_goals_updated': len(open_goals),
                             'viewers_touched': len({g['user_id'] for g in open_goals}),
+                            'measurable': measurable, 'measurable_reason': why,
                             'note': 'only open %s goals re-pointed; no other viewer reprocessed' % gid})
 
 

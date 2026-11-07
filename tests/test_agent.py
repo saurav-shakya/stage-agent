@@ -198,7 +198,63 @@ class AgentTests(unittest.TestCase):
         horizon = ts('2026-10-20T00:00:00.000Z')
         self.assertEqual(gb.judge(g, next_day_open, self.rt.pack.titles, horizon)[0], 'failed')
         self.assertEqual(gb.judge(g, next_day_play, self.rt.pack.titles, horizon)[0], 'succeeded')
-        self.assertEqual(gb.judge(dict(g, rule_version=1), next_day_open, self.rt.pack.titles, horizon)[0], 'succeeded')
+
+    def test_every_goal_in_the_catalogue_is_measurable_except_g10_g11(self):
+        gb = self.rt.goalbook
+        for gid in gb.goals:
+            ok, why = gb.measurable(gid)
+            self.assertEqual(ok, gid not in ('G10', 'G11'), '%s: %s' % (gid, why))
+
+    def _open_goal(self, gid, uid='U-1', instance='G-z'):
+        self.rt.store.save_goal({'instance_id': instance, 'user_id': uid, 'goal_id': gid, 'arm': 'agent',
+                                 'status': 'open', 'rule_version': 1, 'decision_id': 'D-x', 'params': {},
+                                 'started_at': T('02:00'), 'deadline': '2026-10-15T02:00:00.000Z'})
+        return instance
+
+    def _correct(self, gid, new_success):
+        self.rt.on_control({'at': T('03:00'), 'type': 'goal_rule_corrected', 'goal_id': gid,
+                            'new_success': new_success})
+        return {g['instance_id']: g for g in self.rt.store.goals()}
+
+    def test_unrecognised_corrected_rule_is_inconclusive_not_success(self):
+        # Before the fix, an unknown condition fell through to "any event counts", so one completion = success.
+        before = self.run_trig(self.trig('U-4', T('02:30')))
+        self.assertEqual(before['goal']['id'], 'G02')            # G02 is what a viewer like this normally gets
+        goals = self._correct('G02', {'event': 'episode_completed',
+                                      'condition': 'at least 2 episodes of the same series'})
+        g = goals[before['goal']['instance_id']]
+        self.assertEqual(g['rule_version'], 2)                   # still re-pointed: the correction applies to it
+        one_completion = [{'event_id': 'o1', 'event': 'episode_completed', 'received_at': '2026-10-02T05:00:00.000Z',
+                           'properties': {'title_id': 'T0003'}}]
+        status, ev, detail = self.rt.goalbook.judge(g, one_completion, self.rt.pack.titles,
+                                                    ts('2026-10-20T00:00:00.000Z'))
+        self.assertEqual(status, 'inconclusive')
+        self.assertIn('unrecognised success condition', detail)
+        impact = self.rt.store.journal_kind('goal_rule_correction_impact')[0]
+        self.assertFalse(impact['measurable'])
+        # No new viewer is committed to a goal that cannot be judged; the agent picks the next eligible goal.
+        after = self.run_trig(self.trig('U-3', T('05:30')))
+        self.assertEqual(after['status'], 'PUBLISHED')
+        self.assertNotEqual(after['goal']['id'], 'G02')
+
+    def test_corrected_rule_naming_a_nonexistent_event_is_inconclusive(self):
+        gid = self._open_goal('G01')
+        g = self._correct('G01', {'event': 'tv_app_open', 'condition': 'any'})[gid]
+        evs = [{'event_id': 'o1', 'event': 'tv_app_open', 'received_at': '2026-10-02T05:00:00.000Z', 'properties': {}}]
+        status, _, detail = self.rt.goalbook.judge(g, evs, self.rt.pack.titles, ts('2026-10-20T00:00:00.000Z'))
+        self.assertEqual(status, 'inconclusive')
+        self.assertIn('does not exist', detail)
+
+    def test_corrected_number_of_days_is_used_not_the_old_three(self):
+        gid = self._open_goal('G09')
+        g = self._correct('G09', {'event': 'play_started', 'condition': 'on 2 distinct IST days'})[gid]
+        two_days = [{'event_id': 'p%d' % i, 'event': 'play_started', 'received_at': '2026-10-0%dT06:00:00.000Z' % d,
+                     'properties': {'title_id': 'T0003'}} for i, d in enumerate((2, 3))]
+        self.assertEqual(self.rt.goalbook.judge(g, two_days, self.rt.pack.titles,
+                                                ts('2026-10-20T00:00:00.000Z'))[0], 'succeeded')
+        # The same two days under the old v1 rule (3 distinct days) are not enough, so the number really is read.
+        self.assertEqual(self.rt.goalbook.judge(dict(g, rule_version=1), two_days, self.rt.pack.titles,
+                                                ts('2026-10-20T00:00:00.000Z'))[0], 'failed')
 
     # ------------------------------------------------------------------ safety
     def test_holdout_never_gets_an_action_but_has_a_shadow_goal(self):
