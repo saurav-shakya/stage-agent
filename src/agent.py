@@ -218,6 +218,7 @@ class ViewerAgent:
             d['evidence'] = list(dict.fromkeys(d['evidence']))
             seen = set()
             d['evidence_detail'] = [x for x in d['evidence_detail'] if not (x['ref'] in seen or seen.add(x['ref']))]
+            d['evidence_detail'] += [self._freshness(r, uid, start) for r in d['evidence'] if r not in seen]
             return d
 
         # 1. idempotency: same event delivered twice, or a second trigger (login + app_open) in one session.
@@ -392,6 +393,8 @@ class ViewerAgent:
         d['action'] = '+'.join(k.split('@')[0] for k in kinds)
         d['message_schedule'] = [k for k in kinds if '@' in k]
         self._confidence(d, f, goal, actions)
+        have = {x['ref'] for x in d['evidence_detail']}  # page titles are added after finish(); describe them too
+        d['evidence_detail'] += [self._freshness(r, uid, start) for r in d['evidence'] if r not in have]
         return res
 
     # ------------------------------------------------------------------ helpers
@@ -449,6 +452,40 @@ class ViewerAgent:
                     'variables': {'plan_price': '₹%d' % price}, 'title_id': None}
         return None
 
+    def _freshness(self, ref, uid, now):
+        """Source and freshness for one evidence reference, so a reviewer can inspect it and judge how current it
+        was at decision time. Every reference in `evidence` gets an entry in `evidence_detail`."""
+        pack = self.rt.pack
+        kind, _, key = ref.partition(':')
+        if kind == 'event':
+            for e in pack.history.until(uid, now):
+                if e['event_id'] == key:
+                    return {'ref': ref, 'source': 'event_stream', 'event': e['event'], 'occurred_at': iso(e['_true']),
+                            'received_at': e['received_at'], 'age_s': int((now - e['_true']).total_seconds())}
+            return {'ref': ref, 'source': 'event_stream', 'age_s': None, 'note': 'event not found in history'}
+        if kind == 'catalogue':
+            t = pack.titles.get(key, {})
+            return {'ref': ref, 'source': 'catalogue', 'age_s': None, 'available_from': iso(t.get('from')),
+                    'available_until': iso(t.get('until')), 'available_at_decision': pack.available(key, now),
+                    'freshness': 'static file; availability re-checked at decision time (including withdrawals)'}
+        if kind == 'goal_rule':
+            gid, _, v = key.rpartition('-v')
+            eff = self.rt.goalbook.rule(gid, int(v))['effective_at']
+            return {'ref': ref, 'source': 'goal_catalogue' if not eff else 'goal_rule_corrected',
+                    'version': int(v), 'effective_at': eff,
+                    'age_s': int((now - ts(eff)).total_seconds()) if eff else None,
+                    'freshness': 'rule version current at decision time'}
+        if kind == 'profile' and '@' in key:
+            at = key.rpartition('@')[2]
+            return {'ref': ref, 'source': 'profile_snapshot', 'observed_at': at,
+                    'age_s': int((now - ts(at)).total_seconds())}
+        if kind == 'assumption':
+            return {'ref': ref, 'source': 'assumption', 'age_s': None, 'freshness': 'no data; default applied'}
+        # Aggregates over the viewer's events ("events:...", "no X in history"): computed from everything received.
+        return {'ref': ref, 'source': 'event_history', 'age_s': 0,
+                'covers': '%s to decision time' % pack.history_start,
+                'freshness': 'computed at decision time from all events received so far'}
+
     def _assumptions(self, d, goal, f):
         a = d['assumptions']
         a.append('the viewer will see the page for the app-setting dialect %s' % f['page_dialect']['value'])
@@ -459,8 +496,9 @@ class ViewerAgent:
         if goal['goal_id'] == 'G07':
             a.append('viewer has not continued %s on another device we cannot see' % goal['params'].get('slug'))
         if goal['goal_id'] in ('G01', 'G02'):
-            a.append('history before 2026-09-01 is not in the pack; "never played/completed" means not in 30 days')
-        a.append('popularity = play counts in the 30-day history')
+            a.append('history before %s is not in the pack; "never played/completed" means not in the %d-day '
+                     'history' % (self.rt.pack.history_start, self.rt.pack.history_days))
+        a.append('popularity = play counts in the %d-day history' % self.rt.pack.history_days)
 
     def _confidence(self, d, f, goal, actions):
         c, why = 0.7, []

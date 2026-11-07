@@ -297,7 +297,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-01304",
-   "observed_at": "2026-10-04T15:52:23.275Z",
+   "observed_at": "2026-10-04T15:52:23.276Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -311,8 +311,8 @@
    "arm": "holdout",
    "status": "judged:succeeded",
    "rule_version": 1,
-   "started_at": "2026-10-01T15:37:55.608Z",
-   "deadline": "2026-10-15T15:37:55.608Z",
+   "started_at": "2026-10-01T15:37:55.609Z",
+   "deadline": "2026-10-15T15:37:55.609Z",
    "decision_id": "D-02300",
    "params": {},
    "closed_at": "2026-10-01T15:39:47.083Z",
@@ -325,15 +325,15 @@
    "arm": "holdout",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T15:52:23.275Z",
-   "deadline": "2026-10-04T15:52:23.275Z",
+   "started_at": "2026-10-01T15:52:23.276Z",
+   "deadline": "2026-10-04T15:52:23.276Z",
    "decision_id": "D-02347",
    "params": {
     "slug": "bhari-vagi-d6",
     "title_id": "T1393",
     "next_episode_number": 3
    },
-   "closed_at": "2026-10-04T15:52:23.275Z",
+   "closed_at": "2026-10-04T15:52:23.276Z",
    "close_reason": null
   }
  ],
@@ -347,8 +347,8 @@
     "id": "G06",
     "name": "reactivate_lapsed_14d",
     "instance_id": "G-01279",
-    "started_at": "2026-10-01T15:37:55.608Z",
-    "deadline": "2026-10-15T15:37:55.608Z",
+    "started_at": "2026-10-01T15:37:55.609Z",
+    "deadline": "2026-10-15T15:37:55.609Z",
     "rule_version": 1,
     "success_signal": "purchase_completed (any paid plan) within 336h",
     "carried_over": false,
@@ -378,8 +378,8 @@
     "id": "G07",
     "name": "resume_series_3d",
     "instance_id": "G-01304",
-    "started_at": "2026-10-01T15:52:23.275Z",
-    "deadline": "2026-10-04T15:52:23.275Z",
+    "started_at": "2026-10-01T15:52:23.276Z",
+    "deadline": "2026-10-04T15:52:23.276Z",
     "rule_version": 1,
     "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
     "carried_over": false,
@@ -405,8 +405,8 @@
    "decision_id": "D-02300",
    "rule_version": 1,
    "success_signal": "purchase_completed (any paid plan) within 336h",
-   "started_at": "2026-10-01T15:37:55.608Z",
-   "deadline": "2026-10-15T15:37:55.608Z",
+   "started_at": "2026-10-01T15:37:55.609Z",
+   "deadline": "2026-10-15T15:37:55.609Z",
    "status": "succeeded",
    "detail": "success signal purchase_completed observed at 2026-10-01T15:39:47.083Z",
    "evidence": [
@@ -430,8 +430,8 @@
    "decision_id": "D-02347",
    "rule_version": 1,
    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
-   "started_at": "2026-10-01T15:52:23.275Z",
-   "deadline": "2026-10-04T15:52:23.275Z",
+   "started_at": "2026-10-01T15:52:23.276Z",
+   "deadline": "2026-10-04T15:52:23.276Z",
    "status": "failed",
    "detail": "no play_started (same content_slug as the unfinished series) by deadline",
    "evidence": [],
@@ -448,7 +448,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T15:37:55.608Z",
+   "at": "2026-10-01T15:37:55.609Z",
    "kind": "goal_committed",
    "instance_id": "G-01279",
    "goal_id": "G06",
@@ -467,7 +467,7 @@
    "note": "subscription fact now comes from this event, overriding the snapshot"
   },
   {
-   "at": "2026-10-01T15:52:23.275Z",
+   "at": "2026-10-01T15:52:23.276Z",
    "kind": "goal_committed",
    "instance_id": "G-01304",
    "goal_id": "G07",
@@ -475,13 +475,13 @@
    "decision_id": "D-02347"
   },
   {
-   "at": "2026-10-15T15:37:55.608Z",
+   "at": "2026-10-15T15:37:55.609Z",
    "kind": "learning",
    "instance_id": "G-01279",
    "learning": "holdout: no action taken; outcome is the baseline for this kind of viewer"
   },
   {
-   "at": "2026-10-04T15:52:23.275Z",
+   "at": "2026-10-04T15:52:23.276Z",
    "kind": "learning",
    "instance_id": "G-01304",
    "learning": "holdout: no action taken; outcome is the baseline for this kind of viewer"

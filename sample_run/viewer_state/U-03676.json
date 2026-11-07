@@ -206,7 +206,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00573",
-   "observed_at": "2026-10-08T08:23:51.822Z",
+   "observed_at": "2026-10-08T08:23:51.823Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -220,11 +220,11 @@
    "arm": "holdout",
    "status": "judged:succeeded",
    "rule_version": 1,
-   "started_at": "2026-10-01T08:23:51.822Z",
-   "deadline": "2026-10-08T08:23:51.822Z",
+   "started_at": "2026-10-01T08:23:51.823Z",
+   "deadline": "2026-10-08T08:23:51.823Z",
    "decision_id": "D-01047",
    "params": {},
-   "closed_at": "2026-10-08T08:23:51.822Z",
+   "closed_at": "2026-10-08T08:23:51.823Z",
    "close_reason": null
   }
  ],
@@ -238,8 +238,8 @@
     "id": "G12",
     "name": "return_after_absence_7d",
     "instance_id": "G-00573",
-    "started_at": "2026-10-01T08:23:51.822Z",
-    "deadline": "2026-10-08T08:23:51.822Z",
+    "started_at": "2026-10-01T08:23:51.823Z",
+    "deadline": "2026-10-08T08:23:51.823Z",
     "rule_version": 1,
     "success_signal": "play_started (any title) within 168h",
     "carried_over": false,
@@ -261,8 +261,8 @@
    "decision_id": "D-01047",
    "rule_version": 1,
    "success_signal": "play_started (any title) within 168h",
-   "started_at": "2026-10-01T08:23:51.822Z",
-   "deadline": "2026-10-08T08:23:51.822Z",
+   "started_at": "2026-10-01T08:23:51.823Z",
+   "deadline": "2026-10-08T08:23:51.823Z",
    "status": "succeeded",
    "detail": "success signal play_started observed at 2026-10-01T08:24:57.769Z",
    "evidence": [
@@ -281,7 +281,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T08:23:51.822Z",
+   "at": "2026-10-01T08:23:51.823Z",
    "kind": "goal_committed",
    "instance_id": "G-00573",
    "goal_id": "G12",
@@ -289,7 +289,7 @@
    "decision_id": "D-01047"
   },
   {
-   "at": "2026-10-08T08:23:51.822Z",
+   "at": "2026-10-08T08:23:51.823Z",
    "kind": "learning",
    "instance_id": "G-00573",
    "learning": "holdout: no action taken; outcome is the baseline for this kind of viewer"

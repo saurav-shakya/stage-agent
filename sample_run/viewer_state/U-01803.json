@@ -199,7 +199,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00462",
-   "observed_at": "2026-10-08T07:07:54.049Z",
+   "observed_at": "2026-10-08T07:07:54.051Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -213,11 +213,11 @@
    "arm": "agent",
    "status": "judged:succeeded",
    "rule_version": 1,
-   "started_at": "2026-10-01T07:07:54.049Z",
-   "deadline": "2026-10-08T07:07:54.049Z",
+   "started_at": "2026-10-01T07:07:54.051Z",
+   "deadline": "2026-10-08T07:07:54.051Z",
    "decision_id": "D-00869",
    "params": {},
-   "closed_at": "2026-10-08T07:07:54.049Z",
+   "closed_at": "2026-10-08T07:07:54.051Z",
    "close_reason": null
   }
  ],
@@ -231,15 +231,15 @@
     "id": "G12",
     "name": "return_after_absence_7d",
     "instance_id": "G-00462",
-    "started_at": "2026-10-01T07:07:54.049Z",
-    "deadline": "2026-10-08T07:07:54.049Z",
+    "started_at": "2026-10-01T07:07:54.051Z",
+    "deadline": "2026-10-08T07:07:54.051Z",
     "rule_version": 1,
     "success_signal": "play_started (any title) within 168h",
     "carried_over": false,
     "params": {}
    },
    "confidence": 0.7,
-   "published_at": "2026-10-01T07:07:54.049Z",
+   "published_at": "2026-10-01T07:07:54.052Z",
    "trigger": "0d728c3e-cb29-4d9f-a002-422a4db44121"
   },
   {
@@ -268,9 +268,9 @@
    "action_id": "A-00345",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-10-01T07:07:54.049Z",
+   "published_at": "2026-10-01T07:07:54.052Z",
    "send_at": null,
-   "live_until": "2026-10-01T09:07:54.049Z",
+   "live_until": "2026-10-01T09:07:54.052Z",
    "dialect": "d1"
   }
  ],
@@ -283,8 +283,8 @@
    "decision_id": "D-00869",
    "rule_version": 1,
    "success_signal": "play_started (any title) within 168h",
-   "started_at": "2026-10-01T07:07:54.049Z",
-   "deadline": "2026-10-08T07:07:54.049Z",
+   "started_at": "2026-10-01T07:07:54.051Z",
+   "deadline": "2026-10-08T07:07:54.051Z",
    "status": "succeeded",
    "detail": "success signal play_started observed at 2026-10-01T07:11:58.908Z",
    "evidence": [
@@ -303,7 +303,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T07:07:54.049Z",
+   "at": "2026-10-01T07:07:54.051Z",
    "kind": "goal_committed",
    "instance_id": "G-00462",
    "goal_id": "G12",
@@ -311,7 +311,7 @@
    "decision_id": "D-00869"
   },
   {
-   "at": "2026-10-08T07:07:54.049Z",
+   "at": "2026-10-08T07:07:54.051Z",
    "kind": "learning",
    "instance_id": "G-00462",
    "learning": "page seen 1 time(s); goal reached after exposure"

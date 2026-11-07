@@ -208,7 +208,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00107",
-   "observed_at": "2026-10-08T01:47:36.064Z",
+   "observed_at": "2026-10-08T01:47:36.066Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -222,11 +222,11 @@
    "arm": "holdout",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T01:47:36.064Z",
-   "deadline": "2026-10-08T01:47:36.064Z",
+   "started_at": "2026-10-01T01:47:36.066Z",
+   "deadline": "2026-10-08T01:47:36.066Z",
    "decision_id": "D-00129",
    "params": {},
-   "closed_at": "2026-10-08T01:47:36.064Z",
+   "closed_at": "2026-10-08T01:47:36.066Z",
    "close_reason": null
   }
  ],
@@ -240,8 +240,8 @@
     "id": "G05",
     "name": "first_paid_7d",
     "instance_id": "G-00107",
-    "started_at": "2026-10-01T01:47:36.064Z",
-    "deadline": "2026-10-08T01:47:36.064Z",
+    "started_at": "2026-10-01T01:47:36.066Z",
+    "deadline": "2026-10-08T01:47:36.066Z",
     "rule_version": 1,
     "success_signal": "purchase_completed (is_trial = false) within 168h",
     "carried_over": false,
@@ -263,8 +263,8 @@
    "decision_id": "D-00129",
    "rule_version": 1,
    "success_signal": "purchase_completed (is_trial = false) within 168h",
-   "started_at": "2026-10-01T01:47:36.064Z",
-   "deadline": "2026-10-08T01:47:36.064Z",
+   "started_at": "2026-10-01T01:47:36.066Z",
+   "deadline": "2026-10-08T01:47:36.066Z",
    "status": "failed",
    "detail": "no purchase_completed (is_trial = false) by deadline",
    "evidence": [],
@@ -281,7 +281,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T01:47:36.064Z",
+   "at": "2026-10-01T01:47:36.066Z",
    "kind": "goal_committed",
    "instance_id": "G-00107",
    "goal_id": "G05",
@@ -289,7 +289,7 @@
    "decision_id": "D-00129"
   },
   {
-   "at": "2026-10-08T01:47:36.064Z",
+   "at": "2026-10-08T01:47:36.066Z",
    "kind": "learning",
    "instance_id": "G-00107",
    "learning": "holdout: no action taken; outcome is the baseline for this kind of viewer"

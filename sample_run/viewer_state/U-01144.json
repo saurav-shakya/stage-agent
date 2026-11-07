@@ -232,7 +232,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00131",
-   "observed_at": "2026-10-04T02:30:45.873Z",
+   "observed_at": "2026-10-04T02:30:45.874Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -241,7 +241,7 @@
    "value": true,
    "source": "outcome",
    "ref": "outcome:G-00131",
-   "observed_at": "2026-10-04T02:30:45.873Z",
+   "observed_at": "2026-10-04T02:30:45.874Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -255,15 +255,15 @@
    "arm": "agent",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T02:30:45.873Z",
-   "deadline": "2026-10-04T02:30:45.873Z",
+   "started_at": "2026-10-01T02:30:45.874Z",
+   "deadline": "2026-10-04T02:30:45.874Z",
    "decision_id": "D-00163",
    "params": {
     "slug": "hama-chudibha-d1",
     "title_id": "T0002",
     "next_episode_number": 1
    },
-   "closed_at": "2026-10-04T02:30:45.873Z",
+   "closed_at": "2026-10-04T02:30:45.874Z",
    "close_reason": null
   }
  ],
@@ -277,8 +277,8 @@
     "id": "G07",
     "name": "resume_series_3d",
     "instance_id": "G-00131",
-    "started_at": "2026-10-01T02:30:45.873Z",
-    "deadline": "2026-10-04T02:30:45.873Z",
+    "started_at": "2026-10-01T02:30:45.874Z",
+    "deadline": "2026-10-04T02:30:45.874Z",
     "rule_version": 1,
     "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
     "carried_over": false,
@@ -289,7 +289,7 @@
     }
    },
    "confidence": 0.7,
-   "published_at": "2026-10-01T02:30:45.873Z",
+   "published_at": "2026-10-01T02:30:45.875Z",
    "trigger": "e49637ca-fdd0-4b85-98f4-b3199f39754a"
   },
   {
@@ -318,16 +318,16 @@
    "action_id": "A-00088",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-10-01T02:30:45.873Z",
+   "published_at": "2026-10-01T02:30:45.875Z",
    "send_at": null,
-   "live_until": "2026-10-01T04:30:45.873Z",
+   "live_until": "2026-10-01T04:30:45.875Z",
    "dialect": "d1"
   },
   {
    "action_id": "A-00089",
    "type": "push",
    "status": "scheduled",
-   "published_at": "2026-10-01T02:30:45.873Z",
+   "published_at": "2026-10-01T02:30:45.875Z",
    "send_at": "2026-10-02T13:30:00.000Z",
    "live_until": null,
    "dialect": null
@@ -342,8 +342,8 @@
    "decision_id": "D-00163",
    "rule_version": 1,
    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
-   "started_at": "2026-10-01T02:30:45.873Z",
-   "deadline": "2026-10-04T02:30:45.873Z",
+   "started_at": "2026-10-01T02:30:45.874Z",
+   "deadline": "2026-10-04T02:30:45.874Z",
    "status": "failed",
    "detail": "no play_started (same content_slug as the unfinished series) by deadline",
    "evidence": [],
@@ -362,7 +362,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T02:30:45.873Z",
+   "at": "2026-10-01T02:30:45.874Z",
    "kind": "goal_committed",
    "instance_id": "G-00131",
    "goal_id": "G07",
@@ -370,7 +370,7 @@
    "decision_id": "D-00163"
   },
   {
-   "at": "2026-10-04T02:30:45.873Z",
+   "at": "2026-10-04T02:30:45.874Z",
    "kind": "learning",
    "instance_id": "G-00131",
    "learning": "page seen 1 time(s); message failed (token_invalid): do not retry push, prefer the home page; goal not reached: next time try a different lever or a lower-effort goal"

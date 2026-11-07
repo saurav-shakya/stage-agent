@@ -248,7 +248,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-01410",
-   "observed_at": "2026-10-15T16:59:17.255Z",
+   "observed_at": "2026-10-15T16:59:17.257Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -262,11 +262,11 @@
    "arm": "agent",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T16:59:17.255Z",
-   "deadline": "2026-10-15T16:59:17.255Z",
+   "started_at": "2026-10-01T16:59:17.257Z",
+   "deadline": "2026-10-15T16:59:17.257Z",
    "decision_id": "D-02576",
    "params": {},
-   "closed_at": "2026-10-15T16:59:17.255Z",
+   "closed_at": "2026-10-15T16:59:17.257Z",
    "close_reason": null
   }
  ],
@@ -280,15 +280,15 @@
     "id": "G06",
     "name": "reactivate_lapsed_14d",
     "instance_id": "G-01410",
-    "started_at": "2026-10-01T16:59:17.255Z",
-    "deadline": "2026-10-15T16:59:17.255Z",
+    "started_at": "2026-10-01T16:59:17.257Z",
+    "deadline": "2026-10-15T16:59:17.257Z",
     "rule_version": 1,
     "success_signal": "purchase_completed (any paid plan) within 336h",
     "carried_over": false,
     "params": {}
    },
    "confidence": 0.55,
-   "published_at": "2026-10-01T16:59:17.255Z",
+   "published_at": "2026-10-01T16:59:17.257Z",
    "trigger": "de8527d6-ee52-4aa2-ac8d-8bbf8c9e8dc2"
   }
  ],
@@ -297,9 +297,9 @@
    "action_id": "A-01140",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-10-01T16:59:17.255Z",
+   "published_at": "2026-10-01T16:59:17.257Z",
    "send_at": null,
-   "live_until": "2026-10-01T18:59:17.255Z",
+   "live_until": "2026-10-01T18:59:17.257Z",
    "dialect": "d5"
   }
  ],
@@ -312,8 +312,8 @@
    "decision_id": "D-02576",
    "rule_version": 1,
    "success_signal": "purchase_completed (any paid plan) within 336h",
-   "started_at": "2026-10-01T16:59:17.255Z",
-   "deadline": "2026-10-15T16:59:17.255Z",
+   "started_at": "2026-10-01T16:59:17.257Z",
+   "deadline": "2026-10-15T16:59:17.257Z",
    "status": "failed",
    "detail": "no purchase_completed (any paid plan) by deadline",
    "evidence": [],
@@ -330,7 +330,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T16:59:17.255Z",
+   "at": "2026-10-01T16:59:17.257Z",
    "kind": "goal_committed",
    "instance_id": "G-01410",
    "goal_id": "G06",
@@ -338,7 +338,7 @@
    "decision_id": "D-02576"
   },
   {
-   "at": "2026-10-15T16:59:17.255Z",
+   "at": "2026-10-15T16:59:17.257Z",
    "kind": "learning",
    "instance_id": "G-01410",
    "learning": "page seen 1 time(s); goal not reached: next time try a different lever or a lower-effort goal"

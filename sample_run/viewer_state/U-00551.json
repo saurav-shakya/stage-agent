@@ -261,7 +261,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00240",
-   "observed_at": "2026-10-04T04:20:54.736Z",
+   "observed_at": "2026-10-04T04:20:54.738Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -270,7 +270,7 @@
    "value": true,
    "source": "outcome",
    "ref": "outcome:G-00240",
-   "observed_at": "2026-10-04T04:20:54.736Z",
+   "observed_at": "2026-10-04T04:20:54.738Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -284,15 +284,15 @@
    "arm": "agent",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T04:20:54.736Z",
-   "deadline": "2026-10-04T04:20:54.736Z",
+   "started_at": "2026-10-01T04:20:54.738Z",
+   "deadline": "2026-10-04T04:20:54.738Z",
    "decision_id": "D-00315",
    "params": {
     "slug": "bhaja-moguba-d2",
     "title_id": "T0524",
     "next_episode_number": 1
    },
-   "closed_at": "2026-10-04T04:20:54.736Z",
+   "closed_at": "2026-10-04T04:20:54.738Z",
    "close_reason": null
   }
  ],
@@ -306,8 +306,8 @@
     "id": "G07",
     "name": "resume_series_3d",
     "instance_id": "G-00240",
-    "started_at": "2026-10-01T04:20:54.736Z",
-    "deadline": "2026-10-04T04:20:54.736Z",
+    "started_at": "2026-10-01T04:20:54.738Z",
+    "deadline": "2026-10-04T04:20:54.738Z",
     "rule_version": 1,
     "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
     "carried_over": false,
@@ -318,7 +318,7 @@
     }
    },
    "confidence": 0.6,
-   "published_at": "2026-10-01T04:20:54.736Z",
+   "published_at": "2026-10-01T04:20:54.738Z",
    "trigger": "5bed355b-9f06-413d-9b58-98485d53ba78"
   }
  ],
@@ -327,16 +327,16 @@
    "action_id": "A-00161",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-10-01T04:20:54.736Z",
+   "published_at": "2026-10-01T04:20:54.738Z",
    "send_at": null,
-   "live_until": "2026-10-01T06:20:54.736Z",
+   "live_until": "2026-10-01T06:20:54.738Z",
    "dialect": "d2"
   },
   {
    "action_id": "A-00162",
    "type": "push",
    "status": "scheduled",
-   "published_at": "2026-10-01T04:20:54.736Z",
+   "published_at": "2026-10-01T04:20:54.738Z",
    "send_at": "2026-10-02T13:30:00.000Z",
    "live_until": null,
    "dialect": null
@@ -351,8 +351,8 @@
    "decision_id": "D-00315",
    "rule_version": 1,
    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
-   "started_at": "2026-10-01T04:20:54.736Z",
-   "deadline": "2026-10-04T04:20:54.736Z",
+   "started_at": "2026-10-01T04:20:54.738Z",
+   "deadline": "2026-10-04T04:20:54.738Z",
    "status": "failed",
    "detail": "no play_started (same content_slug as the unfinished series) by deadline",
    "evidence": [],
@@ -369,7 +369,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T04:20:54.736Z",
+   "at": "2026-10-01T04:20:54.738Z",
    "kind": "goal_committed",
    "instance_id": "G-00240",
    "goal_id": "G07",
@@ -377,7 +377,7 @@
    "decision_id": "D-00315"
   },
   {
-   "at": "2026-10-04T04:20:54.736Z",
+   "at": "2026-10-04T04:20:54.738Z",
    "kind": "learning",
    "instance_id": "G-00240",
    "learning": "page published but never seen while live: viewer did not reach home in time or changed dialect; goal not reached: next time try a different lever or a lower-effort goal"

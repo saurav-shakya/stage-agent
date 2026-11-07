@@ -230,7 +230,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00918",
-   "observed_at": "2026-10-04T13:03:05.206Z",
+   "observed_at": "2026-10-04T13:03:05.208Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -239,7 +239,7 @@
    "value": true,
    "source": "outcome",
    "ref": "outcome:G-00918",
-   "observed_at": "2026-10-04T13:03:05.206Z",
+   "observed_at": "2026-10-04T13:03:05.208Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -253,15 +253,15 @@
    "arm": "agent",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T13:03:05.206Z",
-   "deadline": "2026-10-04T13:03:05.206Z",
+   "started_at": "2026-10-01T13:03:05.208Z",
+   "deadline": "2026-10-04T13:03:05.208Z",
    "decision_id": "D-01641",
    "params": {
     "slug": "guka-kosusa-d2",
     "title_id": "T0522",
     "next_episode_number": 1
    },
-   "closed_at": "2026-10-04T13:03:05.206Z",
+   "closed_at": "2026-10-04T13:03:05.208Z",
    "close_reason": null
   }
  ],
@@ -275,8 +275,8 @@
     "id": "G07",
     "name": "resume_series_3d",
     "instance_id": "G-00918",
-    "started_at": "2026-10-01T13:03:05.206Z",
-    "deadline": "2026-10-04T13:03:05.206Z",
+    "started_at": "2026-10-01T13:03:05.208Z",
+    "deadline": "2026-10-04T13:03:05.208Z",
     "rule_version": 1,
     "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
     "carried_over": false,
@@ -287,7 +287,7 @@
     }
    },
    "confidence": 0.7,
-   "published_at": "2026-10-01T13:03:05.206Z",
+   "published_at": "2026-10-01T13:03:05.208Z",
    "trigger": "486b8c06-29b0-480e-bf60-4dbf02f467f7"
   }
  ],
@@ -296,16 +296,16 @@
    "action_id": "A-00711",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-10-01T13:03:05.206Z",
+   "published_at": "2026-10-01T13:03:05.208Z",
    "send_at": null,
-   "live_until": "2026-10-01T15:03:05.206Z",
+   "live_until": "2026-10-01T15:03:05.208Z",
    "dialect": "d2"
   },
   {
    "action_id": "A-00712",
    "type": "push",
    "status": "scheduled",
-   "published_at": "2026-10-01T13:03:05.206Z",
+   "published_at": "2026-10-01T13:03:05.208Z",
    "send_at": "2026-10-02T13:30:00.000Z",
    "live_until": null,
    "dialect": null
@@ -320,8 +320,8 @@
    "decision_id": "D-01641",
    "rule_version": 1,
    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
-   "started_at": "2026-10-01T13:03:05.206Z",
-   "deadline": "2026-10-04T13:03:05.206Z",
+   "started_at": "2026-10-01T13:03:05.208Z",
+   "deadline": "2026-10-04T13:03:05.208Z",
    "status": "failed",
    "detail": "no play_started (same content_slug as the unfinished series) by deadline",
    "evidence": [],
@@ -340,7 +340,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T13:03:05.206Z",
+   "at": "2026-10-01T13:03:05.208Z",
    "kind": "goal_committed",
    "instance_id": "G-00918",
    "goal_id": "G07",
@@ -348,7 +348,7 @@
    "decision_id": "D-01641"
   },
   {
-   "at": "2026-10-04T13:03:05.206Z",
+   "at": "2026-10-04T13:03:05.208Z",
    "kind": "learning",
    "instance_id": "G-00918",
    "learning": "page seen 1 time(s); message failed (token_invalid): do not retry push, prefer the home page; goal not reached: next time try a different lever or a lower-effort goal"

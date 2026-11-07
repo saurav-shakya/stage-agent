@@ -208,7 +208,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-01325",
-   "observed_at": "2026-10-04T16:05:51.191Z",
+   "observed_at": "2026-10-04T16:05:51.193Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -222,11 +222,11 @@
    "arm": "agent",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T16:05:51.191Z",
-   "deadline": "2026-10-04T16:05:51.191Z",
+   "started_at": "2026-10-01T16:05:51.193Z",
+   "deadline": "2026-10-04T16:05:51.193Z",
    "decision_id": "D-02384",
    "params": {},
-   "closed_at": "2026-10-04T16:05:51.191Z",
+   "closed_at": "2026-10-04T16:05:51.193Z",
    "close_reason": null
   }
  ],
@@ -240,15 +240,15 @@
     "id": "G02",
     "name": "first_full_episode_3d",
     "instance_id": "G-01325",
-    "started_at": "2026-10-01T16:05:51.191Z",
-    "deadline": "2026-10-04T16:05:51.191Z",
+    "started_at": "2026-10-01T16:05:51.193Z",
+    "deadline": "2026-10-04T16:05:51.193Z",
     "rule_version": 1,
     "success_signal": "episode_completed (any episode) within 72h",
     "carried_over": false,
     "params": {}
    },
    "confidence": 0.6,
-   "published_at": "2026-10-01T16:05:51.192Z",
+   "published_at": "2026-10-01T16:05:51.193Z",
    "trigger": "47d50f45-c502-44b9-94c5-8f1f85109085"
   }
  ],
@@ -257,9 +257,9 @@
    "action_id": "A-01065",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-10-01T16:05:51.192Z",
+   "published_at": "2026-10-01T16:05:51.193Z",
    "send_at": null,
-   "live_until": "2026-10-01T18:05:51.192Z",
+   "live_until": "2026-10-01T18:05:51.193Z",
    "dialect": "d4"
   }
  ],
@@ -272,8 +272,8 @@
    "decision_id": "D-02384",
    "rule_version": 1,
    "success_signal": "episode_completed (any episode) within 72h",
-   "started_at": "2026-10-01T16:05:51.191Z",
-   "deadline": "2026-10-04T16:05:51.191Z",
+   "started_at": "2026-10-01T16:05:51.193Z",
+   "deadline": "2026-10-04T16:05:51.193Z",
    "status": "failed",
    "detail": "no episode_completed (any episode) by deadline",
    "evidence": [],
@@ -290,7 +290,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T16:05:51.191Z",
+   "at": "2026-10-01T16:05:51.193Z",
    "kind": "goal_committed",
    "instance_id": "G-01325",
    "goal_id": "G02",
@@ -298,7 +298,7 @@
    "decision_id": "D-02384"
   },
   {
-   "at": "2026-10-04T16:05:51.191Z",
+   "at": "2026-10-04T16:05:51.193Z",
    "kind": "learning",
    "instance_id": "G-01325",
    "learning": "page seen 1 time(s); goal not reached: next time try a different lever or a lower-effort goal"

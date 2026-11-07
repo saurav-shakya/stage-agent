@@ -11,7 +11,7 @@ import re
 from collections import Counter, defaultdict
 from datetime import timedelta
 
-from .timeutil import ts, true_time
+from .timeutil import ist_day, ts, true_time
 
 # Text inside the catalogue that reads like an instruction to an automated agent. We never act on it; we flag the
 # title so the flag is visible in evidence, and we never pass descriptions to the model.
@@ -84,9 +84,19 @@ class Pack:
         self._load_arms()
         self.history = History()
         self.dup_events = self.history.load(os.path.join(root, 'data/events.jsonl'))
+        self._history_window()
         self._popularity()
 
     # ------------------------------------------------------------------ loading
+    def _history_window(self):
+        """First and last IST day of the supplied history, read from the data (not assumed), so wording such as
+        "not in the 30-day history" stays true for a pack covering a different period."""
+        days = [e['_received'] for evs in self.history.by_user.values() for e in evs]
+        first, last = (min(days), max(days)) if days else (None, None)
+        self.history_start = ist_day(first) if first else None
+        self.history_end = ist_day(last) if last else None
+        self.history_days = round((last - first).total_seconds() / 86400) if days else 0
+
     def _path(self, rel):
         return os.path.join(self.root, rel)
 

@@ -190,7 +190,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00443",
-   "observed_at": "2026-10-02T06:51:58.700Z",
+   "observed_at": "2026-10-02T06:51:58.703Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -204,11 +204,11 @@
    "arm": "agent",
    "status": "judged:succeeded",
    "rule_version": 1,
-   "started_at": "2026-10-01T06:51:58.700Z",
-   "deadline": "2026-10-02T06:51:58.700Z",
+   "started_at": "2026-10-01T06:51:58.703Z",
+   "deadline": "2026-10-02T06:51:58.703Z",
    "decision_id": "D-00837",
    "params": {},
-   "closed_at": "2026-10-02T06:51:58.700Z",
+   "closed_at": "2026-10-02T06:51:58.703Z",
    "close_reason": null
   }
  ],
@@ -222,15 +222,15 @@
     "id": "G01",
     "name": "first_play_24h",
     "instance_id": "G-00443",
-    "started_at": "2026-10-01T06:51:58.700Z",
-    "deadline": "2026-10-02T06:51:58.700Z",
+    "started_at": "2026-10-01T06:51:58.703Z",
+    "deadline": "2026-10-02T06:51:58.703Z",
     "rule_version": 1,
     "success_signal": "play_started (any title) within 24h",
     "carried_over": false,
     "params": {}
    },
    "confidence": 0.6,
-   "published_at": "2026-10-01T06:51:58.700Z",
+   "published_at": "2026-10-01T06:51:58.704Z",
    "trigger": "e085c45d-8b5b-4940-9c5d-c987ed0dd3cf"
   },
   {
@@ -249,9 +249,9 @@
    "action_id": "A-00318",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-10-01T06:51:58.700Z",
+   "published_at": "2026-10-01T06:51:58.704Z",
    "send_at": null,
-   "live_until": "2026-10-01T08:51:58.700Z",
+   "live_until": "2026-10-01T08:51:58.704Z",
    "dialect": "d2"
   }
  ],
@@ -264,8 +264,8 @@
    "decision_id": "D-00837",
    "rule_version": 1,
    "success_signal": "play_started (any title) within 24h",
-   "started_at": "2026-10-01T06:51:58.700Z",
-   "deadline": "2026-10-02T06:51:58.700Z",
+   "started_at": "2026-10-01T06:51:58.703Z",
+   "deadline": "2026-10-02T06:51:58.703Z",
    "status": "succeeded",
    "detail": "success signal play_started observed at 2026-10-01T06:53:35.688Z",
    "evidence": [
@@ -293,7 +293,7 @@
    }
   },
   {
-   "at": "2026-10-01T06:51:58.700Z",
+   "at": "2026-10-01T06:51:58.703Z",
    "kind": "goal_committed",
    "instance_id": "G-00443",
    "goal_id": "G01",
@@ -301,7 +301,7 @@
    "decision_id": "D-00837"
   },
   {
-   "at": "2026-10-02T06:51:58.700Z",
+   "at": "2026-10-02T06:51:58.703Z",
    "kind": "learning",
    "instance_id": "G-00443",
    "learning": "page published but never seen while live: viewer did not reach home in time or changed dialect; goal reached without exposure: not credited"

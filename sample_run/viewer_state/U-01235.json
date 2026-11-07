@@ -225,7 +225,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00749",
-   "observed_at": "2026-10-08T10:45:04.702Z",
+   "observed_at": "2026-10-08T10:45:04.703Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -239,11 +239,11 @@
    "arm": "holdout",
    "status": "judged:succeeded",
    "rule_version": 1,
-   "started_at": "2026-10-01T10:45:04.702Z",
-   "deadline": "2026-10-08T10:45:04.702Z",
+   "started_at": "2026-10-01T10:45:04.703Z",
+   "deadline": "2026-10-08T10:45:04.703Z",
    "decision_id": "D-01339",
    "params": {},
-   "closed_at": "2026-10-08T10:45:04.702Z",
+   "closed_at": "2026-10-08T10:45:04.703Z",
    "close_reason": null
   }
  ],
@@ -257,8 +257,8 @@
     "id": "G08",
     "name": "try_new_release_7d",
     "instance_id": "G-00749",
-    "started_at": "2026-10-01T10:45:04.702Z",
-    "deadline": "2026-10-08T10:45:04.702Z",
+    "started_at": "2026-10-01T10:45:04.703Z",
+    "deadline": "2026-10-08T10:45:04.703Z",
     "rule_version": 1,
     "success_signal": "play_started (a title released in the 30 days before the goal start) within 168h",
     "carried_over": false,
@@ -280,8 +280,8 @@
    "decision_id": "D-01339",
    "rule_version": 1,
    "success_signal": "play_started (a title released in the 30 days before the goal start) within 168h",
-   "started_at": "2026-10-01T10:45:04.702Z",
-   "deadline": "2026-10-08T10:45:04.702Z",
+   "started_at": "2026-10-01T10:45:04.703Z",
+   "deadline": "2026-10-08T10:45:04.703Z",
    "status": "succeeded",
    "detail": "success signal play_started observed at 2026-10-02T14:17:03.000Z",
    "evidence": [
@@ -300,7 +300,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T10:45:04.702Z",
+   "at": "2026-10-01T10:45:04.703Z",
    "kind": "goal_committed",
    "instance_id": "G-00749",
    "goal_id": "G08",
@@ -308,7 +308,7 @@
    "decision_id": "D-01339"
   },
   {
-   "at": "2026-10-08T10:45:04.702Z",
+   "at": "2026-10-08T10:45:04.703Z",
    "kind": "learning",
    "instance_id": "G-00749",
    "learning": "holdout: no action taken; outcome is the baseline for this kind of viewer"

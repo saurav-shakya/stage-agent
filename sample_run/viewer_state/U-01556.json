@@ -242,7 +242,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00190",
-   "observed_at": "2026-10-15T03:27:31.403Z",
+   "observed_at": "2026-10-15T03:27:31.404Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -256,11 +256,11 @@
    "arm": "agent",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T03:27:31.403Z",
-   "deadline": "2026-10-15T03:27:31.403Z",
+   "started_at": "2026-10-01T03:27:31.404Z",
+   "deadline": "2026-10-15T03:27:31.404Z",
    "decision_id": "D-00243",
    "params": {},
-   "closed_at": "2026-10-15T03:27:31.403Z",
+   "closed_at": "2026-10-15T03:27:31.404Z",
    "close_reason": null
   }
  ],
@@ -274,8 +274,8 @@
     "id": "G06",
     "name": "reactivate_lapsed_14d",
     "instance_id": "G-00190",
-    "started_at": "2026-10-01T03:27:31.403Z",
-    "deadline": "2026-10-15T03:27:31.403Z",
+    "started_at": "2026-10-01T03:27:31.404Z",
+    "deadline": "2026-10-15T03:27:31.404Z",
     "rule_version": 1,
     "success_signal": "purchase_completed (any paid plan) within 336h",
     "carried_over": false,
@@ -294,15 +294,15 @@
     "id": "G06",
     "name": "reactivate_lapsed_14d",
     "instance_id": "G-00190",
-    "started_at": "2026-10-01T03:27:31.403Z",
-    "deadline": "2026-10-15T03:27:31.403Z",
+    "started_at": "2026-10-01T03:27:31.404Z",
+    "deadline": "2026-10-15T03:27:31.404Z",
     "rule_version": 1,
     "success_signal": "purchase_completed (any paid plan) within 336h",
     "carried_over": true,
     "params": {}
    },
    "confidence": 0.55,
-   "published_at": "2026-10-01T09:57:56.315Z",
+   "published_at": "2026-10-01T09:57:56.316Z",
    "trigger": "18538ca4-7275-4afd-a3f1-59c6e89d82e6"
   },
   {
@@ -314,15 +314,15 @@
     "id": "G06",
     "name": "reactivate_lapsed_14d",
     "instance_id": "G-00190",
-    "started_at": "2026-10-01T03:27:31.403Z",
-    "deadline": "2026-10-15T03:27:31.403Z",
+    "started_at": "2026-10-01T03:27:31.404Z",
+    "deadline": "2026-10-15T03:27:31.404Z",
     "rule_version": 1,
     "success_signal": "purchase_completed (any paid plan) within 336h",
     "carried_over": true,
     "params": {}
    },
    "confidence": 0.55,
-   "published_at": "2026-10-01T15:05:11.249Z",
+   "published_at": "2026-10-01T15:05:11.250Z",
    "trigger": "a101c0f3-ec5d-4e75-a9ff-c117533175af"
   }
  ],
@@ -340,18 +340,18 @@
    "action_id": "A-00525",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-10-01T09:57:56.315Z",
+   "published_at": "2026-10-01T09:57:56.316Z",
    "send_at": null,
-   "live_until": "2026-10-01T11:57:56.315Z",
+   "live_until": "2026-10-01T11:57:56.316Z",
    "dialect": "d5"
   },
   {
    "action_id": "A-00933",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-10-01T15:05:11.249Z",
+   "published_at": "2026-10-01T15:05:11.250Z",
    "send_at": null,
-   "live_until": "2026-10-01T17:05:11.249Z",
+   "live_until": "2026-10-01T17:05:11.250Z",
    "dialect": "d5"
   }
  ],
@@ -364,8 +364,8 @@
    "decision_id": "D-00243",
    "rule_version": 1,
    "success_signal": "purchase_completed (any paid plan) within 336h",
-   "started_at": "2026-10-01T03:27:31.403Z",
-   "deadline": "2026-10-15T03:27:31.403Z",
+   "started_at": "2026-10-01T03:27:31.404Z",
+   "deadline": "2026-10-15T03:27:31.404Z",
    "status": "failed",
    "detail": "no purchase_completed (any paid plan) by deadline",
    "evidence": [],
@@ -382,7 +382,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T03:27:31.403Z",
+   "at": "2026-10-01T03:27:31.404Z",
    "kind": "goal_committed",
    "instance_id": "G-00190",
    "goal_id": "G06",
@@ -390,7 +390,7 @@
    "decision_id": "D-00243"
   },
   {
-   "at": "2026-10-15T03:27:31.403Z",
+   "at": "2026-10-15T03:27:31.404Z",
    "kind": "learning",
    "instance_id": "G-00190",
    "learning": "page seen 3 time(s); goal not reached: next time try a different lever or a lower-effort goal"

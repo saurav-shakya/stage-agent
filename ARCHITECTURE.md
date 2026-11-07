@@ -73,11 +73,20 @@ Precedence is defined per fact (`src/facts.py`). No source wins just because it 
 | Duplicate profile rows | The latest `updated_at` wins. Differing fields are listed as conflicts. |
 | Event time | `received_at - (sent_at - occurred_at)`. The phone clock can be hours off, but the gap between two readings of the same clock is still the offline-buffering time. |
 
+Every reference in a decision's `evidence` has an entry in `evidence_detail` with its source and freshness, so a
+reviewer can check how current it was when the agent acted: events carry their true time, receive time and age;
+profile rows their snapshot time and age; catalogue titles their availability window and whether they were
+available at decision time; goal rules their version and when that version took effect; aggregates such as
+"no episode_completed in history" the period of history they cover. The history period itself is read from the
+pack, not assumed.
+
 ## Verification
 
 `src/verifier.py` runs after the decision step and re-derives everything from the pack itself:
 
-- **Goal.** Eligibility is recomputed from raw data. The goal must be measurable and have evidence. A model
+- **Goal.** Eligibility is recomputed from raw data. The goal must be measurable and have evidence. Measurable
+  means its success event exists in the event stream and its condition is one the code fully understands; a
+  condition with unknown or extra wording is not measurable (it is never read as "any event counts"). A model
   answer is accepted only if the rules agree with it (for example, the "confirmed in billing" G04 claim for a
   never-paid viewer is rejected and logged).
 - **Page.** It must be agent arm, never holdout. The page dialect must equal the app setting. Each title must be
@@ -115,7 +124,7 @@ search queries or deeplinks.
 | Model confident but wrong | Rejected by the verifier and logged as a failed `model_claim` check. |
 | Data store slow / timing out | NO_ACTION `data_store_unavailable`: we cannot check consent or eligibility, and acting blind is worse than not acting. |
 | Title withdrawn | Only live pages and scheduled messages containing that title are touched. Pages are republished without it (the old page is marked superseded); messages are cancelled. |
-| Goal rule corrected | A new rule version is created. Only open goals of that goal id are re-pointed and journalled; nobody else is reprocessed. Closed goals keep the rule they were judged under. |
+| Goal rule corrected | A new rule version is created. Only open goals of that goal id are re-pointed and journalled; nobody else is reprocessed. Closed goals keep the rule they were judged under. If the new rule cannot be judged (unknown wording, or an event that does not exist), its goals are judged inconclusive rather than guessed, no new viewer is committed to that goal, and the final report says so. |
 | Crash mid-replay | All state is in SQLite and committed per input. Re-delivered triggers are skipped by event_id. |
 
 ## Trust boundaries

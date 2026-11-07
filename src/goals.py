@@ -129,7 +129,7 @@ class GoalBook:
                 return False, [], 'already completed an episode'
             if not f['ever_played']['value'] and signup is None:
                 return False, [], 'no history at all'
-            return True, [f['ever_completed']['ref'], rule], 'no episode_completed in the 30-day history'
+            return True, [f['ever_completed']['ref'], rule], 'no episode_completed in the supplied history'
         if gid == 'G03':
             d = since_signup_days()
             if d is None or d > 2:

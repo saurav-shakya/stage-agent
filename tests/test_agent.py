@@ -256,6 +256,19 @@ class AgentTests(unittest.TestCase):
         self.assertEqual(self.rt.goalbook.judge(dict(g, rule_version=1), two_days, self.rt.pack.titles,
                                                 ts('2026-10-20T00:00:00.000Z'))[0], 'failed')
 
+    def test_every_evidence_reference_carries_source_and_freshness(self):
+        d = self.run_trig(self.trig('U-4', T('05:30')))
+        self.assertEqual(d['status'], 'PUBLISHED')
+        detail = {x['ref']: x for x in d['evidence_detail']}
+        for ref in d['evidence']:
+            self.assertIn(ref, detail, ref)
+            self.assertIn('source', detail[ref], ref)
+            self.assertIn('age_s', detail[ref], ref)
+        rules = [r for r in d['evidence'] if r.startswith('goal_rule:')]
+        titles = [r for r in d['evidence'] if r.startswith('catalogue:')]
+        self.assertTrue(rules and titles)
+        self.assertTrue(all(detail[r]['available_at_decision'] for r in titles))
+
     # ------------------------------------------------------------------ safety
     def test_holdout_never_gets_an_action_but_has_a_shadow_goal(self):
         d = self.run_trig(self.trig('U-2', T('05:30')))

@@ -232,7 +232,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-01103",
-   "observed_at": "2026-10-04T14:56:41.282Z",
+   "observed_at": "2026-10-04T14:56:41.283Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -246,15 +246,15 @@
    "arm": "holdout",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T14:56:41.282Z",
-   "deadline": "2026-10-04T14:56:41.282Z",
+   "started_at": "2026-10-01T14:56:41.283Z",
+   "deadline": "2026-10-04T14:56:41.283Z",
    "decision_id": "D-02003",
    "params": {
     "slug": "kova-sako-d5",
     "title_id": "T1180",
     "next_episode_number": 4
    },
-   "closed_at": "2026-10-04T14:56:41.282Z",
+   "closed_at": "2026-10-04T14:56:41.283Z",
    "close_reason": null
   }
  ],
@@ -268,8 +268,8 @@
     "id": "G07",
     "name": "resume_series_3d",
     "instance_id": "G-01103",
-    "started_at": "2026-10-01T14:56:41.282Z",
-    "deadline": "2026-10-04T14:56:41.282Z",
+    "started_at": "2026-10-01T14:56:41.283Z",
+    "deadline": "2026-10-04T14:56:41.283Z",
     "rule_version": 1,
     "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
     "carried_over": false,
@@ -295,8 +295,8 @@
    "decision_id": "D-02003",
    "rule_version": 1,
    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
-   "started_at": "2026-10-01T14:56:41.282Z",
-   "deadline": "2026-10-04T14:56:41.282Z",
+   "started_at": "2026-10-01T14:56:41.283Z",
+   "deadline": "2026-10-04T14:56:41.283Z",
    "status": "failed",
    "detail": "no play_started (same content_slug as the unfinished series) by deadline",
    "evidence": [],
@@ -313,7 +313,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T14:56:41.282Z",
+   "at": "2026-10-01T14:56:41.283Z",
    "kind": "goal_committed",
    "instance_id": "G-01103",
    "goal_id": "G07",
@@ -321,7 +321,7 @@
    "decision_id": "D-02003"
   },
   {
-   "at": "2026-10-04T14:56:41.282Z",
+   "at": "2026-10-04T14:56:41.283Z",
    "kind": "learning",
    "instance_id": "G-01103",
    "learning": "holdout: no action taken; outcome is the baseline for this kind of viewer"

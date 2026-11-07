@@ -245,7 +245,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00066",
-   "observed_at": "2026-10-04T00:11:04.148Z",
+   "observed_at": "2026-10-04T00:11:04.149Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -259,15 +259,15 @@
    "arm": "agent",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T00:11:04.148Z",
-   "deadline": "2026-10-04T00:11:04.148Z",
+   "started_at": "2026-10-01T00:11:04.149Z",
+   "deadline": "2026-10-04T00:11:04.149Z",
    "decision_id": "D-00073",
    "params": {
     "slug": "diti-kochu-d5",
     "title_id": "T1187",
     "next_episode_number": 2
    },
-   "closed_at": "2026-10-04T00:11:04.148Z",
+   "closed_at": "2026-10-04T00:11:04.149Z",
    "close_reason": null
   }
  ],
@@ -281,8 +281,8 @@
     "id": "G07",
     "name": "resume_series_3d",
     "instance_id": "G-00066",
-    "started_at": "2026-10-01T00:11:04.148Z",
-    "deadline": "2026-10-04T00:11:04.148Z",
+    "started_at": "2026-10-01T00:11:04.149Z",
+    "deadline": "2026-10-04T00:11:04.149Z",
     "rule_version": 1,
     "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
     "carried_over": false,
@@ -293,7 +293,7 @@
     }
    },
    "confidence": 0.7,
-   "published_at": "2026-10-01T00:11:04.148Z",
+   "published_at": "2026-10-01T00:11:04.150Z",
    "trigger": "b43006ad-ff74-4a7c-911f-cdd079b82b23"
   }
  ],
@@ -302,9 +302,9 @@
    "action_id": "A-00045",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-10-01T00:11:04.148Z",
+   "published_at": "2026-10-01T00:11:04.150Z",
    "send_at": null,
-   "live_until": "2026-10-01T02:11:04.148Z",
+   "live_until": "2026-10-01T02:11:04.150Z",
    "dialect": "d5"
   }
  ],
@@ -317,8 +317,8 @@
    "decision_id": "D-00073",
    "rule_version": 1,
    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
-   "started_at": "2026-10-01T00:11:04.148Z",
-   "deadline": "2026-10-04T00:11:04.148Z",
+   "started_at": "2026-10-01T00:11:04.149Z",
+   "deadline": "2026-10-04T00:11:04.149Z",
    "status": "failed",
    "detail": "no play_started (same content_slug as the unfinished series) by deadline",
    "evidence": [],
@@ -335,7 +335,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T00:11:04.148Z",
+   "at": "2026-10-01T00:11:04.149Z",
    "kind": "goal_committed",
    "instance_id": "G-00066",
    "goal_id": "G07",
@@ -343,7 +343,7 @@
    "decision_id": "D-00073"
   },
   {
-   "at": "2026-10-04T00:11:04.148Z",
+   "at": "2026-10-04T00:11:04.149Z",
    "kind": "learning",
    "instance_id": "G-00066",
    "learning": "page seen 1 time(s); goal not reached: next time try a different lever or a lower-effort goal"

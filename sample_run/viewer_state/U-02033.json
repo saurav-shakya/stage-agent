@@ -208,7 +208,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-01300",
-   "observed_at": "2026-10-08T15:50:19.697Z",
+   "observed_at": "2026-10-08T15:50:19.698Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -222,11 +222,11 @@
    "arm": "agent",
    "status": "judged:succeeded",
    "rule_version": 1,
-   "started_at": "2026-10-01T15:50:19.697Z",
-   "deadline": "2026-10-08T15:50:19.697Z",
+   "started_at": "2026-10-01T15:50:19.698Z",
+   "deadline": "2026-10-08T15:50:19.698Z",
    "decision_id": "D-02339",
    "params": {},
-   "closed_at": "2026-10-08T15:50:19.697Z",
+   "closed_at": "2026-10-08T15:50:19.698Z",
    "close_reason": null
   }
  ],
@@ -240,15 +240,15 @@
     "id": "G08",
     "name": "try_new_release_7d",
     "instance_id": "G-01300",
-    "started_at": "2026-10-01T15:50:19.697Z",
-    "deadline": "2026-10-08T15:50:19.697Z",
+    "started_at": "2026-10-01T15:50:19.698Z",
+    "deadline": "2026-10-08T15:50:19.698Z",
     "rule_version": 1,
     "success_signal": "play_started (a title released in the 30 days before the goal start) within 168h",
     "carried_over": false,
     "params": {}
    },
    "confidence": 0.7,
-   "published_at": "2026-10-01T15:50:19.697Z",
+   "published_at": "2026-10-01T15:50:19.699Z",
    "trigger": "b8b84d26-0229-4804-9020-58d8f0b4ff5e"
   }
  ],
@@ -257,9 +257,9 @@
    "action_id": "A-01045",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-10-01T15:50:19.697Z",
+   "published_at": "2026-10-01T15:50:19.699Z",
    "send_at": null,
-   "live_until": "2026-10-01T17:50:19.697Z",
+   "live_until": "2026-10-01T17:50:19.699Z",
    "dialect": "d4"
   }
  ],
@@ -272,8 +272,8 @@
    "decision_id": "D-02339",
    "rule_version": 1,
    "success_signal": "play_started (a title released in the 30 days before the goal start) within 168h",
-   "started_at": "2026-10-01T15:50:19.697Z",
-   "deadline": "2026-10-08T15:50:19.697Z",
+   "started_at": "2026-10-01T15:50:19.698Z",
+   "deadline": "2026-10-08T15:50:19.698Z",
    "status": "succeeded",
    "detail": "success signal play_started observed at 2026-10-01T15:55:17.038Z",
    "evidence": [
@@ -292,7 +292,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T15:50:19.697Z",
+   "at": "2026-10-01T15:50:19.698Z",
    "kind": "goal_committed",
    "instance_id": "G-01300",
    "goal_id": "G08",
@@ -300,7 +300,7 @@
    "decision_id": "D-02339"
   },
   {
-   "at": "2026-10-08T15:50:19.697Z",
+   "at": "2026-10-08T15:50:19.698Z",
    "kind": "learning",
    "instance_id": "G-01300",
    "learning": "page seen 1 time(s); goal reached after exposure"

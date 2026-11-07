@@ -24,6 +24,9 @@ These are deliberate, given a 10-12 hour budget, and listed so a reviewer does n
   viewers who signed up in the last 2 days and have already played. The 08:30 correction therefore re-points 0
   open goals in the sample run, but the mechanism is tested in
   `test_goal_rule_correction_applies_to_open_goals_only`.
+- **Only success conditions the code recognises can be judged.** A corrected rule with new wording is judged
+  inconclusive (and the goal is not chosen for new viewers) until that wording is added to `goals.CONDITIONS`.
+  This is deliberate: guessing would inflate or deflate the measured impact.
 - **Messages use one evening slot** (19:00 IST the next day) and only two goal types. There is no send-time
   optimisation, and `in_app_message` is not used.
 - **Learning feeds forward but not back into this replay.** Outcomes are judged after the simulator runs, so

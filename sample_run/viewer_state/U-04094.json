@@ -199,7 +199,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00027",
-   "observed_at": "2026-10-07T19:39:09.800Z",
+   "observed_at": "2026-10-07T19:39:09.801Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -213,11 +213,11 @@
    "arm": "agent",
    "status": "judged:succeeded",
    "rule_version": 1,
-   "started_at": "2026-09-30T19:39:09.800Z",
-   "deadline": "2026-10-07T19:39:09.800Z",
+   "started_at": "2026-09-30T19:39:09.801Z",
+   "deadline": "2026-10-07T19:39:09.801Z",
    "decision_id": "D-00029",
    "params": {},
-   "closed_at": "2026-10-07T19:39:09.800Z",
+   "closed_at": "2026-10-07T19:39:09.801Z",
    "close_reason": null
   }
  ],
@@ -231,15 +231,15 @@
     "id": "G12",
     "name": "return_after_absence_7d",
     "instance_id": "G-00027",
-    "started_at": "2026-09-30T19:39:09.800Z",
-    "deadline": "2026-10-07T19:39:09.800Z",
+    "started_at": "2026-09-30T19:39:09.801Z",
+    "deadline": "2026-10-07T19:39:09.801Z",
     "rule_version": 1,
     "success_signal": "play_started (any title) within 168h",
     "carried_over": false,
     "params": {}
    },
    "confidence": 0.7,
-   "published_at": "2026-09-30T19:39:09.800Z",
+   "published_at": "2026-09-30T19:39:09.801Z",
    "trigger": "c5d6ab4b-3175-499d-86a4-e9620d772542"
   },
   {
@@ -251,8 +251,8 @@
     "id": "G12",
     "name": "return_after_absence_7d",
     "instance_id": "G-00027",
-    "started_at": "2026-09-30T19:39:09.800Z",
-    "deadline": "2026-10-07T19:39:09.800Z",
+    "started_at": "2026-09-30T19:39:09.801Z",
+    "deadline": "2026-10-07T19:39:09.801Z",
     "rule_version": 1,
     "success_signal": "play_started (any title) within 168h",
     "carried_over": true,
@@ -268,16 +268,16 @@
    "action_id": "A-00019",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-09-30T19:39:09.800Z",
+   "published_at": "2026-09-30T19:39:09.801Z",
    "send_at": null,
-   "live_until": "2026-09-30T21:39:09.800Z",
+   "live_until": "2026-09-30T21:39:09.801Z",
    "dialect": "d1"
   },
   {
    "action_id": "A-00020",
    "type": "push",
    "status": "cancelled",
-   "published_at": "2026-09-30T19:39:09.800Z",
+   "published_at": "2026-09-30T19:39:09.801Z",
    "send_at": "2026-10-02T13:30:00.000Z",
    "live_until": null,
    "dialect": null
@@ -310,8 +310,8 @@
    "decision_id": "D-00029",
    "rule_version": 1,
    "success_signal": "play_started (any title) within 168h",
-   "started_at": "2026-09-30T19:39:09.800Z",
-   "deadline": "2026-10-07T19:39:09.800Z",
+   "started_at": "2026-09-30T19:39:09.801Z",
+   "deadline": "2026-10-07T19:39:09.801Z",
    "status": "succeeded",
    "detail": "success signal play_started observed at 2026-09-30T19:43:56.522Z",
    "evidence": [
@@ -330,7 +330,7 @@
  ],
  "journal": [
   {
-   "at": "2026-09-30T19:39:09.800Z",
+   "at": "2026-09-30T19:39:09.801Z",
    "kind": "goal_committed",
    "instance_id": "G-00027",
    "goal_id": "G12",
@@ -344,7 +344,7 @@
    "reason": "title T0001 withdrawn"
   },
   {
-   "at": "2026-10-07T19:39:09.800Z",
+   "at": "2026-10-07T19:39:09.801Z",
    "kind": "learning",
    "instance_id": "G-00027",
    "learning": "page seen 1 time(s); goal reached after exposure"

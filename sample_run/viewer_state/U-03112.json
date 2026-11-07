@@ -230,7 +230,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00876",
-   "observed_at": "2026-10-15T12:22:26.003Z",
+   "observed_at": "2026-10-15T12:22:26.004Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -244,11 +244,11 @@
    "arm": "holdout",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T12:22:26.003Z",
-   "deadline": "2026-10-15T12:22:26.003Z",
+   "started_at": "2026-10-01T12:22:26.004Z",
+   "deadline": "2026-10-15T12:22:26.004Z",
    "decision_id": "D-01558",
    "params": {},
-   "closed_at": "2026-10-15T12:22:26.003Z",
+   "closed_at": "2026-10-15T12:22:26.004Z",
    "close_reason": null
   }
  ],
@@ -262,8 +262,8 @@
     "id": "G06",
     "name": "reactivate_lapsed_14d",
     "instance_id": "G-00876",
-    "started_at": "2026-10-01T12:22:26.003Z",
-    "deadline": "2026-10-15T12:22:26.003Z",
+    "started_at": "2026-10-01T12:22:26.004Z",
+    "deadline": "2026-10-15T12:22:26.004Z",
     "rule_version": 1,
     "success_signal": "purchase_completed (any paid plan) within 336h",
     "carried_over": false,
@@ -285,8 +285,8 @@
    "decision_id": "D-01558",
    "rule_version": 1,
    "success_signal": "purchase_completed (any paid plan) within 336h",
-   "started_at": "2026-10-01T12:22:26.003Z",
-   "deadline": "2026-10-15T12:22:26.003Z",
+   "started_at": "2026-10-01T12:22:26.004Z",
+   "deadline": "2026-10-15T12:22:26.004Z",
    "status": "failed",
    "detail": "no purchase_completed (any paid plan) by deadline",
    "evidence": [],
@@ -303,7 +303,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T12:22:26.003Z",
+   "at": "2026-10-01T12:22:26.004Z",
    "kind": "goal_committed",
    "instance_id": "G-00876",
    "goal_id": "G06",
@@ -311,7 +311,7 @@
    "decision_id": "D-01558"
   },
   {
-   "at": "2026-10-15T12:22:26.003Z",
+   "at": "2026-10-15T12:22:26.004Z",
    "kind": "learning",
    "instance_id": "G-00876",
    "learning": "holdout: no action taken; outcome is the baseline for this kind of viewer"

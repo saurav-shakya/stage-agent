@@ -217,7 +217,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00613",
-   "observed_at": "2026-10-15T08:57:19.212Z",
+   "observed_at": "2026-10-15T08:57:19.214Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -231,11 +231,11 @@
    "arm": "agent",
    "status": "judged:succeeded",
    "rule_version": 1,
-   "started_at": "2026-10-01T08:57:19.212Z",
-   "deadline": "2026-10-15T08:57:19.212Z",
+   "started_at": "2026-10-01T08:57:19.214Z",
+   "deadline": "2026-10-15T08:57:19.214Z",
    "decision_id": "D-01112",
    "params": {},
-   "closed_at": "2026-10-15T08:57:19.212Z",
+   "closed_at": "2026-10-15T08:57:19.214Z",
    "close_reason": null
   }
  ],
@@ -249,15 +249,15 @@
     "id": "G09",
     "name": "weekly_habit_14d",
     "instance_id": "G-00613",
-    "started_at": "2026-10-01T08:57:19.212Z",
-    "deadline": "2026-10-15T08:57:19.212Z",
+    "started_at": "2026-10-01T08:57:19.214Z",
+    "deadline": "2026-10-15T08:57:19.214Z",
     "rule_version": 1,
     "success_signal": "play_started (on 3 distinct IST days) within 336h",
     "carried_over": false,
     "params": {}
    },
    "confidence": 0.7,
-   "published_at": "2026-10-01T08:57:19.212Z",
+   "published_at": "2026-10-01T08:57:19.215Z",
    "trigger": "ab2ffb08-e330-47ce-b5e3-934e31d8697c"
   }
  ],
@@ -266,9 +266,9 @@
    "action_id": "A-00465",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-10-01T08:57:19.212Z",
+   "published_at": "2026-10-01T08:57:19.215Z",
    "send_at": null,
-   "live_until": "2026-10-01T10:57:19.212Z",
+   "live_until": "2026-10-01T10:57:19.215Z",
    "dialect": "d5"
   }
  ],
@@ -281,8 +281,8 @@
    "decision_id": "D-01112",
    "rule_version": 1,
    "success_signal": "play_started (on 3 distinct IST days) within 336h",
-   "started_at": "2026-10-01T08:57:19.212Z",
-   "deadline": "2026-10-15T08:57:19.212Z",
+   "started_at": "2026-10-01T08:57:19.214Z",
+   "deadline": "2026-10-15T08:57:19.214Z",
    "status": "succeeded",
    "detail": "success signal play_started observed at 2026-10-01T08:58:49.842Z",
    "evidence": [
@@ -303,7 +303,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T08:57:19.212Z",
+   "at": "2026-10-01T08:57:19.214Z",
    "kind": "goal_committed",
    "instance_id": "G-00613",
    "goal_id": "G09",
@@ -311,7 +311,7 @@
    "decision_id": "D-01112"
   },
   {
-   "at": "2026-10-15T08:57:19.212Z",
+   "at": "2026-10-15T08:57:19.214Z",
    "kind": "learning",
    "instance_id": "G-00613",
    "learning": "page published but never seen while live: viewer did not reach home in time or changed dialect; goal reached without exposure: not credited"

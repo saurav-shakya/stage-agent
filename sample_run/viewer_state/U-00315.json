@@ -225,7 +225,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00072",
-   "observed_at": "2026-10-04T00:30:10.391Z",
+   "observed_at": "2026-10-04T00:30:10.393Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -239,15 +239,15 @@
    "arm": "agent",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T00:30:10.391Z",
-   "deadline": "2026-10-04T00:30:10.391Z",
+   "started_at": "2026-10-01T00:30:10.393Z",
+   "deadline": "2026-10-04T00:30:10.393Z",
    "decision_id": "D-00081",
    "params": {
     "slug": "hama-chudibha-d1",
     "title_id": "T0002",
     "next_episode_number": 3
    },
-   "closed_at": "2026-10-04T00:30:10.391Z",
+   "closed_at": "2026-10-04T00:30:10.393Z",
    "close_reason": null
   }
  ],
@@ -261,8 +261,8 @@
     "id": "G07",
     "name": "resume_series_3d",
     "instance_id": "G-00072",
-    "started_at": "2026-10-01T00:30:10.391Z",
-    "deadline": "2026-10-04T00:30:10.391Z",
+    "started_at": "2026-10-01T00:30:10.393Z",
+    "deadline": "2026-10-04T00:30:10.393Z",
     "rule_version": 1,
     "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
     "carried_over": false,
@@ -273,7 +273,7 @@
     }
    },
    "confidence": 0.6,
-   "published_at": "2026-10-01T00:30:10.391Z",
+   "published_at": "2026-10-01T00:30:10.393Z",
    "trigger": "4a431be8-8ec1-48fd-8f09-ac4e94f6fda7"
   },
   {
@@ -292,16 +292,16 @@
    "action_id": "A-00046",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-10-01T00:30:10.391Z",
+   "published_at": "2026-10-01T00:30:10.393Z",
    "send_at": null,
-   "live_until": "2026-10-01T02:30:10.391Z",
+   "live_until": "2026-10-01T02:30:10.393Z",
    "dialect": "d1"
   },
   {
    "action_id": "A-00047",
    "type": "push",
    "status": "scheduled",
-   "published_at": "2026-10-01T00:30:10.391Z",
+   "published_at": "2026-10-01T00:30:10.393Z",
    "send_at": "2026-10-02T13:30:00.000Z",
    "live_until": null,
    "dialect": null
@@ -316,8 +316,8 @@
    "decision_id": "D-00081",
    "rule_version": 1,
    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
-   "started_at": "2026-10-01T00:30:10.391Z",
-   "deadline": "2026-10-04T00:30:10.391Z",
+   "started_at": "2026-10-01T00:30:10.393Z",
+   "deadline": "2026-10-04T00:30:10.393Z",
    "status": "failed",
    "detail": "no play_started (same content_slug as the unfinished series) by deadline",
    "evidence": [],
@@ -334,7 +334,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T00:30:10.391Z",
+   "at": "2026-10-01T00:30:10.393Z",
    "kind": "goal_committed",
    "instance_id": "G-00072",
    "goal_id": "G07",
@@ -342,7 +342,7 @@
    "decision_id": "D-00081"
   },
   {
-   "at": "2026-10-04T00:30:10.391Z",
+   "at": "2026-10-04T00:30:10.393Z",
    "kind": "learning",
    "instance_id": "G-00072",
    "learning": "page seen 1 time(s); goal not reached: next time try a different lever or a lower-effort goal"
