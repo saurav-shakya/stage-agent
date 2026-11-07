@@ -39,20 +39,20 @@ Agent-arm successes by attribution: after_exposure 96, without_prior_exposure (n
 - **2026-10-01T13:10:00.000Z dependency_degraded**: p95 read latency 8 s and 20% of reads time out
   - affected only viewers holding T0001: 17 pages republished without it, 0 left without replacement, 3 messages cancelled.
   - G03 v2: 0 open goals re-pointed to the corrected rule (0 viewers); no other viewer reprocessed.
-  - model calls: ok 743, unavailable 4, skipped_circuit_open 6, malformed_output 1. Every non-ok outcome fell back to the rule-based goal; no decision waited on the model.
-  - during model_provider_unavailable: 20 decisions, p95 127 ms, max 127 ms.
-  - during user_data_store_degraded: 14 decisions, p95 1906 ms, max 1906 ms.
+  - model calls: ok 743, unavailable 4, skipped_circuit_open 6, malformed_output 1. Every non-ok outcome fell back to the rule-based goal; no decision waited longer than the model timeout (2500 ms), and after a 503 or 3 timeouts in a row the circuit skipped the model for 60 s.
+  - during model_provider_unavailable: 20 decisions, p95 126 ms, max 126 ms.
+  - during user_data_store_degraded: 14 decisions, p95 1908 ms, max 1908 ms.
 - **Offline-buffered app opens**: 415 triggers held on the phone > 10 min were recorded as NO_ACTION (stale_trigger) and used only as history.
 - **Purchases arriving after a decision**: 38 live purchases updated the subscription fact over the snapshot; 11 open purchase goals closed; 1 pending messages cancelled.
 - **Three-way dialect conflicts** (app setting, profile, campaign link): 57 decisions; the page always used the app setting and listed the other two as conflicts.
 - **Unsupported model claims rejected**: 1 (U-01991).
 - **Instruction text inside the catalogue**: flagged on T0002. Descriptions are never sent to the model and never drive actions; total messages sent in the run: 299, all through the verifier.
-- **Evening peak**: 20:30 IST, 165 triggers (9.7x the median 10 minutes); p95 publish delay 1130 ms, max 1273 ms, mean queue wait 0 ms.
-- **Busiest 10 minutes of the day**: 10:10 IST, 240 triggers (14.1x the median 10 minutes); p95 publish delay 50 ms, max 1072 ms, mean queue wait 0 ms.
+- **Evening peak**: 20:30 IST, 165 triggers (9.7x the median 10 minutes); p95 publish delay 1131 ms, max 1273 ms, mean queue wait 0 ms.
+- **Busiest 10 minutes of the day**: 10:10 IST, 240 triggers (14.1x the median 10 minutes); p95 publish delay 51 ms, max 1074 ms, mean queue wait 0 ms.
 
 ## Latency
 
-p50 59 ms, p95 1125 ms, max 1906 ms; 0 decisions over 60 s, 0 over 5 min.
+p50 59 ms, p95 1125 ms, max 1908 ms; 0 decisions over 60 s, 0 over 5 min.
 
 ## Impact (headline)
 

@@ -233,7 +233,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-01285",
-   "observed_at": "2026-10-04T15:42:29.508Z",
+   "observed_at": "2026-10-04T15:42:29.509Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -247,8 +247,8 @@
    "arm": "holdout",
    "status": "judged:succeeded",
    "rule_version": 1,
-   "started_at": "2026-10-01T05:25:59.647Z",
-   "deadline": "2026-10-15T05:25:59.647Z",
+   "started_at": "2026-10-01T05:25:59.648Z",
+   "deadline": "2026-10-15T05:25:59.648Z",
    "decision_id": "D-00666",
    "params": {},
    "closed_at": "2026-10-01T05:28:14.359Z",
@@ -261,15 +261,15 @@
    "arm": "holdout",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T15:42:29.508Z",
-   "deadline": "2026-10-04T15:42:29.508Z",
+   "started_at": "2026-10-01T15:42:29.509Z",
+   "deadline": "2026-10-04T15:42:29.509Z",
    "decision_id": "D-02312",
    "params": {
     "slug": "bagi-baya-d4",
     "title_id": "T1811",
     "next_episode_number": 2
    },
-   "closed_at": "2026-10-04T15:42:29.508Z",
+   "closed_at": "2026-10-04T15:42:29.509Z",
    "close_reason": null
   }
  ],
@@ -293,8 +293,8 @@
     "id": "G06",
     "name": "reactivate_lapsed_14d",
     "instance_id": "G-00317",
-    "started_at": "2026-10-01T05:25:59.647Z",
-    "deadline": "2026-10-15T05:25:59.647Z",
+    "started_at": "2026-10-01T05:25:59.648Z",
+    "deadline": "2026-10-15T05:25:59.648Z",
     "rule_version": 1,
     "success_signal": "purchase_completed (any paid plan) within 336h",
     "carried_over": false,
@@ -314,8 +314,8 @@
     "id": "G07",
     "name": "resume_series_3d",
     "instance_id": "G-01285",
-    "started_at": "2026-10-01T15:42:29.508Z",
-    "deadline": "2026-10-04T15:42:29.508Z",
+    "started_at": "2026-10-01T15:42:29.509Z",
+    "deadline": "2026-10-04T15:42:29.509Z",
     "rule_version": 1,
     "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
     "carried_over": false,
@@ -341,8 +341,8 @@
    "decision_id": "D-00666",
    "rule_version": 1,
    "success_signal": "purchase_completed (any paid plan) within 336h",
-   "started_at": "2026-10-01T05:25:59.647Z",
-   "deadline": "2026-10-15T05:25:59.647Z",
+   "started_at": "2026-10-01T05:25:59.648Z",
+   "deadline": "2026-10-15T05:25:59.648Z",
    "status": "succeeded",
    "detail": "success signal purchase_completed observed at 2026-10-01T05:28:14.359Z",
    "evidence": [
@@ -366,8 +366,8 @@
    "decision_id": "D-02312",
    "rule_version": 1,
    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
-   "started_at": "2026-10-01T15:42:29.508Z",
-   "deadline": "2026-10-04T15:42:29.508Z",
+   "started_at": "2026-10-01T15:42:29.509Z",
+   "deadline": "2026-10-04T15:42:29.509Z",
    "status": "failed",
    "detail": "no play_started (same content_slug as the unfinished series) by deadline",
    "evidence": [],
@@ -384,7 +384,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T05:25:59.647Z",
+   "at": "2026-10-01T05:25:59.648Z",
    "kind": "goal_committed",
    "instance_id": "G-00317",
    "goal_id": "G06",
@@ -403,7 +403,7 @@
    "note": "subscription fact now comes from this event, overriding the snapshot"
   },
   {
-   "at": "2026-10-01T15:42:29.508Z",
+   "at": "2026-10-01T15:42:29.509Z",
    "kind": "goal_committed",
    "instance_id": "G-01285",
    "goal_id": "G07",
@@ -411,13 +411,13 @@
    "decision_id": "D-02312"
   },
   {
-   "at": "2026-10-15T05:25:59.647Z",
+   "at": "2026-10-15T05:25:59.648Z",
    "kind": "learning",
    "instance_id": "G-00317",
    "learning": "holdout: no action taken; outcome is the baseline for this kind of viewer"
   },
   {
-   "at": "2026-10-04T15:42:29.508Z",
+   "at": "2026-10-04T15:42:29.509Z",
    "kind": "learning",
    "instance_id": "G-01285",
    "learning": "holdout: no action taken; outcome is the baseline for this kind of viewer"

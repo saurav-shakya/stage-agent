@@ -233,7 +233,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-01390",
-   "observed_at": "2026-10-03T16:47:05.443Z",
+   "observed_at": "2026-10-03T16:47:05.445Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -247,11 +247,11 @@
    "arm": "holdout",
    "status": "judged:succeeded",
    "rule_version": 2,
-   "started_at": "2026-10-01T16:47:05.443Z",
-   "deadline": "2026-10-03T16:47:05.443Z",
+   "started_at": "2026-10-01T16:47:05.445Z",
+   "deadline": "2026-10-03T16:47:05.445Z",
    "decision_id": "D-02532",
    "params": {},
-   "closed_at": "2026-10-03T16:47:05.443Z",
+   "closed_at": "2026-10-03T16:47:05.445Z",
    "close_reason": null
   }
  ],
@@ -265,8 +265,8 @@
     "id": "G03",
     "name": "second_day_return_2d",
     "instance_id": "G-01390",
-    "started_at": "2026-10-01T16:47:05.443Z",
-    "deadline": "2026-10-03T16:47:05.443Z",
+    "started_at": "2026-10-01T16:47:05.445Z",
+    "deadline": "2026-10-03T16:47:05.445Z",
     "rule_version": 2,
     "success_signal": "play_started (on a later IST calendar day within the window) within 48h",
     "carried_over": false,
@@ -288,8 +288,8 @@
    "decision_id": "D-02532",
    "rule_version": 2,
    "success_signal": "play_started (on a later IST calendar day within the window) within 48h",
-   "started_at": "2026-10-01T16:47:05.443Z",
-   "deadline": "2026-10-03T16:47:05.443Z",
+   "started_at": "2026-10-01T16:47:05.445Z",
+   "deadline": "2026-10-03T16:47:05.445Z",
    "status": "succeeded",
    "detail": "success signal play_started observed at 2026-10-02T15:49:16.000Z",
    "evidence": [
@@ -318,7 +318,7 @@
    }
   },
   {
-   "at": "2026-10-01T16:47:05.443Z",
+   "at": "2026-10-01T16:47:05.445Z",
    "kind": "goal_committed",
    "instance_id": "G-01390",
    "goal_id": "G03",
@@ -326,7 +326,7 @@
    "decision_id": "D-02532"
   },
   {
-   "at": "2026-10-03T16:47:05.443Z",
+   "at": "2026-10-03T16:47:05.445Z",
    "kind": "learning",
    "instance_id": "G-01390",
    "learning": "holdout: no action taken; outcome is the baseline for this kind of viewer"

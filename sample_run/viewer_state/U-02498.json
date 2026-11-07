@@ -230,7 +230,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00918",
-   "observed_at": "2026-10-04T13:03:05.205Z",
+   "observed_at": "2026-10-04T13:03:05.206Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -239,7 +239,7 @@
    "value": true,
    "source": "outcome",
    "ref": "outcome:G-00918",
-   "observed_at": "2026-10-04T13:03:05.205Z",
+   "observed_at": "2026-10-04T13:03:05.206Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -253,15 +253,15 @@
    "arm": "agent",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T13:03:05.205Z",
-   "deadline": "2026-10-04T13:03:05.205Z",
+   "started_at": "2026-10-01T13:03:05.206Z",
+   "deadline": "2026-10-04T13:03:05.206Z",
    "decision_id": "D-01641",
    "params": {
     "slug": "guka-kosusa-d2",
     "title_id": "T0522",
     "next_episode_number": 1
    },
-   "closed_at": "2026-10-04T13:03:05.205Z",
+   "closed_at": "2026-10-04T13:03:05.206Z",
    "close_reason": null
   }
  ],
@@ -275,8 +275,8 @@
     "id": "G07",
     "name": "resume_series_3d",
     "instance_id": "G-00918",
-    "started_at": "2026-10-01T13:03:05.205Z",
-    "deadline": "2026-10-04T13:03:05.205Z",
+    "started_at": "2026-10-01T13:03:05.206Z",
+    "deadline": "2026-10-04T13:03:05.206Z",
     "rule_version": 1,
     "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
     "carried_over": false,
@@ -320,8 +320,8 @@
    "decision_id": "D-01641",
    "rule_version": 1,
    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
-   "started_at": "2026-10-01T13:03:05.205Z",
-   "deadline": "2026-10-04T13:03:05.205Z",
+   "started_at": "2026-10-01T13:03:05.206Z",
+   "deadline": "2026-10-04T13:03:05.206Z",
    "status": "failed",
    "detail": "no play_started (same content_slug as the unfinished series) by deadline",
    "evidence": [],
@@ -340,7 +340,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T13:03:05.205Z",
+   "at": "2026-10-01T13:03:05.206Z",
    "kind": "goal_committed",
    "instance_id": "G-00918",
    "goal_id": "G07",
@@ -348,7 +348,7 @@
    "decision_id": "D-01641"
   },
   {
-   "at": "2026-10-04T13:03:05.205Z",
+   "at": "2026-10-04T13:03:05.206Z",
    "kind": "learning",
    "instance_id": "G-00918",
    "learning": "page seen 1 time(s); message failed (token_invalid): do not retry push, prefer the home page; goal not reached: next time try a different lever or a lower-effort goal"

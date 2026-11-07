@@ -43,12 +43,14 @@ Useful options: `--seed`, `--workers 4`, `--model-timeout-ms 2500`, `--max-model
 python -m unittest discover -s tests -t . -v
 ```
 
-23 tests. 17 agent tests run on a small synthetic pack whose configs are copied from the real pack, which is
+29 tests. 18 agent tests run on a small synthetic pack whose configs are copied from the real pack, which is
 located as in Setup. If the pack cannot be found they fail with an error; they are never silently skipped. They cover duplicate, same-session, offline-buffered and wrong-clock triggers; a three-way dialect
 conflict, duplicate profile rows and a purchase that contradicts the snapshot; model timeout, malformed output,
-unsupported confident claim, model outage with circuit breaker, and data-store outage; a corrected goal rule that
+unsupported confident claim, model outage with circuit breaker, a slow model that trips the circuit
+breaker after repeated timeouts, and data-store outage; a corrected goal rule that
 re-points only open goals of that goal id; holdout safety, messaging rules, catalogue instruction text, and a
-title withdrawn mid-day. 6 more tests cover finding the pack in both layouts and failing on a missing or wrong path.
+title withdrawn mid-day. 6 more tests cover finding the pack in both layouts and failing on a missing or wrong path, and 5 cover
+the model client's circuit breaker and the degraded-dependency profile (no pack needed).
 
 ## Inspect one viewer
 

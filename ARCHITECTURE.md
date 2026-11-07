@@ -111,6 +111,7 @@ search queries or deeplinks.
 | Failure | Behaviour |
 |---|---|
 | Model timeout / 503 / malformed output | Rule-based goal; the decision is still published. A 503 opens a 60 s circuit breaker so later decisions do not pay the timeout. |
+| Model slow (degraded window) | Each call is cut off at our own 2.5 s timeout, never the provider's latency. 3 timeouts in a row open the same 60 s breaker; when it closes, one probe decides: a timeout re-opens it at once, an answer resets the count. |
 | Model confident but wrong | Rejected by the verifier and logged as a failed `model_claim` check. |
 | Data store slow / timing out | NO_ACTION `data_store_unavailable`: we cannot check consent or eligibility, and acting blind is worse than not acting. |
 | Title withdrawn | Only live pages and scheduled messages containing that title are touched. Pages are republished without it (the old page is marked superseded); messages are cancelled. |

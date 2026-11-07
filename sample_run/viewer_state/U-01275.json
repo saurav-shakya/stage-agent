@@ -206,7 +206,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00907",
-   "observed_at": "2026-10-08T12:52:42.322Z",
+   "observed_at": "2026-10-08T12:52:42.323Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -220,8 +220,8 @@
    "arm": "holdout",
    "status": "judged:succeeded",
    "rule_version": 1,
-   "started_at": "2026-10-01T12:52:42.322Z",
-   "deadline": "2026-10-08T12:52:42.322Z",
+   "started_at": "2026-10-01T12:52:42.323Z",
+   "deadline": "2026-10-08T12:52:42.323Z",
    "decision_id": "D-01618",
    "params": {},
    "closed_at": "2026-10-01T12:54:22.923Z",
@@ -238,8 +238,8 @@
     "id": "G05",
     "name": "first_paid_7d",
     "instance_id": "G-00907",
-    "started_at": "2026-10-01T12:52:42.322Z",
-    "deadline": "2026-10-08T12:52:42.322Z",
+    "started_at": "2026-10-01T12:52:42.323Z",
+    "deadline": "2026-10-08T12:52:42.323Z",
     "rule_version": 1,
     "success_signal": "purchase_completed (is_trial = false) within 168h",
     "carried_over": false,
@@ -261,8 +261,8 @@
    "decision_id": "D-01618",
    "rule_version": 1,
    "success_signal": "purchase_completed (is_trial = false) within 168h",
-   "started_at": "2026-10-01T12:52:42.322Z",
-   "deadline": "2026-10-08T12:52:42.322Z",
+   "started_at": "2026-10-01T12:52:42.323Z",
+   "deadline": "2026-10-08T12:52:42.323Z",
    "status": "succeeded",
    "detail": "success signal purchase_completed observed at 2026-10-01T12:54:22.923Z",
    "evidence": [
@@ -281,7 +281,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T12:52:42.322Z",
+   "at": "2026-10-01T12:52:42.323Z",
    "kind": "goal_committed",
    "instance_id": "G-00907",
    "goal_id": "G05",
@@ -300,7 +300,7 @@
    "note": "subscription fact now comes from this event, overriding the snapshot"
   },
   {
-   "at": "2026-10-08T12:52:42.322Z",
+   "at": "2026-10-08T12:52:42.323Z",
    "kind": "learning",
    "instance_id": "G-00907",
    "learning": "holdout: no action taken; outcome is the baseline for this kind of viewer"

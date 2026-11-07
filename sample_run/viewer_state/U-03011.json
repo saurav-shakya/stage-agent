@@ -295,7 +295,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00627",
-   "observed_at": "2026-10-04T09:05:18.393Z",
+   "observed_at": "2026-10-04T09:05:18.392Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -304,7 +304,7 @@
    "value": true,
    "source": "outcome",
    "ref": "outcome:G-00627",
-   "observed_at": "2026-10-04T09:05:18.393Z",
+   "observed_at": "2026-10-04T09:05:18.392Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -318,15 +318,15 @@
    "arm": "agent",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T09:05:18.393Z",
-   "deadline": "2026-10-04T09:05:18.393Z",
+   "started_at": "2026-10-01T09:05:18.392Z",
+   "deadline": "2026-10-04T09:05:18.392Z",
    "decision_id": "D-01135",
    "params": {
     "slug": "piropa-moguti-d2",
     "title_id": "T0539",
     "next_episode_number": 4
    },
-   "closed_at": "2026-10-04T09:05:18.393Z",
+   "closed_at": "2026-10-04T09:05:18.392Z",
    "close_reason": null
   }
  ],
@@ -340,8 +340,8 @@
     "id": "G07",
     "name": "resume_series_3d",
     "instance_id": "G-00627",
-    "started_at": "2026-10-01T09:05:18.393Z",
-    "deadline": "2026-10-04T09:05:18.393Z",
+    "started_at": "2026-10-01T09:05:18.392Z",
+    "deadline": "2026-10-04T09:05:18.392Z",
     "rule_version": 1,
     "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
     "carried_over": false,
@@ -385,8 +385,8 @@
    "decision_id": "D-01135",
    "rule_version": 1,
    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
-   "started_at": "2026-10-01T09:05:18.393Z",
-   "deadline": "2026-10-04T09:05:18.393Z",
+   "started_at": "2026-10-01T09:05:18.392Z",
+   "deadline": "2026-10-04T09:05:18.392Z",
    "status": "failed",
    "detail": "no play_started (same content_slug as the unfinished series) by deadline",
    "evidence": [],
@@ -405,7 +405,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T09:05:18.393Z",
+   "at": "2026-10-01T09:05:18.392Z",
    "kind": "goal_committed",
    "instance_id": "G-00627",
    "goal_id": "G07",
@@ -413,7 +413,7 @@
    "decision_id": "D-01135"
   },
   {
-   "at": "2026-10-04T09:05:18.393Z",
+   "at": "2026-10-04T09:05:18.392Z",
    "kind": "learning",
    "instance_id": "G-00627",
    "learning": "page seen 1 time(s); message failed (token_invalid): do not retry push, prefer the home page; goal not reached: next time try a different lever or a lower-effort goal"

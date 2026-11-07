@@ -199,7 +199,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-01443",
-   "observed_at": "2026-10-04T17:27:24.984Z",
+   "observed_at": "2026-10-04T17:27:24.983Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -213,11 +213,11 @@
    "arm": "holdout",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T17:27:24.984Z",
-   "deadline": "2026-10-04T17:27:24.984Z",
+   "started_at": "2026-10-01T17:27:24.983Z",
+   "deadline": "2026-10-04T17:27:24.983Z",
    "decision_id": "D-02657",
    "params": {},
-   "closed_at": "2026-10-04T17:27:24.984Z",
+   "closed_at": "2026-10-04T17:27:24.983Z",
    "close_reason": null
   }
  ],
@@ -231,8 +231,8 @@
     "id": "G02",
     "name": "first_full_episode_3d",
     "instance_id": "G-01443",
-    "started_at": "2026-10-01T17:27:24.984Z",
-    "deadline": "2026-10-04T17:27:24.984Z",
+    "started_at": "2026-10-01T17:27:24.983Z",
+    "deadline": "2026-10-04T17:27:24.983Z",
     "rule_version": 1,
     "success_signal": "episode_completed (any episode) within 72h",
     "carried_over": false,
@@ -254,8 +254,8 @@
    "decision_id": "D-02657",
    "rule_version": 1,
    "success_signal": "episode_completed (any episode) within 72h",
-   "started_at": "2026-10-01T17:27:24.984Z",
-   "deadline": "2026-10-04T17:27:24.984Z",
+   "started_at": "2026-10-01T17:27:24.983Z",
+   "deadline": "2026-10-04T17:27:24.983Z",
    "status": "failed",
    "detail": "no episode_completed (any episode) by deadline",
    "evidence": [],
@@ -272,7 +272,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T17:27:24.984Z",
+   "at": "2026-10-01T17:27:24.983Z",
    "kind": "goal_committed",
    "instance_id": "G-01443",
    "goal_id": "G02",
@@ -280,7 +280,7 @@
    "decision_id": "D-02657"
   },
   {
-   "at": "2026-10-04T17:27:24.984Z",
+   "at": "2026-10-04T17:27:24.983Z",
    "kind": "learning",
    "instance_id": "G-01443",
    "learning": "holdout: no action taken; outcome is the baseline for this kind of viewer"

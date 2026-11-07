@@ -243,7 +243,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-01105",
-   "observed_at": "2026-10-04T14:57:14.561Z",
+   "observed_at": "2026-10-04T14:57:14.562Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -257,15 +257,15 @@
    "arm": "holdout",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T14:57:14.561Z",
-   "deadline": "2026-10-04T14:57:14.561Z",
+   "started_at": "2026-10-01T14:57:14.562Z",
+   "deadline": "2026-10-04T14:57:14.562Z",
    "decision_id": "D-02006",
    "params": {
     "slug": "hama-chudibha-d1",
     "title_id": "T0002",
     "next_episode_number": 3
    },
-   "closed_at": "2026-10-04T14:57:14.561Z",
+   "closed_at": "2026-10-04T14:57:14.562Z",
    "close_reason": null
   }
  ],
@@ -289,8 +289,8 @@
     "id": "G07",
     "name": "resume_series_3d",
     "instance_id": "G-01105",
-    "started_at": "2026-10-01T14:57:14.561Z",
-    "deadline": "2026-10-04T14:57:14.561Z",
+    "started_at": "2026-10-01T14:57:14.562Z",
+    "deadline": "2026-10-04T14:57:14.562Z",
     "rule_version": 1,
     "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
     "carried_over": false,
@@ -316,8 +316,8 @@
    "decision_id": "D-02006",
    "rule_version": 1,
    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
-   "started_at": "2026-10-01T14:57:14.561Z",
-   "deadline": "2026-10-04T14:57:14.561Z",
+   "started_at": "2026-10-01T14:57:14.562Z",
+   "deadline": "2026-10-04T14:57:14.562Z",
    "status": "failed",
    "detail": "no play_started (same content_slug as the unfinished series) by deadline",
    "evidence": [],
@@ -334,7 +334,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T14:57:14.561Z",
+   "at": "2026-10-01T14:57:14.562Z",
    "kind": "goal_committed",
    "instance_id": "G-01105",
    "goal_id": "G07",
@@ -342,7 +342,7 @@
    "decision_id": "D-02006"
   },
   {
-   "at": "2026-10-04T14:57:14.561Z",
+   "at": "2026-10-04T14:57:14.562Z",
    "kind": "learning",
    "instance_id": "G-01105",
    "learning": "holdout: no action taken; outcome is the baseline for this kind of viewer"

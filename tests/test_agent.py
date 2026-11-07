@@ -150,6 +150,21 @@ class AgentTests(unittest.TestCase):
         self.assertEqual(d1['status'], 'PUBLISHED')
         self.assertEqual(d2['status'], 'PUBLISHED')
 
+    def test_slow_model_times_out_then_circuit_stops_waiting(self):
+        # Degraded (not down) model: every call is slower than our timeout. The first decisions pay the 2.5 s
+        # timeout; after 3 in a row the circuit opens and the next decision does not wait on the model at all.
+        self.rt.datastore.deps.add({'type': 'dependency_degraded', 'dependency': 'model_provider',
+                                    'at': T('05:00'), 'until': T('05:10'),
+                                    'detail': 'p95 latency 30 s and 100% of calls time out'})
+        ds = [self.run_trig(self.trig(u, '2026-10-01T05:01:%02d.000Z' % (10 * i)))
+              for i, u in enumerate(['U-1', 'U-3', 'U-4', 'U-5'], 1)]
+        self.assertEqual([d['model']['outcome'] for d in ds],
+                         ['timeout', 'timeout', 'timeout', 'skipped_circuit_open'])
+        self.assertIn('breaker_opened', ds[2]['model'])
+        self.assertTrue(all(d['status'] == 'PUBLISHED' for d in ds))     # rule-based goal, no model needed
+        self.assertGreaterEqual(ds[0]['decided_in_ms'], 2500)               # paid our timeout, not the model's 30 s
+        self.assertLess(ds[3]['decided_in_ms'], 2500)                       # circuit open: no wait at all
+
     def test_data_store_down_means_no_action(self):
         self.rt.datastore.deps.add({'type': 'dependency_unavailable', 'dependency': 'user_data_store',
                                     'at': T('05:00'), 'until': T('05:10')})

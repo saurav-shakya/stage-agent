@@ -248,7 +248,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00456",
-   "observed_at": "2026-10-04T07:03:10.221Z",
+   "observed_at": "2026-10-04T07:03:10.223Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -257,7 +257,7 @@
    "value": true,
    "source": "outcome",
    "ref": "outcome:G-00456",
-   "observed_at": "2026-10-04T07:03:10.221Z",
+   "observed_at": "2026-10-04T07:03:10.223Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -271,15 +271,15 @@
    "arm": "agent",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T07:03:10.221Z",
-   "deadline": "2026-10-04T07:03:10.221Z",
+   "started_at": "2026-10-01T07:03:10.223Z",
+   "deadline": "2026-10-04T07:03:10.223Z",
    "decision_id": "D-00858",
    "params": {
     "slug": "hapibha-d1",
     "title_id": "T0004",
     "next_episode_number": 1
    },
-   "closed_at": "2026-10-04T07:03:10.221Z",
+   "closed_at": "2026-10-04T07:03:10.223Z",
    "close_reason": null
   }
  ],
@@ -303,8 +303,8 @@
     "id": "G07",
     "name": "resume_series_3d",
     "instance_id": "G-00456",
-    "started_at": "2026-10-01T07:03:10.221Z",
-    "deadline": "2026-10-04T07:03:10.221Z",
+    "started_at": "2026-10-01T07:03:10.223Z",
+    "deadline": "2026-10-04T07:03:10.223Z",
     "rule_version": 1,
     "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
     "carried_over": false,
@@ -315,7 +315,7 @@
     }
    },
    "confidence": 0.7,
-   "published_at": "2026-10-01T07:03:10.222Z",
+   "published_at": "2026-10-01T07:03:10.223Z",
    "trigger": "c4aa35fb-cb54-4d3f-a568-0d6f6efd61bd"
   }
  ],
@@ -324,16 +324,16 @@
    "action_id": "A-00341",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-10-01T07:03:10.222Z",
+   "published_at": "2026-10-01T07:03:10.223Z",
    "send_at": null,
-   "live_until": "2026-10-01T09:03:10.222Z",
+   "live_until": "2026-10-01T09:03:10.223Z",
    "dialect": "d1"
   },
   {
    "action_id": "A-00342",
    "type": "push",
    "status": "scheduled",
-   "published_at": "2026-10-01T07:03:10.222Z",
+   "published_at": "2026-10-01T07:03:10.223Z",
    "send_at": "2026-10-02T13:30:00.000Z",
    "live_until": null,
    "dialect": null
@@ -348,8 +348,8 @@
    "decision_id": "D-00858",
    "rule_version": 1,
    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
-   "started_at": "2026-10-01T07:03:10.221Z",
-   "deadline": "2026-10-04T07:03:10.221Z",
+   "started_at": "2026-10-01T07:03:10.223Z",
+   "deadline": "2026-10-04T07:03:10.223Z",
    "status": "failed",
    "detail": "no play_started (same content_slug as the unfinished series) by deadline",
    "evidence": [],
@@ -366,7 +366,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T07:03:10.221Z",
+   "at": "2026-10-01T07:03:10.223Z",
    "kind": "goal_committed",
    "instance_id": "G-00456",
    "goal_id": "G07",
@@ -374,7 +374,7 @@
    "decision_id": "D-00858"
   },
   {
-   "at": "2026-10-04T07:03:10.221Z",
+   "at": "2026-10-04T07:03:10.223Z",
    "kind": "learning",
    "instance_id": "G-00456",
    "learning": "page published but never seen while live: viewer did not reach home in time or changed dialect; goal not reached: next time try a different lever or a lower-effort goal"

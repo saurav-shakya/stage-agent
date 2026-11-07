@@ -190,7 +190,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00304",
-   "observed_at": "2026-10-02T05:14:07.366Z",
+   "observed_at": "2026-10-02T05:14:07.367Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -199,7 +199,7 @@
    "value": true,
    "source": "outcome",
    "ref": "outcome:G-00304",
-   "observed_at": "2026-10-02T05:14:07.366Z",
+   "observed_at": "2026-10-02T05:14:07.367Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -213,11 +213,11 @@
    "arm": "agent",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T05:14:07.366Z",
-   "deadline": "2026-10-02T05:14:07.366Z",
+   "started_at": "2026-10-01T05:14:07.367Z",
+   "deadline": "2026-10-02T05:14:07.367Z",
    "decision_id": "D-00645",
    "params": {},
-   "closed_at": "2026-10-02T05:14:07.366Z",
+   "closed_at": "2026-10-02T05:14:07.367Z",
    "close_reason": null
   }
  ],
@@ -231,15 +231,15 @@
     "id": "G01",
     "name": "first_play_24h",
     "instance_id": "G-00304",
-    "started_at": "2026-10-01T05:14:07.366Z",
-    "deadline": "2026-10-02T05:14:07.366Z",
+    "started_at": "2026-10-01T05:14:07.367Z",
+    "deadline": "2026-10-02T05:14:07.367Z",
     "rule_version": 1,
     "success_signal": "play_started (any title) within 24h",
     "carried_over": false,
     "params": {}
    },
    "confidence": 0.6,
-   "published_at": "2026-10-01T05:14:07.366Z",
+   "published_at": "2026-10-01T05:14:07.368Z",
    "trigger": "9440dfe8-c2f9-4d49-a63c-630eb31c6590"
   },
   {
@@ -258,9 +258,9 @@
    "action_id": "A-00218",
    "type": "home_page",
    "status": "superseded",
-   "published_at": "2026-10-01T05:14:07.366Z",
+   "published_at": "2026-10-01T05:14:07.368Z",
    "send_at": null,
-   "live_until": "2026-10-01T07:14:07.366Z",
+   "live_until": "2026-10-01T07:14:07.368Z",
    "dialect": "d1"
   },
   {
@@ -269,7 +269,7 @@
    "status": "published",
    "published_at": "2026-10-01T07:00:01.000Z",
    "send_at": null,
-   "live_until": "2026-10-01T07:14:07.366Z",
+   "live_until": "2026-10-01T07:14:07.368Z",
    "dialect": "d1"
   }
  ],
@@ -282,8 +282,8 @@
    "decision_id": "D-00645",
    "rule_version": 1,
    "success_signal": "play_started (any title) within 24h",
-   "started_at": "2026-10-01T05:14:07.366Z",
-   "deadline": "2026-10-02T05:14:07.366Z",
+   "started_at": "2026-10-01T05:14:07.367Z",
+   "deadline": "2026-10-02T05:14:07.367Z",
    "status": "failed",
    "detail": "no play_started (any title) by deadline",
    "evidence": [],
@@ -309,7 +309,7 @@
    }
   },
   {
-   "at": "2026-10-01T05:14:07.366Z",
+   "at": "2026-10-01T05:14:07.367Z",
    "kind": "goal_committed",
    "instance_id": "G-00304",
    "goal_id": "G01",
@@ -324,7 +324,7 @@
    "removed_title": "T0001"
   },
   {
-   "at": "2026-10-02T05:14:07.366Z",
+   "at": "2026-10-02T05:14:07.367Z",
    "kind": "learning",
    "instance_id": "G-00304",
    "learning": "page published but never seen while live: viewer did not reach home in time or changed dialect; goal not reached: next time try a different lever or a lower-effort goal"

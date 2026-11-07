@@ -190,7 +190,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00557",
-   "observed_at": "2026-10-02T08:11:15.869Z",
+   "observed_at": "2026-10-02T08:11:15.871Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -204,11 +204,11 @@
    "arm": "agent",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T08:11:15.869Z",
-   "deadline": "2026-10-02T08:11:15.869Z",
+   "started_at": "2026-10-01T08:11:15.871Z",
+   "deadline": "2026-10-02T08:11:15.871Z",
    "decision_id": "D-01019",
    "params": {},
-   "closed_at": "2026-10-02T08:11:15.869Z",
+   "closed_at": "2026-10-02T08:11:15.871Z",
    "close_reason": null
   }
  ],
@@ -222,15 +222,15 @@
     "id": "G01",
     "name": "first_play_24h",
     "instance_id": "G-00557",
-    "started_at": "2026-10-01T08:11:15.869Z",
-    "deadline": "2026-10-02T08:11:15.869Z",
+    "started_at": "2026-10-01T08:11:15.871Z",
+    "deadline": "2026-10-02T08:11:15.871Z",
     "rule_version": 1,
     "success_signal": "play_started (any title) within 24h",
     "carried_over": false,
     "params": {}
    },
    "confidence": 0.6,
-   "published_at": "2026-10-01T08:11:15.869Z",
+   "published_at": "2026-10-01T08:11:15.871Z",
    "trigger": "83b3a035-c541-4693-934a-6553e65b148d"
   },
   {
@@ -249,9 +249,9 @@
    "action_id": "A-00416",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-10-01T08:11:15.869Z",
+   "published_at": "2026-10-01T08:11:15.871Z",
    "send_at": null,
-   "live_until": "2026-10-01T10:11:15.869Z",
+   "live_until": "2026-10-01T10:11:15.871Z",
    "dialect": "d2"
   }
  ],
@@ -264,8 +264,8 @@
    "decision_id": "D-01019",
    "rule_version": 1,
    "success_signal": "play_started (any title) within 24h",
-   "started_at": "2026-10-01T08:11:15.869Z",
-   "deadline": "2026-10-02T08:11:15.869Z",
+   "started_at": "2026-10-01T08:11:15.871Z",
+   "deadline": "2026-10-02T08:11:15.871Z",
    "status": "failed",
    "detail": "no play_started (any title) by deadline",
    "evidence": [],
@@ -291,7 +291,7 @@
    }
   },
   {
-   "at": "2026-10-01T08:11:15.869Z",
+   "at": "2026-10-01T08:11:15.871Z",
    "kind": "goal_committed",
    "instance_id": "G-00557",
    "goal_id": "G01",
@@ -299,7 +299,7 @@
    "decision_id": "D-01019"
   },
   {
-   "at": "2026-10-02T08:11:15.869Z",
+   "at": "2026-10-02T08:11:15.871Z",
    "kind": "learning",
    "instance_id": "G-00557",
    "learning": "page seen 1 time(s); goal not reached: next time try a different lever or a lower-effort goal"

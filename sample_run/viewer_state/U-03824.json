@@ -223,7 +223,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-01254",
-   "observed_at": "2026-10-15T15:22:24.477Z",
+   "observed_at": "2026-10-15T15:22:24.478Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -232,7 +232,7 @@
    "value": true,
    "source": "outcome",
    "ref": "outcome:G-01254",
-   "observed_at": "2026-10-15T15:22:24.477Z",
+   "observed_at": "2026-10-15T15:22:24.478Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -246,11 +246,11 @@
    "arm": "agent",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T15:22:24.477Z",
-   "deadline": "2026-10-15T15:22:24.477Z",
+   "started_at": "2026-10-01T15:22:24.478Z",
+   "deadline": "2026-10-15T15:22:24.478Z",
    "decision_id": "D-02239",
    "params": {},
-   "closed_at": "2026-10-15T15:22:24.477Z",
+   "closed_at": "2026-10-15T15:22:24.478Z",
    "close_reason": null
   }
  ],
@@ -264,8 +264,8 @@
     "id": "G06",
     "name": "reactivate_lapsed_14d",
     "instance_id": "G-01254",
-    "started_at": "2026-10-01T15:22:24.477Z",
-    "deadline": "2026-10-15T15:22:24.477Z",
+    "started_at": "2026-10-01T15:22:24.478Z",
+    "deadline": "2026-10-15T15:22:24.478Z",
     "rule_version": 1,
     "success_signal": "purchase_completed (any paid plan) within 336h",
     "carried_over": false,
@@ -286,8 +286,8 @@
    "decision_id": "D-02239",
    "rule_version": 1,
    "success_signal": "purchase_completed (any paid plan) within 336h",
-   "started_at": "2026-10-01T15:22:24.477Z",
-   "deadline": "2026-10-15T15:22:24.477Z",
+   "started_at": "2026-10-01T15:22:24.478Z",
+   "deadline": "2026-10-15T15:22:24.478Z",
    "status": "failed",
    "detail": "no purchase_completed (any paid plan) by deadline",
    "evidence": [],
@@ -304,7 +304,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T15:22:24.477Z",
+   "at": "2026-10-01T15:22:24.478Z",
    "kind": "goal_committed",
    "instance_id": "G-01254",
    "goal_id": "G06",
@@ -312,7 +312,7 @@
    "decision_id": "D-02239"
   },
   {
-   "at": "2026-10-15T15:22:24.477Z",
+   "at": "2026-10-15T15:22:24.478Z",
    "kind": "learning",
    "instance_id": "G-01254",
    "learning": "agent took no action for this goal; goal not reached: next time try a different lever or a lower-effort goal"

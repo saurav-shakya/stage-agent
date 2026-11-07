@@ -222,7 +222,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00130",
-   "observed_at": "2026-10-08T02:30:38.102Z",
+   "observed_at": "2026-10-08T02:30:38.103Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -236,11 +236,11 @@
    "arm": "agent",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T02:30:38.102Z",
-   "deadline": "2026-10-08T02:30:38.102Z",
+   "started_at": "2026-10-01T02:30:38.103Z",
+   "deadline": "2026-10-08T02:30:38.103Z",
    "decision_id": "D-00162",
    "params": {},
-   "closed_at": "2026-10-08T02:30:38.102Z",
+   "closed_at": "2026-10-08T02:30:38.103Z",
    "close_reason": null
   }
  ],
@@ -254,15 +254,15 @@
     "id": "G08",
     "name": "try_new_release_7d",
     "instance_id": "G-00130",
-    "started_at": "2026-10-01T02:30:38.102Z",
-    "deadline": "2026-10-08T02:30:38.102Z",
+    "started_at": "2026-10-01T02:30:38.103Z",
+    "deadline": "2026-10-08T02:30:38.103Z",
     "rule_version": 1,
     "success_signal": "play_started (a title released in the 30 days before the goal start) within 168h",
     "carried_over": false,
     "params": {}
    },
    "confidence": 0.7,
-   "published_at": "2026-10-01T02:30:38.102Z",
+   "published_at": "2026-10-01T02:30:38.103Z",
    "trigger": "a3b2f84a-3e46-478e-b51b-95b173a97e42"
   },
   {
@@ -274,8 +274,8 @@
     "id": "G08",
     "name": "try_new_release_7d",
     "instance_id": "G-00130",
-    "started_at": "2026-10-01T02:30:38.102Z",
-    "deadline": "2026-10-08T02:30:38.102Z",
+    "started_at": "2026-10-01T02:30:38.103Z",
+    "deadline": "2026-10-08T02:30:38.103Z",
     "rule_version": 1,
     "success_signal": "play_started (a title released in the 30 days before the goal start) within 168h",
     "carried_over": true,
@@ -291,9 +291,9 @@
    "action_id": "A-00087",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-10-01T02:30:38.102Z",
+   "published_at": "2026-10-01T02:30:38.103Z",
    "send_at": null,
-   "live_until": "2026-10-01T04:30:38.102Z",
+   "live_until": "2026-10-01T04:30:38.103Z",
    "dialect": "d6"
   },
   {
@@ -315,8 +315,8 @@
    "decision_id": "D-00162",
    "rule_version": 1,
    "success_signal": "play_started (a title released in the 30 days before the goal start) within 168h",
-   "started_at": "2026-10-01T02:30:38.102Z",
-   "deadline": "2026-10-08T02:30:38.102Z",
+   "started_at": "2026-10-01T02:30:38.103Z",
+   "deadline": "2026-10-08T02:30:38.103Z",
    "status": "failed",
    "detail": "no play_started (a title released in the 30 days before the goal start) by deadline",
    "evidence": [],
@@ -333,7 +333,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T02:30:38.102Z",
+   "at": "2026-10-01T02:30:38.103Z",
    "kind": "goal_committed",
    "instance_id": "G-00130",
    "goal_id": "G08",
@@ -341,7 +341,7 @@
    "decision_id": "D-00162"
   },
   {
-   "at": "2026-10-08T02:30:38.102Z",
+   "at": "2026-10-08T02:30:38.103Z",
    "kind": "learning",
    "instance_id": "G-00130",
    "learning": "page seen 2 time(s); goal not reached: next time try a different lever or a lower-effort goal"

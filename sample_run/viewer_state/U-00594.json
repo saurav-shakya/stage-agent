@@ -243,7 +243,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00561",
-   "observed_at": "2026-10-04T08:15:03.842Z",
+   "observed_at": "2026-10-04T08:15:03.843Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -257,15 +257,15 @@
    "arm": "agent",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T08:15:03.842Z",
-   "deadline": "2026-10-04T08:15:03.842Z",
+   "started_at": "2026-10-01T08:15:03.843Z",
+   "deadline": "2026-10-04T08:15:03.843Z",
    "decision_id": "D-01026",
    "params": {
     "slug": "molo-d2",
     "title_id": "T0521",
     "next_episode_number": 4
    },
-   "closed_at": "2026-10-04T08:15:03.842Z",
+   "closed_at": "2026-10-04T08:15:03.843Z",
    "close_reason": null
   }
  ],
@@ -279,8 +279,8 @@
     "id": "G07",
     "name": "resume_series_3d",
     "instance_id": "G-00561",
-    "started_at": "2026-10-01T08:15:03.842Z",
-    "deadline": "2026-10-04T08:15:03.842Z",
+    "started_at": "2026-10-01T08:15:03.843Z",
+    "deadline": "2026-10-04T08:15:03.843Z",
     "rule_version": 1,
     "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
     "carried_over": false,
@@ -291,7 +291,7 @@
     }
    },
    "confidence": 0.7,
-   "published_at": "2026-10-01T08:15:03.842Z",
+   "published_at": "2026-10-01T08:15:03.844Z",
    "trigger": "9fc6ac48-163c-4e6f-9bca-6cb80f14cc39"
   },
   {
@@ -303,8 +303,8 @@
     "id": "G07",
     "name": "resume_series_3d",
     "instance_id": "G-00561",
-    "started_at": "2026-10-01T08:15:03.842Z",
-    "deadline": "2026-10-04T08:15:03.842Z",
+    "started_at": "2026-10-01T08:15:03.843Z",
+    "deadline": "2026-10-04T08:15:03.843Z",
     "rule_version": 1,
     "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
     "carried_over": true,
@@ -315,7 +315,7 @@
     }
    },
    "confidence": 0.7,
-   "published_at": "2026-10-01T14:16:10.806Z",
+   "published_at": "2026-10-01T14:16:10.805Z",
    "trigger": "51272c55-f008-47a3-ae6a-dbdb38889f59"
   },
   {
@@ -327,8 +327,8 @@
     "id": "G07",
     "name": "resume_series_3d",
     "instance_id": "G-00561",
-    "started_at": "2026-10-01T08:15:03.842Z",
-    "deadline": "2026-10-04T08:15:03.842Z",
+    "started_at": "2026-10-01T08:15:03.843Z",
+    "deadline": "2026-10-04T08:15:03.843Z",
     "rule_version": 1,
     "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
     "carried_over": true,
@@ -348,16 +348,16 @@
    "action_id": "A-00419",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-10-01T08:15:03.842Z",
+   "published_at": "2026-10-01T08:15:03.844Z",
    "send_at": null,
-   "live_until": "2026-10-01T10:15:03.842Z",
+   "live_until": "2026-10-01T10:15:03.844Z",
    "dialect": "d2"
   },
   {
    "action_id": "A-00420",
    "type": "push",
    "status": "scheduled",
-   "published_at": "2026-10-01T08:15:03.842Z",
+   "published_at": "2026-10-01T08:15:03.844Z",
    "send_at": "2026-10-02T13:30:00.000Z",
    "live_until": null,
    "dialect": null
@@ -366,9 +366,9 @@
    "action_id": "A-00812",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-10-01T14:16:10.806Z",
+   "published_at": "2026-10-01T14:16:10.805Z",
    "send_at": null,
-   "live_until": "2026-10-01T16:16:10.806Z",
+   "live_until": "2026-10-01T16:16:10.805Z",
    "dialect": "d2"
   },
   {
@@ -390,8 +390,8 @@
    "decision_id": "D-01026",
    "rule_version": 1,
    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
-   "started_at": "2026-10-01T08:15:03.842Z",
-   "deadline": "2026-10-04T08:15:03.842Z",
+   "started_at": "2026-10-01T08:15:03.843Z",
+   "deadline": "2026-10-04T08:15:03.843Z",
    "status": "failed",
    "detail": "no play_started (same content_slug as the unfinished series) by deadline",
    "evidence": [],
@@ -408,7 +408,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T08:15:03.842Z",
+   "at": "2026-10-01T08:15:03.843Z",
    "kind": "goal_committed",
    "instance_id": "G-00561",
    "goal_id": "G07",
@@ -416,7 +416,7 @@
    "decision_id": "D-01026"
   },
   {
-   "at": "2026-10-04T08:15:03.842Z",
+   "at": "2026-10-04T08:15:03.843Z",
    "kind": "learning",
    "instance_id": "G-00561",
    "learning": "page seen 3 time(s); goal not reached: next time try a different lever or a lower-effort goal"

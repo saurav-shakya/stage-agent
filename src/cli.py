@@ -97,8 +97,10 @@ def final_report(rt, decisions, outcomes, lat, imp, sim):
         w('  - %s v%d: %d open goals re-pointed to the corrected rule (%d viewers); no other viewer reprocessed.'
           % (j['goal_id'], j['version'], j['open_goals_updated'], j['viewers_touched']))
     mo = lat.get('model_outcomes', {})
-    w('  - model calls: %s. Every non-ok outcome fell back to the rule-based goal; no decision waited on the model.'
-      % ', '.join('%s %d' % kv for kv in mo.items()))
+    w('  - model calls: %s. Every non-ok outcome fell back to the rule-based goal; no decision waited longer than '
+      'the model timeout (%d ms), and after a 503 or %d timeouts in a row the circuit skipped the model for %d s.'
+      % (', '.join('%s %d' % kv for kv in mo.items()), rt.model.timeout_ms,
+         rt.model.BREAKER_AFTER_TIMEOUTS, rt.model.BREAKER_S))
     by = lat['by_condition']
     for k, v in by.items():
         if k != 'normal':

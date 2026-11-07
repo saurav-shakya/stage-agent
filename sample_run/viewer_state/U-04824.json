@@ -220,7 +220,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00042",
-   "observed_at": "2026-10-14T21:07:18.506Z",
+   "observed_at": "2026-10-14T21:07:18.507Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -234,11 +234,11 @@
    "arm": "holdout",
    "status": "judged:succeeded",
    "rule_version": 1,
-   "started_at": "2026-09-30T21:07:18.506Z",
-   "deadline": "2026-10-14T21:07:18.506Z",
+   "started_at": "2026-09-30T21:07:18.507Z",
+   "deadline": "2026-10-14T21:07:18.507Z",
    "decision_id": "D-00044",
    "params": {},
-   "closed_at": "2026-10-14T21:07:18.506Z",
+   "closed_at": "2026-10-14T21:07:18.507Z",
    "close_reason": null
   }
  ],
@@ -252,8 +252,8 @@
     "id": "G06",
     "name": "reactivate_lapsed_14d",
     "instance_id": "G-00042",
-    "started_at": "2026-09-30T21:07:18.506Z",
-    "deadline": "2026-10-14T21:07:18.506Z",
+    "started_at": "2026-09-30T21:07:18.507Z",
+    "deadline": "2026-10-14T21:07:18.507Z",
     "rule_version": 1,
     "success_signal": "purchase_completed (any paid plan) within 336h",
     "carried_over": false,
@@ -273,8 +273,8 @@
     "id": "G06",
     "name": "reactivate_lapsed_14d",
     "instance_id": "G-00042",
-    "started_at": "2026-09-30T21:07:18.506Z",
-    "deadline": "2026-10-14T21:07:18.506Z",
+    "started_at": "2026-09-30T21:07:18.507Z",
+    "deadline": "2026-10-14T21:07:18.507Z",
     "rule_version": 1,
     "success_signal": "purchase_completed (any paid plan) within 336h",
     "carried_over": true,
@@ -296,8 +296,8 @@
    "decision_id": "D-00044",
    "rule_version": 1,
    "success_signal": "purchase_completed (any paid plan) within 336h",
-   "started_at": "2026-09-30T21:07:18.506Z",
-   "deadline": "2026-10-14T21:07:18.506Z",
+   "started_at": "2026-09-30T21:07:18.507Z",
+   "deadline": "2026-10-14T21:07:18.507Z",
    "status": "succeeded",
    "detail": "success signal purchase_completed observed at 2026-10-10T16:14:00.000Z",
    "evidence": [
@@ -316,7 +316,7 @@
  ],
  "journal": [
   {
-   "at": "2026-09-30T21:07:18.506Z",
+   "at": "2026-09-30T21:07:18.507Z",
    "kind": "goal_committed",
    "instance_id": "G-00042",
    "goal_id": "G06",
@@ -324,7 +324,7 @@
    "decision_id": "D-00044"
   },
   {
-   "at": "2026-10-14T21:07:18.506Z",
+   "at": "2026-10-14T21:07:18.507Z",
    "kind": "learning",
    "instance_id": "G-00042",
    "learning": "holdout: no action taken; outcome is the baseline for this kind of viewer"

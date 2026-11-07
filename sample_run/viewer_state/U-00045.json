@@ -232,7 +232,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00417",
-   "observed_at": "2026-10-15T06:31:42.837Z",
+   "observed_at": "2026-10-15T06:31:42.838Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -246,8 +246,8 @@
    "arm": "agent",
    "status": "judged:succeeded",
    "rule_version": 1,
-   "started_at": "2026-10-01T06:31:42.837Z",
-   "deadline": "2026-10-15T06:31:42.837Z",
+   "started_at": "2026-10-01T06:31:42.838Z",
+   "deadline": "2026-10-15T06:31:42.838Z",
    "decision_id": "D-00803",
    "params": {},
    "closed_at": "2026-10-01T06:33:58.504Z",
@@ -264,15 +264,15 @@
     "id": "G06",
     "name": "reactivate_lapsed_14d",
     "instance_id": "G-00417",
-    "started_at": "2026-10-01T06:31:42.837Z",
-    "deadline": "2026-10-15T06:31:42.837Z",
+    "started_at": "2026-10-01T06:31:42.838Z",
+    "deadline": "2026-10-15T06:31:42.838Z",
     "rule_version": 1,
     "success_signal": "purchase_completed (any paid plan) within 336h",
     "carried_over": false,
     "params": {}
    },
    "confidence": 0.45,
-   "published_at": "2026-10-01T06:31:42.837Z",
+   "published_at": "2026-10-01T06:31:42.838Z",
    "trigger": "ac29e566-3b68-4378-b9bd-99a3445d0785"
   }
  ],
@@ -281,9 +281,9 @@
    "action_id": "A-00296",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-10-01T06:31:42.837Z",
+   "published_at": "2026-10-01T06:31:42.838Z",
    "send_at": null,
-   "live_until": "2026-10-01T08:31:42.837Z",
+   "live_until": "2026-10-01T08:31:42.838Z",
    "dialect": "d3"
   }
  ],
@@ -296,8 +296,8 @@
    "decision_id": "D-00803",
    "rule_version": 1,
    "success_signal": "purchase_completed (any paid plan) within 336h",
-   "started_at": "2026-10-01T06:31:42.837Z",
-   "deadline": "2026-10-15T06:31:42.837Z",
+   "started_at": "2026-10-01T06:31:42.838Z",
+   "deadline": "2026-10-15T06:31:42.838Z",
    "status": "succeeded",
    "detail": "success signal purchase_completed observed at 2026-10-01T06:33:58.504Z",
    "evidence": [
@@ -316,7 +316,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T06:31:42.837Z",
+   "at": "2026-10-01T06:31:42.838Z",
    "kind": "goal_committed",
    "instance_id": "G-00417",
    "goal_id": "G06",
@@ -335,7 +335,7 @@
    "note": "subscription fact now comes from this event, overriding the snapshot"
   },
   {
-   "at": "2026-10-15T06:31:42.837Z",
+   "at": "2026-10-15T06:31:42.838Z",
    "kind": "learning",
    "instance_id": "G-00417",
    "learning": "page seen 1 time(s); goal reached after exposure"

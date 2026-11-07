@@ -231,7 +231,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00187",
-   "observed_at": "2026-10-04T03:25:24.032Z",
+   "observed_at": "2026-10-04T03:25:24.033Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -245,15 +245,15 @@
    "arm": "holdout",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T03:25:24.032Z",
-   "deadline": "2026-10-04T03:25:24.032Z",
+   "started_at": "2026-10-01T03:25:24.033Z",
+   "deadline": "2026-10-04T03:25:24.033Z",
    "decision_id": "D-00236",
    "params": {
     "slug": "molo-d2",
     "title_id": "T0521",
     "next_episode_number": 1
    },
-   "closed_at": "2026-10-04T03:25:24.032Z",
+   "closed_at": "2026-10-04T03:25:24.033Z",
    "close_reason": null
   }
  ],
@@ -267,8 +267,8 @@
     "id": "G07",
     "name": "resume_series_3d",
     "instance_id": "G-00187",
-    "started_at": "2026-10-01T03:25:24.032Z",
-    "deadline": "2026-10-04T03:25:24.032Z",
+    "started_at": "2026-10-01T03:25:24.033Z",
+    "deadline": "2026-10-04T03:25:24.033Z",
     "rule_version": 1,
     "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
     "carried_over": false,
@@ -302,8 +302,8 @@
     "id": "G07",
     "name": "resume_series_3d",
     "instance_id": "G-00187",
-    "started_at": "2026-10-01T03:25:24.032Z",
-    "deadline": "2026-10-04T03:25:24.032Z",
+    "started_at": "2026-10-01T03:25:24.033Z",
+    "deadline": "2026-10-04T03:25:24.033Z",
     "rule_version": 1,
     "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
     "carried_over": true,
@@ -339,8 +339,8 @@
    "decision_id": "D-00236",
    "rule_version": 1,
    "success_signal": "play_started (same content_slug as the unfinished series) within 72h",
-   "started_at": "2026-10-01T03:25:24.032Z",
-   "deadline": "2026-10-04T03:25:24.032Z",
+   "started_at": "2026-10-01T03:25:24.033Z",
+   "deadline": "2026-10-04T03:25:24.033Z",
    "status": "failed",
    "detail": "no play_started (same content_slug as the unfinished series) by deadline",
    "evidence": [],
@@ -357,7 +357,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T03:25:24.032Z",
+   "at": "2026-10-01T03:25:24.033Z",
    "kind": "goal_committed",
    "instance_id": "G-00187",
    "goal_id": "G07",
@@ -365,7 +365,7 @@
    "decision_id": "D-00236"
   },
   {
-   "at": "2026-10-04T03:25:24.032Z",
+   "at": "2026-10-04T03:25:24.033Z",
    "kind": "learning",
    "instance_id": "G-00187",
    "learning": "holdout: no action taken; outcome is the baseline for this kind of viewer"

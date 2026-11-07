@@ -246,7 +246,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00361",
-   "observed_at": "2026-10-08T05:53:43.732Z",
+   "observed_at": "2026-10-08T05:53:43.733Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -260,11 +260,11 @@
    "arm": "holdout",
    "status": "judged:succeeded",
    "rule_version": 1,
-   "started_at": "2026-10-01T05:53:43.732Z",
-   "deadline": "2026-10-08T05:53:43.732Z",
+   "started_at": "2026-10-01T05:53:43.733Z",
+   "deadline": "2026-10-08T05:53:43.733Z",
    "decision_id": "D-00730",
    "params": {},
-   "closed_at": "2026-10-08T05:53:43.732Z",
+   "closed_at": "2026-10-08T05:53:43.733Z",
    "close_reason": null
   }
  ],
@@ -278,8 +278,8 @@
     "id": "G08",
     "name": "try_new_release_7d",
     "instance_id": "G-00361",
-    "started_at": "2026-10-01T05:53:43.732Z",
-    "deadline": "2026-10-08T05:53:43.732Z",
+    "started_at": "2026-10-01T05:53:43.733Z",
+    "deadline": "2026-10-08T05:53:43.733Z",
     "rule_version": 1,
     "success_signal": "play_started (a title released in the 30 days before the goal start) within 168h",
     "carried_over": false,
@@ -299,8 +299,8 @@
     "id": "G08",
     "name": "try_new_release_7d",
     "instance_id": "G-00361",
-    "started_at": "2026-10-01T05:53:43.732Z",
-    "deadline": "2026-10-08T05:53:43.732Z",
+    "started_at": "2026-10-01T05:53:43.733Z",
+    "deadline": "2026-10-08T05:53:43.733Z",
     "rule_version": 1,
     "success_signal": "play_started (a title released in the 30 days before the goal start) within 168h",
     "carried_over": true,
@@ -322,8 +322,8 @@
    "decision_id": "D-00730",
    "rule_version": 1,
    "success_signal": "play_started (a title released in the 30 days before the goal start) within 168h",
-   "started_at": "2026-10-01T05:53:43.732Z",
-   "deadline": "2026-10-08T05:53:43.732Z",
+   "started_at": "2026-10-01T05:53:43.733Z",
+   "deadline": "2026-10-08T05:53:43.733Z",
    "status": "succeeded",
    "detail": "success signal play_started observed at 2026-10-05T12:48:55.000Z",
    "evidence": [
@@ -342,7 +342,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T05:53:43.732Z",
+   "at": "2026-10-01T05:53:43.733Z",
    "kind": "goal_committed",
    "instance_id": "G-00361",
    "goal_id": "G08",
@@ -350,7 +350,7 @@
    "decision_id": "D-00730"
   },
   {
-   "at": "2026-10-08T05:53:43.732Z",
+   "at": "2026-10-08T05:53:43.733Z",
    "kind": "learning",
    "instance_id": "G-00361",
    "learning": "holdout: no action taken; outcome is the baseline for this kind of viewer"

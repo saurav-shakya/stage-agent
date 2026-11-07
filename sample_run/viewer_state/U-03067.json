@@ -219,7 +219,7 @@
    },
    "source": "outcome",
    "ref": "outcome:G-00553",
-   "observed_at": "2026-10-08T08:08:02.095Z",
+   "observed_at": "2026-10-08T08:08:02.096Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -228,7 +228,7 @@
    "value": true,
    "source": "outcome",
    "ref": "outcome:G-00553",
-   "observed_at": "2026-10-08T08:08:02.095Z",
+   "observed_at": "2026-10-08T08:08:02.096Z",
    "age_s_at_decision": 0,
    "conflicts": [],
    "as_of_decision": null
@@ -242,11 +242,11 @@
    "arm": "agent",
    "status": "judged:failed",
    "rule_version": 1,
-   "started_at": "2026-10-01T08:08:02.095Z",
-   "deadline": "2026-10-08T08:08:02.095Z",
+   "started_at": "2026-10-01T08:08:02.096Z",
+   "deadline": "2026-10-08T08:08:02.096Z",
    "decision_id": "D-01011",
    "params": {},
-   "closed_at": "2026-10-08T08:08:02.095Z",
+   "closed_at": "2026-10-08T08:08:02.096Z",
    "close_reason": null
   }
  ],
@@ -260,15 +260,15 @@
     "id": "G05",
     "name": "first_paid_7d",
     "instance_id": "G-00553",
-    "started_at": "2026-10-01T08:08:02.095Z",
-    "deadline": "2026-10-08T08:08:02.095Z",
+    "started_at": "2026-10-01T08:08:02.096Z",
+    "deadline": "2026-10-08T08:08:02.096Z",
     "rule_version": 1,
     "success_signal": "purchase_completed (is_trial = false) within 168h",
     "carried_over": false,
     "params": {}
    },
    "confidence": 0.55,
-   "published_at": "2026-10-01T08:08:02.095Z",
+   "published_at": "2026-10-01T08:08:02.096Z",
    "trigger": "99ac887a-5401-4062-b428-10711fdbf3f1"
   }
  ],
@@ -277,9 +277,9 @@
    "action_id": "A-00414",
    "type": "home_page",
    "status": "published",
-   "published_at": "2026-10-01T08:08:02.095Z",
+   "published_at": "2026-10-01T08:08:02.096Z",
    "send_at": null,
-   "live_until": "2026-10-01T10:08:02.095Z",
+   "live_until": "2026-10-01T10:08:02.096Z",
    "dialect": "d5"
   }
  ],
@@ -292,8 +292,8 @@
    "decision_id": "D-01011",
    "rule_version": 1,
    "success_signal": "purchase_completed (is_trial = false) within 168h",
-   "started_at": "2026-10-01T08:08:02.095Z",
-   "deadline": "2026-10-08T08:08:02.095Z",
+   "started_at": "2026-10-01T08:08:02.096Z",
+   "deadline": "2026-10-08T08:08:02.096Z",
    "status": "failed",
    "detail": "no purchase_completed (is_trial = false) by deadline",
    "evidence": [],
@@ -310,7 +310,7 @@
  ],
  "journal": [
   {
-   "at": "2026-10-01T08:08:02.095Z",
+   "at": "2026-10-01T08:08:02.096Z",
    "kind": "goal_committed",
    "instance_id": "G-00553",
    "goal_id": "G05",
@@ -318,7 +318,7 @@
    "decision_id": "D-01011"
   },
   {
-   "at": "2026-10-08T08:08:02.095Z",
+   "at": "2026-10-08T08:08:02.096Z",
    "kind": "learning",
    "instance_id": "G-00553",
    "learning": "page published but never seen while live: viewer did not reach home in time or changed dialect; goal not reached: next time try a different lever or a lower-effort goal"
