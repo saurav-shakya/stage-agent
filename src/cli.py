@@ -1,6 +1,6 @@
 """Command line entry point.
 
-    python -m src.cli run    --pack data_pack/one_user_one_agent_pack --out sample_run
+    python -m src.cli run    [--pack data_pack/one_user_one_agent_pack] --out sample_run
     python -m src.cli viewer U-01991 --out sample_run [--at 2026-10-01T10:00:00Z]
 """
 import argparse
@@ -13,13 +13,18 @@ from collections import Counter
 from . import impact, reports
 from .agent import Config
 from .judge import judge_all, load_outcome_events
+from .pack import PackNotFound, find_pack
 from .replay import read_jsonl, run_replay
 from .store import Store
 from .timeutil import ts
 
 
 def cmd_run(a):
-    pack, out = a.pack, a.out
+    try:
+        pack = find_pack(a.pack)
+    except PackNotFound as e:
+        sys.exit('error: %s' % e)
+    out = a.out
     cfg = Config(model_timeout_ms=a.model_timeout_ms, max_model_calls=a.max_model_calls,
                  max_tool_calls=a.max_tool_calls, messages_enabled=not a.no_messages)
     rt = run_replay(pack, out, workers=a.workers, config=cfg)
@@ -171,7 +176,8 @@ def main(argv=None):
     p = argparse.ArgumentParser(prog='python -m src.cli')
     sub = p.add_subparsers(dest='cmd', required=True)
     r = sub.add_parser('run', help='replay the trigger script, simulate outcomes, judge goals, write reports')
-    r.add_argument('--pack', default='data_pack/one_user_one_agent_pack')
+    r.add_argument('--pack', default=None,
+                   help='pack directory (default: $OUA_PACK, else data_pack/one_user_one_agent_pack or data_pack)')
     r.add_argument('--out', default='sample_run')
     r.add_argument('--seed', default='oua-practice')
     r.add_argument('--workers', type=int, default=4)

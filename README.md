@@ -15,15 +15,18 @@ git clone <this repo> && cd stage-agent
 unzip one_user_one_agent_data_pack.zip -d data_pack
 ```
 
-The pack must end up at `data_pack/one_user_one_agent_pack/` (or pass `--pack <path>`).
+The pack is found automatically at `data_pack/one_user_one_agent_pack/` (what the unzip above produces) or directly
+in `data_pack/`. To use a pack elsewhere, pass `--pack <dir>` or set `OUA_PACK=<dir>`; either may point at the pack
+itself or at the folder the zip was extracted into. An explicit path that does not hold the pack is an error: it
+never falls back to the default location. A missing pack stops `run` and fails the tests with the paths searched.
 
 ## One command: replay the trigger script
 
 ```bash
-python -m src.cli run --pack data_pack/one_user_one_agent_pack --out sample_run
+python -m src.cli run --out sample_run
 ```
 
-This (about 20 s on a laptop):
+This (about 10-20 s on a laptop):
 
 1. replays `triggers.jsonl`, `live_events.jsonl` and `control_events.jsonl` in delivery order through the agents,
 2. writes `decisions.jsonl` and `actions.jsonl`,
@@ -40,12 +43,12 @@ Useful options: `--seed`, `--workers 4`, `--model-timeout-ms 2500`, `--max-model
 python -m unittest discover -s tests -t . -v
 ```
 
-17 tests on a small synthetic pack (configs are copied from the real pack, so set `OUA_PACK` if it lives
-elsewhere). They cover duplicate, same-session, offline-buffered and wrong-clock triggers; a three-way dialect
+23 tests. 17 agent tests run on a small synthetic pack whose configs are copied from the real pack, which is
+located as in Setup. If the pack cannot be found they fail with an error; they are never silently skipped. They cover duplicate, same-session, offline-buffered and wrong-clock triggers; a three-way dialect
 conflict, duplicate profile rows and a purchase that contradicts the snapshot; model timeout, malformed output,
 unsupported confident claim, model outage with circuit breaker, and data-store outage; a corrected goal rule that
 re-points only open goals of that goal id; holdout safety, messaging rules, catalogue instruction text, and a
-title withdrawn mid-day.
+title withdrawn mid-day. 6 more tests cover finding the pack in both layouts and failing on a missing or wrong path.
 
 ## Inspect one viewer
 

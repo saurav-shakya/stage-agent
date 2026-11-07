@@ -7,8 +7,7 @@ import shutil
 import tempfile
 import uuid
 
-REAL_PACK = os.environ.get('OUA_PACK', os.path.join(os.path.dirname(__file__), '..', 'data_pack',
-                                                    'one_user_one_agent_pack'))
+from src.pack import find_pack
 
 CAT_FIELDS = ['title_id', 'content_slug', 'title', 'dialect', 'language', 'content_type', 'genres', 'release_date',
               'available_from', 'available_until', 'is_premium', 'description']
@@ -18,8 +17,9 @@ PROF_FIELDS = ['user_id', 'signup_at', 'subscription_status', 'plan_started_at',
 SNAP = '2026-09-30T00:00:00.000Z'
 
 
-def have_real_pack():
-    return os.path.exists(os.path.join(REAL_PACK, 'config', 'goals.json'))
+def real_pack():
+    """The real pack, whose configs the tests copy. Raises PackNotFound (an error, not a skip) when it is missing."""
+    return find_pack()
 
 
 def title(tid, slug, dialect, ctype='film', genres='Drama', lang='hin', desc='A film.', premium='false',
@@ -64,13 +64,12 @@ def default_catalogue():
 
 
 def build_pack(catalogue=None, profiles=None, events=None, arms=None, faults=None, controls=None):
-    if not have_real_pack():
-        raise RuntimeError('real pack not found at %s (set OUA_PACK)' % REAL_PACK)
+    real = real_pack()
     root = tempfile.mkdtemp(prefix='oua_test_')
     for d in ('config', 'data', 'replay', 'pilot'):
         os.makedirs(os.path.join(root, d))
     for f in ('goals.json', 'interventions.json', 'pricing.json'):
-        shutil.copy(os.path.join(REAL_PACK, 'config', f), os.path.join(root, 'config', f))
+        shutil.copy(os.path.join(real, 'config', f), os.path.join(root, 'config', f))
     catalogue = catalogue or default_catalogue()
     with open(os.path.join(root, 'data/catalogue.csv'), 'w', newline='', encoding='utf-8') as f:
         w = csv.DictWriter(f, CAT_FIELDS)

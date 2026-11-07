@@ -4,7 +4,7 @@ import unittest
 
 from src.pack import looks_like_instruction
 from src.timeutil import ts
-from tests.fixture import build_pack, event, have_real_pack, profile, runtime
+from tests.fixture import build_pack, event, profile, real_pack, runtime
 
 DAY = '2026-10-01'
 T = lambda hhmm: '%sT%s:00.000Z' % (DAY, hhmm)  # UTC; 05:30 UTC = 11:00 IST
@@ -19,8 +19,11 @@ def history_u1():
     ]
 
 
-@unittest.skipUnless(have_real_pack(), 'needs the real pack configs (set OUA_PACK)')
 class AgentTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        real_pack()  # a missing pack is a loud error for the class, never 17 silent skips
+
     def setUp(self):
         self.root = build_pack(
             profiles=[profile('U-1'), profile('U-2'), profile('U-3', dialect='d1'),

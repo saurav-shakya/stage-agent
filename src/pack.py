@@ -31,6 +31,49 @@ def looks_like_instruction(text):
     return bool(text and _INJ.search(text))
 
 
+# ---------------------------------------------------------------------- locating the pack
+PACK_DIRNAME = 'one_user_one_agent_pack'   # top-level folder inside one_user_one_agent_data_pack.zip
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+class PackNotFound(FileNotFoundError):
+    pass
+
+
+def is_pack(path):
+    return bool(path) and all(os.path.isfile(os.path.join(path, rel))
+                              for rel in ('config/goals.json', 'replay/triggers.jsonl'))
+
+
+def _layouts(path):
+    """A pack folder itself, or a folder the zip was extracted into (which holds one_user_one_agent_pack/)."""
+    return [path, os.path.join(path, PACK_DIRNAME)]
+
+
+def find_pack(path=None):
+    """Return the pack directory, or raise PackNotFound saying where it looked.
+
+    An explicit path (argument, else $OUA_PACK) must hold the pack: it never falls back to another location, so a
+    typo cannot silently run against a different pack. Without one, both layouts under the repo's data_pack/ are
+    accepted: data_pack/one_user_one_agent_pack/ (README's unzip) and data_pack/ itself (contents copied flat).
+    """
+    explicit = path or os.environ.get('OUA_PACK')
+    if explicit:
+        tried = _layouts(explicit)
+        source = '--pack' if path else '$OUA_PACK'
+    else:
+        tried = _layouts(os.path.join(REPO_ROOT, 'data_pack'))[::-1]
+        source = None
+    for cand in tried:
+        if is_pack(cand):
+            return os.path.normpath(cand)
+    where = ('%s=%s' % (source, explicit)) if source else 'the default location'
+    raise PackNotFound(
+        'data pack not found (%s). Looked for config/goals.json and replay/triggers.jsonl in:\n  %s\n'
+        'Unzip it with `unzip one_user_one_agent_data_pack.zip -d data_pack`, or pass --pack <dir> / set OUA_PACK.'
+        % (where, '\n  '.join(os.path.normpath(c) for c in tried)))
+
+
 class Pack:
     def __init__(self, root):
         self.root = root
