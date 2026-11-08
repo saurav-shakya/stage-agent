@@ -40,10 +40,13 @@ Useful options: `--seed`, `--workers 4`, `--model-timeout-ms 2500`, `--max-model
 ### Optional: a real model instead of the mock
 
 ```bash
-pip install anthropic
-export ANTHROPIC_API_KEY=...
-python -m src.cli run --provider claude --model-timeout-ms 8000 --out run_claude
+python3 -m venv .venv && .venv/bin/pip install anthropic
+cp .env.example .env              # then put your key in .env (git-ignored, never committed)
+.venv/bin/python -m src.cli check-model                    # one call with made-up data: no pack data sent
+.venv/bin/python -m src.cli run --provider claude --model-timeout-ms 8000 --out run_claude
 ```
+
+`check-model` proves the SDK, key and model work and prints the latency, using invented goals only.
 
 `--model-name` picks the model (default `claude-opus-5-5`). The mock stays the default, and the sample run uses it.
 With a real model, every agent-arm decision makes a real, billed call, the replayed model faults are not injected,
@@ -57,7 +60,7 @@ fit the pack's privacy rule.
 python -m unittest discover -s tests -t . -v
 ```
 
-42 tests. 23 agent tests run on a small synthetic pack whose configs are copied from the real pack, which is
+44 tests. 23 agent tests run on a small synthetic pack whose configs are copied from the real pack, which is
 located as in Setup. If the pack cannot be found they fail with an error; they are never silently skipped. They cover duplicate, same-session, offline-buffered and wrong-clock triggers; a three-way dialect
 conflict, duplicate profile rows and a purchase that contradicts the snapshot; model timeout, malformed output,
 unsupported confident claim, model outage with circuit breaker, a slow model that trips the circuit
@@ -67,7 +70,7 @@ that does not exist) judged inconclusive instead of success, with no new viewer 
 of days honoured; every catalogue goal measurable except G10 and G11; every evidence reference carrying its source and freshness; holdout safety, messaging rules, catalogue instruction text, and a
 title withdrawn mid-day. 6 more tests cover finding the pack in both layouts and failing on a missing or wrong path, and 5 cover
 the model client's circuit breaker and the degraded-dependency profile, and 3 cover parsing success-rule
-conditions, and 5 cover the optional Claude provider against a fake SDK: what is sent, error mapping, refusal and circuit breaker (no pack, network or key needed).
+conditions, and 5 cover the optional Claude provider against a fake SDK: what is sent, error mapping, refusal and circuit breaker (no pack, network or key needed), and 2 cover reading the `.env` file.
 
 ## Inspect one viewer
 

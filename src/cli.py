@@ -2,6 +2,7 @@
 
     python -m src.cli run    [--pack data_pack/one_user_one_agent_pack] --out sample_run
     python -m src.cli viewer U-01991 --out sample_run [--at 2026-10-01T10:00:00Z]
+    python -m src.cli check-model   # optional: test the Claude key with made-up data (no pack data is sent)
 """
 import argparse
 import json
@@ -12,6 +13,7 @@ from collections import Counter
 
 from . import impact, reports
 from .agent import Config
+from .envfile import load_env
 from .judge import judge_all, load_outcome_events
 from .pack import PackNotFound, find_pack
 from .replay import read_jsonl, run_replay
@@ -25,6 +27,8 @@ def cmd_run(a):
     except PackNotFound as e:
         sys.exit('error: %s' % e)
     out = a.out
+    if a.provider == 'claude':
+        load_env()
     cfg = Config(model_timeout_ms=a.model_timeout_ms, max_model_calls=a.max_model_calls,
                  max_tool_calls=a.max_tool_calls, messages_enabled=not a.no_messages,
                  provider=a.provider, model_name=a.model_name)
@@ -184,6 +188,38 @@ def cmd_viewer(a):
                 print(json.dumps(o, indent=1))
 
 
+# Made-up goals and facts for check-model: nothing here comes from the pack, so nothing personal is sent.
+CHECK_PROMPT = {'task': 'pick_goal',
+                'candidates': [{'goal_id': 'G02', 'reason': 'signed up 1 day ago, no episode_completed yet'},
+                               {'goal_id': 'G07', 'reason': 'unfinished series (next ep 3 of 8), idle 4 days'}],
+                'viewer': {'subscription_status': 'never', 'ever_played': True, 'ever_completed': False}}
+
+
+def cmd_check_model(a):
+    """One real call with made-up data: proves the SDK, key and model work before any run with the pack."""
+    from datetime import datetime, timezone
+    from .llm import ClaudeProvider, ModelError
+    loaded = load_env()
+    if not os.environ.get('ANTHROPIC_API_KEY') and not os.environ.get('ANTHROPIC_AUTH_TOKEN'):
+        sys.exit('error: no ANTHROPIC_API_KEY. Copy .env.example to .env and put your key there.')
+    print('key from %s' % ('.env' if 'ANTHROPIC_API_KEY' in loaded else 'environment'))
+    try:
+        provider = ClaudeProvider(model=a.model_name, timeout_ms=a.timeout_ms)
+    except RuntimeError as e:
+        sys.exit('error: %s' % e)
+    try:
+        raw, ms = provider.complete(CHECK_PROMPT, {'now': datetime.now(timezone.utc), 'trigger_event_id': 'check'})
+    except ModelError as e:
+        sys.exit('error: %s call failed: %s (%s)' % (a.model_name, e.kind, e))
+    ans = json.loads(raw)
+    allowed = [c['goal_id'] for c in CHECK_PROMPT['candidates']]
+    print('model %s answered in %d ms: %s' % (a.model_name, ms, json.dumps(ans)))
+    print('answer is one of the allowed goals %s: %s' % (allowed, ans.get('goal_id') in allowed))
+    if ms > 2500:
+        print('note: slower than the default 2500 ms model timeout; use --model-timeout-ms %d with run' %
+              (ms // 1000 * 1000 + 3000))
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(prog='python -m src.cli')
     sub = p.add_subparsers(dest='cmd', required=True)
@@ -207,6 +243,10 @@ def main(argv=None):
     v.add_argument('--out', default='sample_run')
     v.add_argument('--at', default=None, help='ISO time; show state as of this moment')
     v.set_defaults(fn=cmd_viewer)
+    c = sub.add_parser('check-model', help='optional: one real Claude call with made-up data to test your key')
+    c.add_argument('--model-name', default='claude-opus-5-5')
+    c.add_argument('--timeout-ms', type=int, default=30000)
+    c.set_defaults(fn=cmd_check_model)
     a = p.parse_args(argv)
     a.fn(a)
 

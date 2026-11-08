@@ -11,7 +11,7 @@ was changed or rejected.
 | Read the brief and profile the pack | Summarised the brief; counted duplicates, late and buffered events, duplicate profile rows, viewers without a profile, language variants, invalid app dialects, the catalogue instruction text | Re-ran the counts with a separate script before relying on them |
 | Pilot re-analysis | Computed ITT from `pilot_outcomes.csv`: treatment 18.25% vs holdout 19.56%, against the report's 40.1% vs 17.7% | Recomputed independently; the same figures are produced by `impact.pilot()` and appear in `impact_report.md` |
 | Read the simulator | Pointed out what the simulator rewards and checks: page dialect must equal app dialect, 10-minute staleness rule, quiet hours and cap counted per action | Read `validate_page` and the session logic directly |
-| Code | Drafted all modules in `src/` and the tests | Full replay, simulator run, 42 unit tests, manual reading of decision records |
+| Code | Drafted all modules in `src/` and the tests | Full replay, simulator run, 44 unit tests, manual reading of decision records |
 | Docs | Drafted README, ARCHITECTURE, KNOWN_LIMITATIONS | Checked every number in them against the generated reports |
 
 ## Output that was changed or rejected after checking
@@ -77,7 +77,7 @@ decision and outcome.
 - **Decision records.** Read records for the surprise cases: the unsupported-claim viewer (U-01991), stale
   buffered triggers, three-way dialect conflicts, the purchase that arrived after a decision, and the T0001
   withdrawal.
-- **Unit tests.** 42 tests, including the four the brief requires: late/duplicate trigger, conflicting source,
+- **Unit tests.** 44 tests, including the four the brief requires: late/duplicate trigger, conflicting source,
   tool failure, corrected goal rule.
 - **Before/after comparison for every fix.** After each change I re-ran the full replay and compared every
   decision (status, action, goal, content, evidence) and every outcome with the previous commit. The rule-parsing
