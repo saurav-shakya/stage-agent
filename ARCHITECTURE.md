@@ -137,8 +137,12 @@ search queries or deeplinks.
 3. **Only the verifier's output reaches `actions.jsonl`.**
 4. **The holdout is enforced in two places**: the agent never plans for it, and the verifier rejects any action
    for a non-agent arm.
-5. **Personal data.** The pack is git-ignored and nothing is sent to an external service. A hosted model would sit
-   behind `Provider` and receive only ids and booleans, under a no-retention agreement.
+5. **Personal data.** The pack is git-ignored. By default nothing is sent to an external service. The optional
+   `ClaudeProvider` (`--provider claude`) sends only goal ids, rule reasons with every viewer and event reference
+   removed (a reason such as "never paid per profile:U-…" would otherwise carry the viewer id), and three viewer
+   facts. Its answer is limited by a JSON schema to the rule-eligible goal ids, and it is still verified. Its errors
+   map to the same timeout / unavailable / error paths as the mock, so the circuit breaker and rule fallback are
+   unchanged. It should run only under an account whose retention terms fit the pack's privacy rule.
 
 ## Measurement
 

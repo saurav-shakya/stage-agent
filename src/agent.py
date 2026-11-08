@@ -29,6 +29,8 @@ class Config:
         self.model_timeout_ms = kw.get('model_timeout_ms', 2500)
         self.latency_budget_ms = kw.get('latency_budget_ms', 60_000)
         self.messages_enabled = kw.get('messages_enabled', True)
+        self.provider = kw.get('provider', 'mock')          # 'mock' (default, no key) or 'claude'
+        self.model_name = kw.get('model_name', 'claude-opus-5-5')
 
 
 class Runtime:

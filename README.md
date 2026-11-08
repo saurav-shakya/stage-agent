@@ -37,13 +37,27 @@ This (about 10-20 s on a laptop):
 Useful options: `--seed`, `--workers 4`, `--model-timeout-ms 2500`, `--max-model-calls 8`, `--max-tool-calls 20`,
 `--no-messages` (home page only).
 
+### Optional: a real model instead of the mock
+
+```bash
+pip install anthropic
+export ANTHROPIC_API_KEY=...
+python -m src.cli run --provider claude --model-timeout-ms 8000 --out run_claude
+```
+
+`--model-name` picks the model (default `claude-opus-5-5`). The mock stays the default, and the sample run uses it.
+With a real model, every agent-arm decision makes a real, billed call, the replayed model faults are not injected,
+and results will differ from `sample_run/`. Only goal ids, rule reasons with viewer and event references removed,
+and three viewer facts are sent; no viewer id or free text. Use it only with an account whose data-retention terms
+fit the pack's privacy rule.
+
 ## Tests
 
 ```bash
 python -m unittest discover -s tests -t . -v
 ```
 
-37 tests. 23 agent tests run on a small synthetic pack whose configs are copied from the real pack, which is
+42 tests. 23 agent tests run on a small synthetic pack whose configs are copied from the real pack, which is
 located as in Setup. If the pack cannot be found they fail with an error; they are never silently skipped. They cover duplicate, same-session, offline-buffered and wrong-clock triggers; a three-way dialect
 conflict, duplicate profile rows and a purchase that contradicts the snapshot; model timeout, malformed output,
 unsupported confident claim, model outage with circuit breaker, a slow model that trips the circuit
@@ -53,7 +67,7 @@ that does not exist) judged inconclusive instead of success, with no new viewer 
 of days honoured; every catalogue goal measurable except G10 and G11; every evidence reference carrying its source and freshness; holdout safety, messaging rules, catalogue instruction text, and a
 title withdrawn mid-day. 6 more tests cover finding the pack in both layouts and failing on a missing or wrong path, and 5 cover
 the model client's circuit breaker and the degraded-dependency profile, and 3 cover parsing success-rule
-conditions (no pack needed).
+conditions, and 5 cover the optional Claude provider against a fake SDK: what is sent, error mapping, refusal and circuit breaker (no pack, network or key needed).
 
 ## Inspect one viewer
 

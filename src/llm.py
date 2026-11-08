@@ -7,6 +7,8 @@ evidence and never approval. The viewer's free-text data (descriptions, search q
 """
 import hashlib
 import json
+import re
+import time
 
 from .timeutil import ts
 
@@ -75,6 +77,89 @@ class MockProvider(Provider):
                            'reason': 'agrees with the highest-priority rule-eligible goal'}), latency
 
 
+# A reference that names a viewer or one of their events ("profile:U-01234@...", "event:<uuid>").
+_VIEWER_REF = re.compile(r'\b(?:profile|event|user|viewer):\S+|\bU-\d+\b')
+
+CLAUDE_SYSTEM = (
+    'You help a streaming app choose ONE next goal for a viewer. You receive goals that deterministic rules have '
+    'already found eligible, each with the rule\'s reason, and a few facts about the viewer. Pick the goal most '
+    'likely to be reached within its window. Do not invent facts; if nothing distinguishes them, prefer the first '
+    '(highest-priority) goal. Your answer is advisory and will be checked against the rules.')
+
+
+class ClaudeProvider(Provider):
+    """Optional hosted provider (Anthropic Claude), used only with `--provider claude`. The mock stays the default
+    so evaluators never need a key.
+
+    Privacy: only goal ids, rule reasons with every viewer/event reference removed, and three booleans/enums are
+    sent. No viewer id, title description, search query or event is sent. The pack's policy still applies: use this
+    only with an account whose data-retention terms allow it (the API does not train on inputs by default).
+
+    The SDK is imported lazily so the default path stays standard-library only (`pip install anthropic` to use it).
+    Errors map to the same ModelTimeout / ModelUnavailable / ModelError the mock raises, so the circuit breaker and
+    rule fallback behave identically.
+    """
+    name = 'claude'
+
+    def __init__(self, model='claude-opus-5-5', timeout_ms=2500, client=None):
+        try:
+            import anthropic
+        except ImportError as e:
+            raise RuntimeError('--provider claude needs the Anthropic SDK: pip install anthropic') from e
+        self.anthropic = anthropic
+        self.model = model
+        # Our own deadline, no SDK retries: a retry would only spend the decision's latency budget.
+        self.client = client or anthropic.Anthropic(timeout=timeout_ms / 1000.0, max_retries=0)
+
+    @staticmethod
+    def scrub(text):
+        return _VIEWER_REF.sub('[ref]', str(text))
+
+    def request(self, prompt):
+        cands = [{'goal_id': c['goal_id'], 'reason': self.scrub(c['reason'])} for c in prompt['candidates']]
+        viewer = {k: v for k, v in prompt.get('viewer', {}).items()
+                  if k in ('subscription_status', 'ever_played', 'ever_completed', 'days_since_signup')}
+        schema = {
+            'type': 'object',
+            'properties': {
+                'goal_id': {'type': 'string', 'enum': [c['goal_id'] for c in cands]},
+                'eligible': {'type': 'boolean'},
+                'confidence': {'type': 'number'},
+                'reason': {'type': 'string'},
+            },
+            'required': ['goal_id', 'eligible', 'confidence', 'reason'],
+            'additionalProperties': False,
+        }
+        return dict(
+            model=self.model,
+            max_tokens=1024,
+            system=CLAUDE_SYSTEM,
+            messages=[{'role': 'user', 'content': json.dumps({'eligible_goals': cands, 'viewer': viewer})}],
+            output_config={'effort': 'low', 'format': {'type': 'json_schema', 'schema': schema}},
+        )
+
+    def complete(self, prompt, ctx):
+        a = self.anthropic
+        t0 = time.perf_counter()
+        try:
+            resp = self.client.messages.create(**self.request(prompt))
+        except a.APITimeoutError as e:            # subclass of APIConnectionError: catch it first
+            raise ModelTimeout('no answer within our timeout') from e
+        except a.RateLimitError as e:
+            raise ModelUnavailable('HTTP 429 rate limited') from e
+        except a.APIStatusError as e:
+            if e.status_code >= 500:
+                raise ModelUnavailable('HTTP %d' % e.status_code) from e
+            raise ModelError('HTTP %d' % e.status_code) from e
+        except a.APIConnectionError as e:
+            raise ModelUnavailable('connection error') from e
+        latency = int((time.perf_counter() - t0) * 1000)
+        if resp.stop_reason != 'end_turn':      # refusal / max_tokens: no answer; the rules decide
+            raise ModelError('stop_reason=%s' % resp.stop_reason)
+        text = next((b.text for b in resp.content if b.type == 'text'), '')
+        return text, latency
+
+
 class ModelClient:
     """Budget, timeout and parsing around a provider. Never raises: returns (answer|None, record)."""
 
@@ -124,7 +209,7 @@ class ModelClient:
             self.breaker_until = now + timedelta(seconds=60)
             rec.update(outcome='unavailable', latency_ms=50, detail=str(e))
             return None, rec
-        except ModelError as e:  # pragma: no cover
+        except ModelError as e:  # e.g. a refusal or a 4xx from a hosted provider
             rec.update(outcome='error', latency_ms=50, detail=str(e))
             return None, rec
         if lat > self.timeout_ms:

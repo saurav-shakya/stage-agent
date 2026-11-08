@@ -11,7 +11,7 @@ import os
 
 from .agent import Config, Runtime
 from .goals import GoalBook
-from .llm import DataStore, Dependencies, MockProvider, ModelClient, load_faults
+from .llm import ClaudeProvider, DataStore, Dependencies, MockProvider, ModelClient, load_faults
 from .pack import Pack
 from .store import Store
 from .timeutil import ts
@@ -29,7 +29,10 @@ def build_runtime(pack_dir, db_path, config=None, pack=None):
     goalbook = GoalBook(pack.goals_cfg, pack.titles, pack.slug_titles)
     deps = Dependencies()
     cfg = config or Config()
-    provider = MockProvider(load_faults(os.path.join(pack_dir, 'replay/model_faults.jsonl')), deps)
+    if cfg.provider == 'claude':
+        provider = ClaudeProvider(model=cfg.model_name, timeout_ms=cfg.model_timeout_ms)
+    else:
+        provider = MockProvider(load_faults(os.path.join(pack_dir, 'replay/model_faults.jsonl')), deps)
     rt = Runtime(pack, store, goalbook, Verifier(pack, goalbook),
                  ModelClient(provider, timeout_ms=cfg.model_timeout_ms, max_calls=cfg.max_model_calls),
                  DataStore(deps), cfg)

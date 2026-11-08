@@ -26,8 +26,12 @@ def cmd_run(a):
         sys.exit('error: %s' % e)
     out = a.out
     cfg = Config(model_timeout_ms=a.model_timeout_ms, max_model_calls=a.max_model_calls,
-                 max_tool_calls=a.max_tool_calls, messages_enabled=not a.no_messages)
-    rt = run_replay(pack, out, workers=a.workers, config=cfg)
+                 max_tool_calls=a.max_tool_calls, messages_enabled=not a.no_messages,
+                 provider=a.provider, model_name=a.model_name)
+    try:
+        rt = run_replay(pack, out, workers=a.workers, config=cfg)
+    except RuntimeError as e:
+        sys.exit('error: %s' % e)
     sim_dir = os.path.join(out, 'sim')
     print('running simulator (seed %s)...' % a.seed)
     subprocess.run([sys.executable, '-I', os.path.join(pack, 'simulator/simulate_outcomes.py'), '--pack', pack,
@@ -193,6 +197,10 @@ def main(argv=None):
     r.add_argument('--max-model-calls', type=int, default=8)
     r.add_argument('--max-tool-calls', type=int, default=20)
     r.add_argument('--no-messages', action='store_true', help='home page only, no push / WhatsApp')
+    r.add_argument('--provider', choices=('mock', 'claude'), default='mock',
+                   help='model provider: mock (default, no key, replays model faults) or claude (needs '
+                        '`pip install anthropic` and ANTHROPIC_API_KEY; real calls, real cost)')
+    r.add_argument('--model-name', default='claude-opus-5-5', help='model for --provider claude')
     r.set_defaults(fn=cmd_run)
     v = sub.add_parser('viewer', help='show what the agent knew, decided and observed for one viewer')
     v.add_argument('user')
