@@ -14,6 +14,7 @@ from datetime import timedelta
 
 from .content import build_page
 from .facts import resolve
+from .llm import DEFAULT_CLAUDE_MODEL
 from .timeutil import buffered_seconds, iso, ist_day, next_ist_time, true_time, ts
 
 STALE_TRIGGER_S = 600       # an app open held offline longer than this: the viewer is no longer in that session
@@ -30,7 +31,7 @@ class Config:
         self.latency_budget_ms = kw.get('latency_budget_ms', 60_000)
         self.messages_enabled = kw.get('messages_enabled', True)
         self.provider = kw.get('provider', 'mock')          # 'mock' (default, no key) or 'claude'
-        self.model_name = kw.get('model_name', 'claude-opus-5-5')
+        self.model_name = kw.get('model_name', DEFAULT_CLAUDE_MODEL)
 
 
 class Runtime:

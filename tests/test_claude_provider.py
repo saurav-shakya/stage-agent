@@ -22,9 +22,10 @@ def fake_sdk():
         pass
 
     class APIStatusError(APIError):
-        def __init__(self, status_code):
+        def __init__(self, status_code, message=None):
             super().__init__('HTTP %d' % status_code)
             self.status_code = status_code
+            self.body = {'type': 'error', 'error': {'type': 'x', 'message': message}} if message else None
 
     class RateLimitError(APIStatusError):
         def __init__(self):
@@ -78,7 +79,7 @@ class ClaudeProviderTests(unittest.TestCase):
         body = json.dumps(sent)
         self.assertNotIn('U-02905', body)
         self.assertNotIn('profile:', body)
-        self.assertEqual(sent['model'], 'claude-opus-5-5')
+        self.assertEqual(sent['model'], 'claude-haiku-5-5')
         schema = sent['output_config']['format']['schema']
         self.assertEqual(schema['properties']['goal_id']['enum'], ['G04', 'G02'])
         self.assertEqual(json.loads(text)['goal_id'], 'G02')
@@ -103,6 +104,18 @@ class ClaudeProviderTests(unittest.TestCase):
             client.ask_goal(PROMPT['candidates'], PROMPT['viewer'], CTX, {'model_calls': 0})
         _, rec = client.ask_goal(PROMPT['candidates'], PROMPT['viewer'], CTX, {'model_calls': 0})
         self.assertEqual(rec['outcome'], 'skipped_circuit_open')
+
+    def test_api_error_message_is_kept(self):
+        with self.assertRaises(ModelError) as cm:
+            self.provider(error=self.sdk.APIStatusError(401, 'invalid x-api-key')).complete(PROMPT, CTX)
+        self.assertEqual(str(cm.exception), 'HTTP 401: invalid x-api-key')
+
+    def test_workspace_id_is_sent_when_configured(self):
+        seen = {}
+        self.sdk.Anthropic = lambda **kw: seen.update(kw)
+        ClaudeProvider(workspace_id='wrkspc_test')
+        self.assertEqual(seen['default_headers'], {'anthropic-workspace-id': 'wrkspc_test'})
+        self.assertEqual(seen['max_retries'], 0)
 
     def test_missing_sdk_gives_a_clear_error(self):
         sys.modules['anthropic'] = None   # makes `import anthropic` raise ImportError

@@ -14,6 +14,7 @@ from collections import Counter
 from . import impact, reports
 from .agent import Config
 from .envfile import load_env
+from .llm import DEFAULT_CLAUDE_MODEL
 from .judge import judge_all, load_outcome_events
 from .pack import PackNotFound, find_pack
 from .replay import read_jsonl, run_replay
@@ -191,7 +192,7 @@ def cmd_viewer(a):
 # Made-up goals and facts for check-model: nothing here comes from the pack, so nothing personal is sent.
 CHECK_PROMPT = {'task': 'pick_goal',
                 'candidates': [{'goal_id': 'G02', 'reason': 'signed up 1 day ago, no episode_completed yet'},
-                               {'goal_id': 'G07', 'reason': 'unfinished series (next ep 3 of 8), idle 4 days'}],
+                               {'goal_id': 'G07', 'reason': 'started a series (episode 1 of 8 partly watched), idle 4 days'}],
                 'viewer': {'subscription_status': 'never', 'ever_played': True, 'ever_completed': False}}
 
 
@@ -236,7 +237,7 @@ def main(argv=None):
     r.add_argument('--provider', choices=('mock', 'claude'), default='mock',
                    help='model provider: mock (default, no key, replays model faults) or claude (needs '
                         '`pip install anthropic` and ANTHROPIC_API_KEY; real calls, real cost)')
-    r.add_argument('--model-name', default='claude-opus-5-5', help='model for --provider claude')
+    r.add_argument('--model-name', default=DEFAULT_CLAUDE_MODEL, help='model for --provider claude')
     r.set_defaults(fn=cmd_run)
     v = sub.add_parser('viewer', help='show what the agent knew, decided and observed for one viewer')
     v.add_argument('user')
@@ -244,7 +245,7 @@ def main(argv=None):
     v.add_argument('--at', default=None, help='ISO time; show state as of this moment')
     v.set_defaults(fn=cmd_viewer)
     c = sub.add_parser('check-model', help='optional: one real Claude call with made-up data to test your key')
-    c.add_argument('--model-name', default='claude-opus-5-5')
+    c.add_argument('--model-name', default=DEFAULT_CLAUDE_MODEL)
     c.add_argument('--timeout-ms', type=int, default=30000)
     c.set_defaults(fn=cmd_check_model)
     a = p.parse_args(argv)

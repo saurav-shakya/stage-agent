@@ -7,6 +7,7 @@ evidence and never approval. The viewer's free-text data (descriptions, search q
 """
 import hashlib
 import json
+import os
 import re
 import time
 
@@ -77,6 +78,9 @@ class MockProvider(Provider):
                            'reason': 'agrees with the highest-priority rule-eligible goal'}), latency
 
 
+# Default hosted model: fast enough for the per-decision model timeout (a decision has seconds, not minutes).
+DEFAULT_CLAUDE_MODEL = 'claude-haiku-5-5'
+
 # A reference that names a viewer or one of their events ("profile:U-01234@...", "event:<uuid>").
 _VIEWER_REF = re.compile(r'\b(?:profile|event|user|viewer):\S+|\bU-\d+\b')
 
@@ -101,15 +105,27 @@ class ClaudeProvider(Provider):
     """
     name = 'claude'
 
-    def __init__(self, model='claude-opus-5-5', timeout_ms=2500, client=None):
+    def __init__(self, model=DEFAULT_CLAUDE_MODEL, timeout_ms=2500, client=None, workspace_id=None):
         try:
             import anthropic
         except ImportError as e:
             raise RuntimeError('--provider claude needs the Anthropic SDK: pip install anthropic') from e
         self.anthropic = anthropic
         self.model = model
+        # A personal or service-account key that is not scoped to one workspace must name the workspace on every
+        # request (otherwise HTTP 400); a key scoped to one workspace needs nothing.
+        workspace_id = workspace_id or os.environ.get('ANTHROPIC_WORKSPACE_ID')
+        headers = {'anthropic-workspace-id': workspace_id} if workspace_id else None
         # Our own deadline, no SDK retries: a retry would only spend the decision's latency budget.
-        self.client = client or anthropic.Anthropic(timeout=timeout_ms / 1000.0, max_retries=0)
+        self.client = client or anthropic.Anthropic(timeout=timeout_ms / 1000.0, max_retries=0,
+                                                    default_headers=headers)
+
+    @staticmethod
+    def _api_message(e):
+        """The API's own error text (it never contains the key), e.g. 'invalid x-api-key'."""
+        body = getattr(e, 'body', None)
+        err = body.get('error') if isinstance(body, dict) else None
+        return err.get('message') if isinstance(err, dict) and err.get('message') else ''
 
     @staticmethod
     def scrub(text):
@@ -148,9 +164,10 @@ class ClaudeProvider(Provider):
         except a.RateLimitError as e:
             raise ModelUnavailable('HTTP 429 rate limited') from e
         except a.APIStatusError as e:
+            detail = ('HTTP %d: %s' % (e.status_code, self._api_message(e))).rstrip(': ')
             if e.status_code >= 500:
-                raise ModelUnavailable('HTTP %d' % e.status_code) from e
-            raise ModelError('HTTP %d' % e.status_code) from e
+                raise ModelUnavailable(detail) from e
+            raise ModelError(detail) from e
         except a.APIConnectionError as e:
             raise ModelUnavailable('connection error') from e
         latency = int((time.perf_counter() - t0) * 1000)
