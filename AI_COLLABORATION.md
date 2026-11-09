@@ -79,7 +79,7 @@ every decision and outcome.
 16. **Model speed, measured.** With the real API, Opus 5.5 took about 5 seconds per answer. The agent waits at most
     2.5 seconds for the model, because the page must land while the viewer is still on the home screen. Haiku 5.5
     took about 2.5 seconds with an equally good answer, so I made Haiku the default for `--provider claude`. This
-    also showed that the timeout and the rule fallback are not just theory; a real model really is that sl  ow.
+    also showed that the timeout and the rule fallback are not just theory; a real model really is that slow.
 
 ## How I checked that it works
 
@@ -97,4 +97,4 @@ every decision and outcome.
 
 - [x] Run `python -m src.cli run` and the tests on my own machine.
 - [x] Walk one viewer end to end with `python -m src.cli viewer U-02825 --out sample_run`.
-- [ ] Re-read ARCHITECTURE.md and be ready to defend each choice in the discussion.
+- [x] Re-read ARCHITECTURE.md and be ready to defend each choice in the discussion.
