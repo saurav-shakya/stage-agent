@@ -7,6 +7,24 @@ later judges the goal and the agent's impact against the randomized holdout.
 Python 3.11+, standard library only. No API key needed: the replay uses a deterministic mock model provider that
 also reproduces `replay/model_faults.jsonl` and the outages in `replay/control_events.jsonl`.
 
+## Results at a glance
+
+From the committed sample run (seed `oua-practice`). Every number links to the file it comes from, and the commands
+below reproduce them.
+
+| What | Result | Source |
+|---|---|---|
+| Tests | **46 passed**, 0 failed, 0 skipped | [`sample_run/test_output.txt`](sample_run/test_output.txt) |
+| Policy problems found by the pack's simulator | **0**; actions on holdout viewers: **0** | [`impact_report.md`](sample_run/impact_report.md) §4 |
+| Latency (trigger to publish) | p50 60 ms, p95 1,127 ms, max 1,909 ms; **0 over 60 s** | [`final_report.md`](sample_run/final_report.md), [`latency_report.json`](sample_run/latency_report.json) |
+| Impact vs randomized holdout (ITT), played within 72 h | **60.25% vs 51.76%, +8.50 pts (95% CI ±4.64)** | [`impact_report.md`](sample_run/impact_report.md) §1 |
+| Episode completed within 72 h | 36.73% vs 29.33%, +7.40 pts (±4.40) | [`impact_report.md`](sample_run/impact_report.md) §1 |
+| Committed goal reached | 12.17% vs 11.10%, +1.07 pts (±3.01): **no detectable effect** | [`impact_report.md`](sample_run/impact_report.md) §1 |
+| Old pilot, re-analysed fairly | report claimed 40.1% vs 17.7%; randomized comparison is 18.25% vs 19.56% (−1.30 pts) | [`impact_report.md`](sample_run/impact_report.md) §3 |
+| Decisions | 2,769 triggers: 891 published, 1,581 recorded NO_ACTION with a reason, 297 duplicates or same-session skipped | [`final_report.md`](sample_run/final_report.md) |
+
+Known weak spots are listed, not hidden: see [`KNOWN_LIMITATIONS.md`](KNOWN_LIMITATIONS.md).
+
 ## Setup
 
 ```bash
@@ -62,6 +80,8 @@ fit the pack's privacy rule.
 ```bash
 python -m unittest discover -s tests -t . -v
 ```
+
+The output of the last full run is saved in [`sample_run/test_output.txt`](sample_run/test_output.txt).
 
 46 tests. 23 agent tests run on a small synthetic pack whose configs are copied from the real pack, which is
 located as in Setup. If the pack cannot be found they fail with an error; they are never silently skipped. They cover duplicate, same-session, offline-buffered and wrong-clock triggers; a three-way dialect

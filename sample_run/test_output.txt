@@ -1,0 +1,58 @@
+# Full test run, captured as plain text so it can be checked and reproduced.
+# Command:  python -m unittest discover -s tests -t . -v
+# Python:   Python 3.14.4
+# Code at:  commit 4027f0f (this file was added in the next commit; no code changed)
+# Run on:   2026-11-09T16:06Z
+# The data pack is not in the repo (personal data); the agent tests need it at data_pack/ (see README Setup).
+
+test_catalogue_instruction_text_is_flagged_and_never_sent_to_model (tests.test_agent.AgentTests.test_catalogue_instruction_text_is_flagged_and_never_sent_to_model) ... ok
+test_confident_unsupported_model_claim_is_rejected (tests.test_agent.AgentTests.test_confident_unsupported_model_claim_is_rejected) ... ok
+test_corrected_number_of_days_is_used_not_the_old_three (tests.test_agent.AgentTests.test_corrected_number_of_days_is_used_not_the_old_three) ... ok
+test_corrected_rule_naming_a_nonexistent_event_is_inconclusive (tests.test_agent.AgentTests.test_corrected_rule_naming_a_nonexistent_event_is_inconclusive) ... ok
+test_data_store_down_means_no_action (tests.test_agent.AgentTests.test_data_store_down_means_no_action) ... ok
+test_duplicate_profile_rows_latest_wins_and_conflict_visible (tests.test_agent.AgentTests.test_duplicate_profile_rows_latest_wins_and_conflict_visible) ... ok
+test_duplicate_trigger_is_idempotent (tests.test_agent.AgentTests.test_duplicate_trigger_is_idempotent) ... ok
+test_every_evidence_reference_carries_source_and_freshness (tests.test_agent.AgentTests.test_every_evidence_reference_carries_source_and_freshness) ... ok
+test_every_goal_in_the_catalogue_is_measurable_except_g10_g11 (tests.test_agent.AgentTests.test_every_goal_in_the_catalogue_is_measurable_except_g10_g11) ... ok
+test_goal_rule_correction_applies_to_open_goals_only (tests.test_agent.AgentTests.test_goal_rule_correction_applies_to_open_goals_only) ... ok
+test_holdout_never_gets_an_action_but_has_a_shadow_goal (tests.test_agent.AgentTests.test_holdout_never_gets_an_action_but_has_a_shadow_goal) ... ok
+test_login_and_open_in_same_session_decide_once (tests.test_agent.AgentTests.test_login_and_open_in_same_session_decide_once) ... ok
+test_malformed_model_output_falls_back (tests.test_agent.AgentTests.test_malformed_model_output_falls_back) ... ok
+test_messages_respect_consent_quiet_hours_and_cap (tests.test_agent.AgentTests.test_messages_respect_consent_quiet_hours_and_cap) ... ok
+test_model_outage_opens_circuit_and_still_publishes (tests.test_agent.AgentTests.test_model_outage_opens_circuit_and_still_publishes) ... ok
+test_model_timeout_falls_back_within_budget (tests.test_agent.AgentTests.test_model_timeout_falls_back_within_budget) ... ok
+test_offline_buffered_trigger_is_not_acted_on (tests.test_agent.AgentTests.test_offline_buffered_trigger_is_not_acted_on) ... ok
+test_purchase_after_decision_overrides_snapshot_and_replans (tests.test_agent.AgentTests.test_purchase_after_decision_overrides_snapshot_and_replans) ... ok
+test_slow_model_times_out_then_circuit_stops_waiting (tests.test_agent.AgentTests.test_slow_model_times_out_then_circuit_stops_waiting) ... ok
+test_three_way_dialect_conflict_uses_app_setting (tests.test_agent.AgentTests.test_three_way_dialect_conflict_uses_app_setting) ... ok
+test_unrecognised_corrected_rule_is_inconclusive_not_success (tests.test_agent.AgentTests.test_unrecognised_corrected_rule_is_inconclusive_not_success) ... ok
+test_withdrawn_title_is_removed_from_live_pages (tests.test_agent.AgentTests.test_withdrawn_title_is_removed_from_live_pages) ... ok
+test_wrong_phone_clock_alone_is_not_stale (tests.test_agent.AgentTests.test_wrong_phone_clock_alone_is_not_stale) ... ok
+test_api_error_message_is_kept (tests.test_claude_provider.ClaudeProviderTests.test_api_error_message_is_kept) ... ok
+test_errors_map_to_the_same_failures_as_the_mock (tests.test_claude_provider.ClaudeProviderTests.test_errors_map_to_the_same_failures_as_the_mock) ... ok
+test_missing_sdk_gives_a_clear_error (tests.test_claude_provider.ClaudeProviderTests.test_missing_sdk_gives_a_clear_error) ... ok
+test_refusal_is_no_answer_and_the_rules_decide (tests.test_claude_provider.ClaudeProviderTests.test_refusal_is_no_answer_and_the_rules_decide) ... ok
+test_request_sends_no_viewer_reference_and_limits_answer_to_eligible_goals (tests.test_claude_provider.ClaudeProviderTests.test_request_sends_no_viewer_reference_and_limits_answer_to_eligible_goals) ... ok
+test_timeouts_still_open_the_circuit_breaker (tests.test_claude_provider.ClaudeProviderTests.test_timeouts_still_open_the_circuit_breaker) ... ok
+test_workspace_id_is_sent_when_configured (tests.test_claude_provider.ClaudeProviderTests.test_workspace_id_is_sent_when_configured) ... ok
+test_missing_file_is_fine (tests.test_envfile.EnvFileTests.test_missing_file_is_fine) ... ok
+test_reads_pairs_strips_quotes_and_skips_noise (tests.test_envfile.EnvFileTests.test_reads_pairs_strips_quotes_and_skips_noise) ... ok
+test_every_wording_in_the_pack_and_the_replay_correction (tests.test_goal_rules.ParseConditionTests.test_every_wording_in_the_pack_and_the_replay_correction) ... ok
+test_numbers_are_read_not_assumed (tests.test_goal_rules.ParseConditionTests.test_numbers_are_read_not_assumed) ... ok
+test_unknown_or_extended_wording_is_not_guessed (tests.test_goal_rules.ParseConditionTests.test_unknown_or_extended_wording_is_not_guessed) ... ok
+test_consecutive_timeouts_open_then_probe_and_recover (tests.test_model_client.CircuitBreakerTests.test_consecutive_timeouts_open_then_probe_and_recover) ... ok
+test_single_timeout_does_not_open_the_circuit (tests.test_model_client.CircuitBreakerTests.test_single_timeout_does_not_open_the_circuit) ... ok
+test_milliseconds_and_defaults (tests.test_model_client.DegradationProfileTests.test_milliseconds_and_defaults) ... ok
+test_mock_model_is_slow_only_inside_a_degraded_window (tests.test_model_client.DegradationProfileTests.test_mock_model_is_slow_only_inside_a_degraded_window) ... ok
+test_reads_the_replay_detail (tests.test_model_client.DegradationProfileTests.test_reads_the_replay_detail) ... ok
+test_default_flat_layout (tests.test_pack_location.PackLocationTests.test_default_flat_layout) ... ok
+test_default_readme_layout (tests.test_pack_location.PackLocationTests.test_default_readme_layout) ... ok
+test_env_var_is_used (tests.test_pack_location.PackLocationTests.test_env_var_is_used) ... ok
+test_explicit_path_accepts_pack_or_its_parent (tests.test_pack_location.PackLocationTests.test_explicit_path_accepts_pack_or_its_parent) ... ok
+test_missing_pack_raises (tests.test_pack_location.PackLocationTests.test_missing_pack_raises) ... ok
+test_wrong_explicit_path_never_falls_back_to_default (tests.test_pack_location.PackLocationTests.test_wrong_explicit_path_never_falls_back_to_default) ... ok
+
+----------------------------------------------------------------------
+Ran 46 tests in 0.241s
+
+OK
